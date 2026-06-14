@@ -334,6 +334,19 @@ body::before, body::after {
   .inv-img-ph   { width: 70px; height: 70px; }
 }
 
+
+/* BAMBOO HERO DECORATION */
+.hero > svg:first-child {
+  position: absolute;
+  right: 0; top: 0;
+  height: 100%; width: 120px;
+  pointer-events: none;
+  opacity: .2;
+}
+@media (max-width: 400px) {
+  .hero > svg:first-child { opacity: .12; width: 80px; }
+}
+
 </style>
 </head>
 <body>
@@ -730,40 +743,44 @@ function enterApp(){
   <svg class="hdr-deco" viewBox="0 0 140 300" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <pattern id="khanran" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-        <!-- Khăn rằn pattern: ô vuông chéo đỏ-trắng-đen -->
-        <rect width="20" height="20" fill="#8B1A1A" opacity=".15"/>
-        <rect x="0" y="0" width="10" height="10" fill="white" opacity=".08"/>
-        <rect x="10" y="10" width="10" height="10" fill="white" opacity=".08"/>
-        <line x1="0" y1="0" x2="20" y2="20" stroke="white" stroke-width="1" opacity=".12"/>
-        <line x1="20" y1="0" x2="0" y2="20" stroke="white" stroke-width="1" opacity=".08"/>
-        <rect x="8" y="8" width="4" height="4" fill="white" opacity=".15"/>
+        <rect width="10" height="10" fill="white" opacity=".18"/>
+        <rect x="10" y="10" width="10" height="10" fill="white" opacity=".18"/>
+        <rect x="10" y="0" width="10" height="10" fill="black" opacity=".18"/>
+        <rect x="0" y="10" width="10" height="10" fill="black" opacity=".18"/>
       </pattern>
     </defs>
+    <!-- Base khăn rằn pattern -->
     <rect width="140" height="300" fill="url(#khanran)"/>
-    <!-- Vertical stripes đặc trưng khăn rằn -->
-    <rect x="0" y="0" width="3" height="300" fill="white" opacity=".06"/>
-    <rect x="20" y="0" width="1" height="300" fill="white" opacity=".1"/>
-    <rect x="40" y="0" width="3" height="300" fill="white" opacity=".06"/>
-    <rect x="60" y="0" width="1" height="300" fill="white" opacity=".1"/>
-    <rect x="80" y="0" width="3" height="300" fill="white" opacity=".06"/>
-    <rect x="100" y="0" width="1" height="300" fill="white" opacity=".1"/>
-    <rect x="120" y="0" width="3" height="300" fill="white" opacity=".06"/>
-    <!-- Horizontal stripes -->
-    <rect x="0" y="0" width="140" height="2" fill="white" opacity=".1"/>
-    <rect x="0" y="20" width="140" height="1" fill="white" opacity=".08"/>
-    <rect x="0" y="40" width="140" height="2" fill="white" opacity=".1"/>
-    <rect x="0" y="60" width="140" height="1" fill="white" opacity=".08"/>
-    <rect x="0" y="80" width="140" height="2" fill="white" opacity=".1"/>
-    <rect x="0" y="100" width="140" height="1" fill="white" opacity=".08"/>
-    <rect x="0" y="120" width="140" height="2" fill="white" opacity=".1"/>
-    <rect x="0" y="140" width="140" height="1" fill="white" opacity=".08"/>
-    <rect x="0" y="160" width="140" height="2" fill="white" opacity=".1"/>
-    <rect x="0" y="180" width="140" height="1" fill="white" opacity=".08"/>
-    <rect x="0" y="200" width="140" height="2" fill="white" opacity=".1"/>
-    <rect x="0" y="220" width="140" height="1" fill="white" opacity=".08"/>
-    <rect x="0" y="240" width="140" height="2" fill="white" opacity=".1"/>
-    <rect x="0" y="260" width="140" height="1" fill="white" opacity=".08"/>
-    <rect x="0" y="280" width="140" height="2" fill="white" opacity=".1"/>
+    <!-- Đường kẻ dọc đậm hơn -->
+    <line x1="20" y1="0" x2="20" y2="300" stroke="white" stroke-width="1" opacity=".22"/>
+    <line x1="40" y1="0" x2="40" y2="300" stroke="white" stroke-width="1" opacity=".22"/>
+    <line x1="60" y1="0" x2="60" y2="300" stroke="white" stroke-width="1" opacity=".22"/>
+    <line x1="80" y1="0" x2="80" y2="300" stroke="white" stroke-width="1" opacity=".22"/>
+    <line x1="100" y1="0" x2="100" y2="300" stroke="white" stroke-width="1" opacity=".22"/>
+    <line x1="120" y1="0" x2="120" y2="300" stroke="white" stroke-width="1" opacity=".22"/>
+    <!-- Đường kẻ ngang đậm hơn -->
+    <line x1="0" y1="20" x2="140" y2="20" stroke="white" stroke-width="1" opacity=".22"/>
+    <line x1="0" y1="40" x2="140" y2="40" stroke="white" stroke-width="1" opacity=".22"/>
+    <line x1="0" y1="60" x2="140" y2="60" stroke="white" stroke-width="1" opacity=".22"/>
+    <line x1="0" y1="80" x2="140" y2="80" stroke="white" stroke-width="1" opacity=".22"/>
+    <line x1="0" y1="100" x2="140" y2="100" stroke="white" stroke-width="1" opacity=".22"/>
+    <line x1="0" y1="120" x2="140" y2="120" stroke="white" stroke-width="1" opacity=".22"/>
+    <line x1="0" y1="140" x2="140" y2="140" stroke="white" stroke-width="1" opacity=".22"/>
+    <line x1="0" y1="160" x2="140" y2="160" stroke="white" stroke-width="1" opacity=".22"/>
+    <line x1="0" y1="180" x2="140" y2="180" stroke="white" stroke-width="1" opacity=".22"/>
+    <line x1="0" y1="200" x2="140" y2="200" stroke="white" stroke-width="1" opacity=".22"/>
+    <line x1="0" y1="220" x2="140" y2="220" stroke="white" stroke-width="1" opacity=".22"/>
+    <line x1="0" y1="240" x2="140" y2="240" stroke="white" stroke-width="1" opacity=".22"/>
+    <line x1="0" y1="260" x2="140" y2="260" stroke="white" stroke-width="1" opacity=".22"/>
+    <line x1="0" y1="280" x2="140" y2="280" stroke="white" stroke-width="1" opacity=".22"/>
+    <!-- Gradient fade bên trái để không che chữ -->
+    <defs>
+      <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#1B5E20" stop-opacity="1"/>
+        <stop offset="40%" stop-color="#1B5E20" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <rect width="140" height="300" fill="url(#fade)"/>
   </svg>
 
   <div class="hdr-inner">
@@ -790,7 +807,40 @@ function enterApp(){
 
 <!-- ═══════════ TAB 1: OVERVIEW ═══════════ -->
 <div id="p-overview" class="tab-panel active"><div class="wrap">
-<div class="hero"><div class="hero-deco">🎋</div>
+<div class="hero"><svg viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg" style="position:absolute;right:0;top:0;height:100%;width:120px;pointer-events:none;opacity:.22;">
+  <!-- Thân tre 1 -->
+  <rect x="72" y="0" width="9" height="200" rx="4" fill="white"/>
+  <rect x="72" y="35"  width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="75"  width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="115" width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="155" width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <!-- Thân tre 2 -->
+  <rect x="92" y="0" width="7" height="200" rx="3" fill="white"/>
+  <rect x="92" y="50"  width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <rect x="92" y="95"  width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <rect x="92" y="140" width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <!-- Thân tre 3 -->
+  <rect x="108" y="0" width="6" height="200" rx="3" fill="white"/>
+  <rect x="108" y="44"  width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <rect x="108" y="90"  width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <rect x="108" y="136" width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <!-- Lá tre 1 (từ thân 1) -->
+  <ellipse cx="65" cy="30"  rx="18" ry="5" transform="rotate(-35 65 30)"  fill="white"/>
+  <ellipse cx="60" cy="72"  rx="16" ry="4" transform="rotate(30 60 72)"   fill="white"/>
+  <ellipse cx="68" cy="110" rx="17" ry="5" transform="rotate(-28 68 110)" fill="white"/>
+  <ellipse cx="62" cy="150" rx="15" ry="4" transform="rotate(32 62 150)"  fill="white"/>
+  <!-- Lá tre 2 (từ thân 2) -->
+  <ellipse cx="86" cy="45"  rx="16" ry="4" transform="rotate(-30 86 45)"  fill="white"/>
+  <ellipse cx="84" cy="90"  rx="14" ry="3.5" transform="rotate(25 84 90)" fill="white"/>
+  <ellipse cx="87" cy="135" rx="15" ry="4" transform="rotate(-25 87 135)" fill="white"/>
+  <!-- Gradient fade trái: che phần gốc lá nhô vào nội dung -->
+  <defs>
+    <linearGradient id="bamboo-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-opacity="1" stop-color="transparent"/>
+      <stop offset="55%" stop-opacity="0" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+</svg><div class="hero-deco">🎋</div>
   <div class="hero-vi" data-en="Operations Overview" data-vi="Tổng quan vận hành">Operations Overview</div>
   <div class="hero-en">Equipment · Counter Setup · Philippines Notes</div>
   <div class="pills"><span class="pill">3 menu items</span><span class="pill">5–100 portions/day</span><span class="pill">Add-on at tea counter</span></div>
@@ -893,7 +943,40 @@ function enterApp(){
 </div></div>
 
 <div id="p-inventory" class="tab-panel"><div class="wrap">
-<div class="hero"><div class="hero-deco">🌿</div>
+<div class="hero"><svg viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg" style="position:absolute;right:0;top:0;height:100%;width:120px;pointer-events:none;opacity:.22;">
+  <!-- Thân tre 1 -->
+  <rect x="72" y="0" width="9" height="200" rx="4" fill="white"/>
+  <rect x="72" y="35"  width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="75"  width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="115" width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="155" width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <!-- Thân tre 2 -->
+  <rect x="92" y="0" width="7" height="200" rx="3" fill="white"/>
+  <rect x="92" y="50"  width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <rect x="92" y="95"  width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <rect x="92" y="140" width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <!-- Thân tre 3 -->
+  <rect x="108" y="0" width="6" height="200" rx="3" fill="white"/>
+  <rect x="108" y="44"  width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <rect x="108" y="90"  width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <rect x="108" y="136" width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <!-- Lá tre 1 (từ thân 1) -->
+  <ellipse cx="65" cy="30"  rx="18" ry="5" transform="rotate(-35 65 30)"  fill="white"/>
+  <ellipse cx="60" cy="72"  rx="16" ry="4" transform="rotate(30 60 72)"   fill="white"/>
+  <ellipse cx="68" cy="110" rx="17" ry="5" transform="rotate(-28 68 110)" fill="white"/>
+  <ellipse cx="62" cy="150" rx="15" ry="4" transform="rotate(32 62 150)"  fill="white"/>
+  <!-- Lá tre 2 (từ thân 2) -->
+  <ellipse cx="86" cy="45"  rx="16" ry="4" transform="rotate(-30 86 45)"  fill="white"/>
+  <ellipse cx="84" cy="90"  rx="14" ry="3.5" transform="rotate(25 84 90)" fill="white"/>
+  <ellipse cx="87" cy="135" rx="15" ry="4" transform="rotate(-25 87 135)" fill="white"/>
+  <!-- Gradient fade trái: che phần gốc lá nhô vào nội dung -->
+  <defs>
+    <linearGradient id="bamboo-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-opacity="1" stop-color="transparent"/>
+      <stop offset="55%" stop-opacity="0" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+</svg><div class="hero-deco">🌿</div>
   <div class="hero-vi" data-en="Ingredients & Tools Reference" data-vi="Nguyên liệu & Dụng cụ">Ingredients & Tools Reference</div>
   <div class="hero-en">Visual guide — how to identify each item + alternatives if unavailable</div>
   <div class="pills"><span class="pill">📸 Photo reference</span><span class="pill">🔄 Substitutes listed</span></div>
@@ -1347,7 +1430,40 @@ function enterApp(){
 
 <!-- ═══════════ TAB 4: STOCK & STORAGE ═══════════ -->
 <div id="p-stock" class="tab-panel"><div class="wrap">
-<div class="hero"><div class="hero-deco">📦</div>
+<div class="hero"><svg viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg" style="position:absolute;right:0;top:0;height:100%;width:120px;pointer-events:none;opacity:.22;">
+  <!-- Thân tre 1 -->
+  <rect x="72" y="0" width="9" height="200" rx="4" fill="white"/>
+  <rect x="72" y="35"  width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="75"  width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="115" width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="155" width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <!-- Thân tre 2 -->
+  <rect x="92" y="0" width="7" height="200" rx="3" fill="white"/>
+  <rect x="92" y="50"  width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <rect x="92" y="95"  width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <rect x="92" y="140" width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <!-- Thân tre 3 -->
+  <rect x="108" y="0" width="6" height="200" rx="3" fill="white"/>
+  <rect x="108" y="44"  width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <rect x="108" y="90"  width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <rect x="108" y="136" width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <!-- Lá tre 1 (từ thân 1) -->
+  <ellipse cx="65" cy="30"  rx="18" ry="5" transform="rotate(-35 65 30)"  fill="white"/>
+  <ellipse cx="60" cy="72"  rx="16" ry="4" transform="rotate(30 60 72)"   fill="white"/>
+  <ellipse cx="68" cy="110" rx="17" ry="5" transform="rotate(-28 68 110)" fill="white"/>
+  <ellipse cx="62" cy="150" rx="15" ry="4" transform="rotate(32 62 150)"  fill="white"/>
+  <!-- Lá tre 2 (từ thân 2) -->
+  <ellipse cx="86" cy="45"  rx="16" ry="4" transform="rotate(-30 86 45)"  fill="white"/>
+  <ellipse cx="84" cy="90"  rx="14" ry="3.5" transform="rotate(25 84 90)" fill="white"/>
+  <ellipse cx="87" cy="135" rx="15" ry="4" transform="rotate(-25 87 135)" fill="white"/>
+  <!-- Gradient fade trái: che phần gốc lá nhô vào nội dung -->
+  <defs>
+    <linearGradient id="bamboo-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-opacity="1" stop-color="transparent"/>
+      <stop offset="55%" stop-opacity="0" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+</svg><div class="hero-deco">📦</div>
   <div class="hero-vi" data-en="Stock & Storage Standards" data-vi="Nhập hàng & Bảo quản">Stock & Storage Standards</div>
   <div class="hero-en">Procurement frequency · Acceptance criteria · Storage rules</div>
   <div class="pills"><span class="pill">Daily baguette order</span><span class="pill">Check quality on receipt</span></div>
@@ -1384,7 +1500,40 @@ function enterApp(){
 
 <!-- ═══════════ TAB 5: COLD CUT ═══════════ -->
 <div id="p-coldcut" class="tab-panel"><div class="wrap">
-<div class="hero"><div class="hero-deco">🌿</div>
+<div class="hero"><svg viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg" style="position:absolute;right:0;top:0;height:100%;width:120px;pointer-events:none;opacity:.22;">
+  <!-- Thân tre 1 -->
+  <rect x="72" y="0" width="9" height="200" rx="4" fill="white"/>
+  <rect x="72" y="35"  width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="75"  width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="115" width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="155" width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <!-- Thân tre 2 -->
+  <rect x="92" y="0" width="7" height="200" rx="3" fill="white"/>
+  <rect x="92" y="50"  width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <rect x="92" y="95"  width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <rect x="92" y="140" width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <!-- Thân tre 3 -->
+  <rect x="108" y="0" width="6" height="200" rx="3" fill="white"/>
+  <rect x="108" y="44"  width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <rect x="108" y="90"  width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <rect x="108" y="136" width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <!-- Lá tre 1 (từ thân 1) -->
+  <ellipse cx="65" cy="30"  rx="18" ry="5" transform="rotate(-35 65 30)"  fill="white"/>
+  <ellipse cx="60" cy="72"  rx="16" ry="4" transform="rotate(30 60 72)"   fill="white"/>
+  <ellipse cx="68" cy="110" rx="17" ry="5" transform="rotate(-28 68 110)" fill="white"/>
+  <ellipse cx="62" cy="150" rx="15" ry="4" transform="rotate(32 62 150)"  fill="white"/>
+  <!-- Lá tre 2 (từ thân 2) -->
+  <ellipse cx="86" cy="45"  rx="16" ry="4" transform="rotate(-30 86 45)"  fill="white"/>
+  <ellipse cx="84" cy="90"  rx="14" ry="3.5" transform="rotate(25 84 90)" fill="white"/>
+  <ellipse cx="87" cy="135" rx="15" ry="4" transform="rotate(-25 87 135)" fill="white"/>
+  <!-- Gradient fade trái: che phần gốc lá nhô vào nội dung -->
+  <defs>
+    <linearGradient id="bamboo-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-opacity="1" stop-color="transparent"/>
+      <stop offset="55%" stop-opacity="0" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+</svg><div class="hero-deco">🌿</div>
   <div class="hero-vi">Bánh Mì Thịt Nguội</div>
   <div class="hero-en">Vietnamese Cold Cut Sandwich — Foundation item</div>
   <div class="pills"><span class="pill">⏱ &lt;3 min</span><span class="pill">✅ No cooking needed</span><span class="pill">Master this first</span></div>
@@ -1433,7 +1582,40 @@ function enterApp(){
 
 <!-- ═══════════ TAB 6: FRIED EGG ═══════════ -->
 <div id="p-egg" class="tab-panel"><div class="wrap">
-<div class="hero"><div class="hero-deco">🍳</div>
+<div class="hero"><svg viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg" style="position:absolute;right:0;top:0;height:100%;width:120px;pointer-events:none;opacity:.22;">
+  <!-- Thân tre 1 -->
+  <rect x="72" y="0" width="9" height="200" rx="4" fill="white"/>
+  <rect x="72" y="35"  width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="75"  width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="115" width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="155" width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <!-- Thân tre 2 -->
+  <rect x="92" y="0" width="7" height="200" rx="3" fill="white"/>
+  <rect x="92" y="50"  width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <rect x="92" y="95"  width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <rect x="92" y="140" width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <!-- Thân tre 3 -->
+  <rect x="108" y="0" width="6" height="200" rx="3" fill="white"/>
+  <rect x="108" y="44"  width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <rect x="108" y="90"  width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <rect x="108" y="136" width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <!-- Lá tre 1 (từ thân 1) -->
+  <ellipse cx="65" cy="30"  rx="18" ry="5" transform="rotate(-35 65 30)"  fill="white"/>
+  <ellipse cx="60" cy="72"  rx="16" ry="4" transform="rotate(30 60 72)"   fill="white"/>
+  <ellipse cx="68" cy="110" rx="17" ry="5" transform="rotate(-28 68 110)" fill="white"/>
+  <ellipse cx="62" cy="150" rx="15" ry="4" transform="rotate(32 62 150)"  fill="white"/>
+  <!-- Lá tre 2 (từ thân 2) -->
+  <ellipse cx="86" cy="45"  rx="16" ry="4" transform="rotate(-30 86 45)"  fill="white"/>
+  <ellipse cx="84" cy="90"  rx="14" ry="3.5" transform="rotate(25 84 90)" fill="white"/>
+  <ellipse cx="87" cy="135" rx="15" ry="4" transform="rotate(-25 87 135)" fill="white"/>
+  <!-- Gradient fade trái: che phần gốc lá nhô vào nội dung -->
+  <defs>
+    <linearGradient id="bamboo-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-opacity="1" stop-color="transparent"/>
+      <stop offset="55%" stop-opacity="0" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+</svg><div class="hero-deco">🍳</div>
   <div class="hero-vi">Bánh Mì Trứng</div>
   <div class="hero-en">Vietnamese Fried Egg Sandwich — 2 crispy-edged sunny-side up eggs</div>
   <div class="pills"><span class="pill">⏱ 4–5 min</span><span class="pill">☀️ Great for breakfast</span><span class="pill">Requires frying</span></div>
@@ -1484,7 +1666,40 @@ function enterApp(){
 
 <!-- ═══════════ TAB 7: GRILLED CHICKEN ═══════════ -->
 <div id="p-chicken" class="tab-panel"><div class="wrap">
-<div class="hero"><div class="hero-deco">🌿</div>
+<div class="hero"><svg viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg" style="position:absolute;right:0;top:0;height:100%;width:120px;pointer-events:none;opacity:.22;">
+  <!-- Thân tre 1 -->
+  <rect x="72" y="0" width="9" height="200" rx="4" fill="white"/>
+  <rect x="72" y="35"  width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="75"  width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="115" width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="155" width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <!-- Thân tre 2 -->
+  <rect x="92" y="0" width="7" height="200" rx="3" fill="white"/>
+  <rect x="92" y="50"  width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <rect x="92" y="95"  width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <rect x="92" y="140" width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <!-- Thân tre 3 -->
+  <rect x="108" y="0" width="6" height="200" rx="3" fill="white"/>
+  <rect x="108" y="44"  width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <rect x="108" y="90"  width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <rect x="108" y="136" width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <!-- Lá tre 1 (từ thân 1) -->
+  <ellipse cx="65" cy="30"  rx="18" ry="5" transform="rotate(-35 65 30)"  fill="white"/>
+  <ellipse cx="60" cy="72"  rx="16" ry="4" transform="rotate(30 60 72)"   fill="white"/>
+  <ellipse cx="68" cy="110" rx="17" ry="5" transform="rotate(-28 68 110)" fill="white"/>
+  <ellipse cx="62" cy="150" rx="15" ry="4" transform="rotate(32 62 150)"  fill="white"/>
+  <!-- Lá tre 2 (từ thân 2) -->
+  <ellipse cx="86" cy="45"  rx="16" ry="4" transform="rotate(-30 86 45)"  fill="white"/>
+  <ellipse cx="84" cy="90"  rx="14" ry="3.5" transform="rotate(25 84 90)" fill="white"/>
+  <ellipse cx="87" cy="135" rx="15" ry="4" transform="rotate(-25 87 135)" fill="white"/>
+  <!-- Gradient fade trái: che phần gốc lá nhô vào nội dung -->
+  <defs>
+    <linearGradient id="bamboo-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-opacity="1" stop-color="transparent"/>
+      <stop offset="55%" stop-opacity="0" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+</svg><div class="hero-deco">🌿</div>
   <div class="hero-vi">Bánh Mì Gà Nướng Sả</div>
   <div class="hero-en">Lemongrass Grilled Chicken Sandwich — Premium item</div>
   <div class="pills"><span class="pill">⏱ 5–6 min</span><span class="pill">⭐ Premium</span><span class="pill">Marinate ahead</span></div>
@@ -1534,7 +1749,40 @@ function enterApp(){
 
 <!-- ═══════════ TAB 8: DAILY SCHEDULE ═══════════ -->
 <div id="p-schedule" class="tab-panel"><div class="wrap">
-<div class="hero"><div class="hero-deco">⏰</div>
+<div class="hero"><svg viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg" style="position:absolute;right:0;top:0;height:100%;width:120px;pointer-events:none;opacity:.22;">
+  <!-- Thân tre 1 -->
+  <rect x="72" y="0" width="9" height="200" rx="4" fill="white"/>
+  <rect x="72" y="35"  width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="75"  width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="115" width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <rect x="72" y="155" width="9" height="3" fill="rgba(0,0,0,.3)"/>
+  <!-- Thân tre 2 -->
+  <rect x="92" y="0" width="7" height="200" rx="3" fill="white"/>
+  <rect x="92" y="50"  width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <rect x="92" y="95"  width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <rect x="92" y="140" width="7" height="2.5" fill="rgba(0,0,0,.3)"/>
+  <!-- Thân tre 3 -->
+  <rect x="108" y="0" width="6" height="200" rx="3" fill="white"/>
+  <rect x="108" y="44"  width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <rect x="108" y="90"  width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <rect x="108" y="136" width="6" height="2" fill="rgba(0,0,0,.25)"/>
+  <!-- Lá tre 1 (từ thân 1) -->
+  <ellipse cx="65" cy="30"  rx="18" ry="5" transform="rotate(-35 65 30)"  fill="white"/>
+  <ellipse cx="60" cy="72"  rx="16" ry="4" transform="rotate(30 60 72)"   fill="white"/>
+  <ellipse cx="68" cy="110" rx="17" ry="5" transform="rotate(-28 68 110)" fill="white"/>
+  <ellipse cx="62" cy="150" rx="15" ry="4" transform="rotate(32 62 150)"  fill="white"/>
+  <!-- Lá tre 2 (từ thân 2) -->
+  <ellipse cx="86" cy="45"  rx="16" ry="4" transform="rotate(-30 86 45)"  fill="white"/>
+  <ellipse cx="84" cy="90"  rx="14" ry="3.5" transform="rotate(25 84 90)" fill="white"/>
+  <ellipse cx="87" cy="135" rx="15" ry="4" transform="rotate(-25 87 135)" fill="white"/>
+  <!-- Gradient fade trái: che phần gốc lá nhô vào nội dung -->
+  <defs>
+    <linearGradient id="bamboo-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-opacity="1" stop-color="transparent"/>
+      <stop offset="55%" stop-opacity="0" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+</svg><div class="hero-deco">⏰</div>
   <div class="hero-vi" data-en="Daily Schedule" data-vi="Lịch ca làm việc">Daily Schedule</div>
   <div class="hero-en">Bánh Mì Station — Opening · Service · Closing</div>
   <div class="pills"><span class="pill">Shift A: Opening prep</span><span class="pill">Shift B: Service</span><span class="pill">Shift C: Closing</span></div>
