@@ -252,38 +252,518 @@ body::after{
 .inv-pkg-item img{width:100%;height:90px;object-fit:cover;display:block;background:#F1F8F1;}
 .inv-pkg-label{font-size:12px;font-weight:700;color:var(--ink);padding:6px 8px 2px;}
 .inv-pkg-spec{font-size:11px;color:var(--ink3);padding:0 8px 8px;line-height:1.4;}
+
+/* KHĂN RẰN MIỀN TÂY — ô vuông + đường chéo đặc trưng */
+.pat {
+  height: 16px !important;
+  background:
+    repeating-linear-gradient(45deg, transparent 0px, transparent 4px, rgba(255,255,255,.35) 4px, rgba(255,255,255,.35) 5px),
+    repeating-linear-gradient(-45deg, transparent 0px, transparent 4px, rgba(0,0,0,.25) 4px, rgba(0,0,0,.25) 5px),
+    repeating-conic-gradient(#1a1a1a 0% 25%, #e8e8e8 0% 50%) 0 0 / 14px 14px !important;
+}
+body::before, body::after {
+  background:
+    repeating-linear-gradient(45deg, transparent 0px, transparent 5px, rgba(255,255,255,.2) 5px, rgba(255,255,255,.2) 6px),
+    repeating-linear-gradient(-45deg, transparent 0px, transparent 5px, rgba(0,0,0,.15) 5px, rgba(0,0,0,.15) 6px),
+    repeating-conic-gradient(#1a1a1a 0% 25%, #e8e8e8 0% 50%) 0 0 / 10px 10px !important;
+  width: 10px !important;
+}
+
+
+/* ══════════════════════════════
+   MOBILE RESPONSIVE
+══════════════════════════════ */
+
+/* Table scroll wrapper */
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: .75rem; border-radius: 10px; }
+.table-wrap .ing-table,
+.table-wrap .store-table { margin-bottom: 0; }
+
+/* Nav: smaller on mobile, 2 lines if needed */
+@media (max-width: 600px) {
+  body::before, body::after { width: 5px !important; }
+
+  .wrap { padding: .75rem .6rem; }
+
+  .hdr-inner { padding: .875rem .875rem 0; }
+
+  .ntab {
+    padding: 8px 10px;
+    font-size: 10.5px;
+  }
+
+  .hero { padding: 1rem; border-radius: 10px; }
+  .hero-vi { font-size: 18px; }
+  .hero-en { font-size: 11.5px; }
+
+  .equip-img-row { flex-direction: column; }
+  .equip-img-box { width: 100%; height: 180px; }
+  .equip-spec { grid-template-columns: 1fr 1fr; }
+
+  .inv-grid { grid-template-columns: 80px 1fr; gap: 10px; }
+  .inv-img-wrap { width: 80px; height: 80px; }
+  .inv-img-ph   { width: 80px; height: 80px; font-size: 22px; }
+
+  .inv-grid3 { grid-template-columns: 1fr; }
+
+  .prep-grid { grid-template-columns: 1fr; }
+
+  .summary-grid { grid-template-columns: 1fr 1fr; }
+  .sum-val { font-size: 18px; }
+
+  .equip-spec { grid-template-columns: 1fr; }
+
+  .sched-body { padding: 10px; }
+  .sched-item { font-size: 12px; }
+
+  .std-key { min-width: 100px; font-size: 11px; }
+
+  .ing-table th, .ing-table td,
+  .store-table th, .store-table td { padding: 6px 8px; font-size: 11.5px; }
+
+  .brand { font-size: 13px; }
+  .brand span { font-size: 10px; }
+  .logo-wrap { width: 42px; height: 42px; }
+}
+
+@media (max-width: 400px) {
+  .ntab { padding: 7px 8px; font-size: 10px; }
+  .hero-vi { font-size: 16px; }
+  .inv-grid { grid-template-columns: 70px 1fr; }
+  .inv-img-wrap { width: 70px; height: 70px; }
+  .inv-img-ph   { width: 70px; height: 70px; }
+}
+
 </style>
 </head>
 <body>
+
+
+<div id="splash" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;overflow:hidden;background:#0a0a0a;">
+
+  <!-- SVG SCENE: Chợ Bến Thành + Sài Gòn -->
+  <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg"
+       style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+    <defs>
+      <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#0D1B2A"/>
+        <stop offset="55%" stop-color="#1B3A5C"/>
+        <stop offset="100%" stop-color="#2E5C8A"/>
+      </linearGradient>
+      <linearGradient id="wall2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#C8A96E"/>
+        <stop offset="100%" stop-color="#A07840"/>
+      </linearGradient>
+      <linearGradient id="walld2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#8B6B35"/>
+        <stop offset="100%" stop-color="#6B4F20"/>
+      </linearGradient>
+      <linearGradient id="road2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#2a2218"/>
+        <stop offset="100%" stop-color="#0a0805"/>
+      </linearGradient>
+      <filter id="glow2"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      <filter id="sglow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+
+    <!-- SKY -->
+    <rect width="800" height="450" fill="url(#sky2)"/>
+
+    <!-- STARS -->
+    <circle cx="70" cy="35" r="1" fill="white" opacity=".6"/>
+    <circle cx="140" cy="22" r="1.2" fill="white" opacity=".5"/>
+    <circle cx="210" cy="48" r="1" fill="white" opacity=".7"/>
+    <circle cx="320" cy="18" r="1.4" fill="white" opacity=".4"/>
+    <circle cx="480" cy="30" r="1" fill="white" opacity=".6"/>
+    <circle cx="600" cy="15" r="1.2" fill="white" opacity=".5"/>
+    <circle cx="710" cy="42" r="1" fill="white" opacity=".7"/>
+    <circle cx="760" cy="28" r="0.8" fill="white" opacity=".4"/>
+    <circle cx="55" cy="70" r="0.8" fill="white" opacity=".5"/>
+    <circle cx="660" cy="60" r="0.9" fill="white" opacity=".4"/>
+
+    <!-- MOON -->
+    <circle cx="680" cy="58" r="24" fill="#FDF5C8" opacity=".9" filter="url(#sglow)"/>
+    <circle cx="691" cy="49" r="20" fill="#1B3A5C"/>
+
+    <!-- DISTANT BUILDINGS silhouette -->
+    <rect x="0"   y="285" width="90"  height="100" fill="#0D1B2A" opacity=".7"/>
+    <rect x="25"  y="255" width="22"  height="130" fill="#0D1B2A" opacity=".7"/>
+    <rect x="55"  y="270" width="18"  height="115" fill="#0D1B2A" opacity=".65"/>
+    <rect x="670" y="275" width="130" height="110" fill="#0D1B2A" opacity=".7"/>
+    <rect x="695" y="248" width="28"  height="137" fill="#0D1B2A" opacity=".7"/>
+    <rect x="735" y="260" width="22"  height="125" fill="#0D1B2A" opacity=".65"/>
+    <rect x="760" y="272" width="40"  height="113" fill="#0D1B2A" opacity=".6"/>
+    <!-- Building windows lit up -->
+    <rect x="30"  y="262" width="5" height="4" fill="#F5D76E" opacity=".4"/>
+    <rect x="40"  y="262" width="5" height="4" fill="#F5D76E" opacity=".3"/>
+    <rect x="30"  y="272" width="5" height="4" fill="#F5D76E" opacity=".5"/>
+    <rect x="700" y="255" width="5" height="4" fill="#F5D76E" opacity=".4"/>
+    <rect x="710" y="260" width="5" height="4" fill="#F5D76E" opacity=".3"/>
+    <rect x="740" y="267" width="5" height="4" fill="#F5D76E" opacity=".4"/>
+
+    <!-- TREES left -->
+    <rect x="88" y="320" width="6" height="65" fill="#2A1A08"/>
+    <ellipse cx="91" cy="315" rx="22" ry="28" fill="#1B3D1A" opacity=".85"/>
+    <ellipse cx="91" cy="308" rx="16" ry="20" fill="#255025" opacity=".7"/>
+    <rect x="130" y="330" width="5" height="55" fill="#2A1A08"/>
+    <ellipse cx="132" cy="325" rx="18" ry="22" fill="#1B3D1A" opacity=".8"/>
+
+    <!-- TREES right -->
+    <rect x="660" y="318" width="6" height="67" fill="#2A1A08"/>
+    <ellipse cx="663" cy="312" rx="22" ry="28" fill="#1B3D1A" opacity=".85"/>
+    <ellipse cx="663" cy="305" rx="16" ry="20" fill="#255025" opacity=".7"/>
+    <rect x="705" y="328" width="5" height="57" fill="#2A1A08"/>
+    <ellipse cx="707" cy="323" rx="18" ry="22" fill="#1B3D1A" opacity=".8"/>
+
+    <!-- LAMP POSTS -->
+    <rect x="155" y="310" width="4" height="75" fill="#4A3015"/>
+    <circle cx="157" cy="307" r="7" fill="#F5D76E" opacity=".7" filter="url(#glow2)"/>
+    <line x1="157" y1="308" x2="165" y2="318" stroke="#4A3015" stroke-width="2"/>
+    <rect x="637" y="310" width="4" height="75" fill="#4A3015"/>
+    <circle cx="639" cy="307" r="7" fill="#F5D76E" opacity=".7" filter="url(#glow2)"/>
+    <line x1="639" y1="308" x2="631" y2="318" stroke="#4A3015" stroke-width="2"/>
+
+    <!-- ROAD -->
+    <rect x="0" y="375" width="800" height="75" fill="url(#road2)"/>
+    <rect x="0" y="375" width="800" height="3" fill="#3a3020" opacity=".5"/>
+    <!-- Road dashes -->
+    <rect x="360" y="390" width="40" height="6" rx="2" fill="#F5D76E" opacity=".25"/>
+    <rect x="360" y="403" width="40" height="6" rx="2" fill="#F5D76E" opacity=".25"/>
+    <rect x="360" y="416" width="40" height="6" rx="2" fill="#F5D76E" opacity=".25"/>
+    <!-- Sidewalk line -->
+    <rect x="0" y="374" width="800" height="2" fill="#C8A040" opacity=".2"/>
+
+    <!-- ═══ BẾN THÀNH MARKET ═══ -->
+
+    <!-- LEFT WING -->
+    <rect x="105" y="295" width="155" height="95" fill="url(#wall2)"/>
+    <rect x="105" y="295" width="155" height="9" fill="#D4AF70"/>
+    <polygon points="95,295 268,295 258,272 105,272" fill="#8B6B35"/>
+    <!-- Left arches -->
+    <rect x="118" y="325" width="33" height="60" rx="16" fill="#3D2810"/>
+    <rect x="163" y="325" width="33" height="60" rx="16" fill="#3D2810"/>
+    <rect x="208" y="325" width="33" height="60" rx="16" fill="#3D2810"/>
+    <!-- Left small tower -->
+    <rect x="93"  y="260" width="20" height="36" fill="url(#walld2)"/>
+    <polygon points="85,260 121,260 103,242" fill="#6B4F20"/>
+
+    <!-- RIGHT WING -->
+    <rect x="540" y="295" width="155" height="95" fill="url(#wall2)"/>
+    <rect x="540" y="295" width="155" height="9" fill="#D4AF70"/>
+    <polygon points="532,295 703,295 693,272 540,272" fill="#8B6B35"/>
+    <!-- Right arches -->
+    <rect x="549" y="325" width="33" height="60" rx="16" fill="#3D2810"/>
+    <rect x="594" y="325" width="33" height="60" rx="16" fill="#3D2810"/>
+    <rect x="639" y="325" width="33" height="60" rx="16" fill="#3D2810"/>
+    <!-- Right small tower -->
+    <rect x="687" y="260" width="20" height="36" fill="url(#walld2)"/>
+    <polygon points="679,260 715,260 697,242" fill="#6B4F20"/>
+
+    <!-- CENTER BODY -->
+    <rect x="255" y="275" width="290" height="115" fill="url(#wall2)"/>
+    <rect x="255" y="275" width="290" height="10" fill="#D4AF70"/>
+    <rect x="255" y="315" width="290" height="5"  fill="#C8A040" opacity=".4"/>
+    <!-- Center main arch -->
+    <rect x="348" y="308" width="104" height="82" rx="52" fill="#2A1A08"/>
+    <rect x="357" y="313" width="86"  height="72" rx="43" fill="#1a1008"/>
+    <!-- Center side arches -->
+    <rect x="272" y="322" width="62" height="68" rx="31" fill="#3D2810"/>
+    <rect x="280" y="327" width="47" height="58" rx="24" fill="#1a1008"/>
+    <rect x="466" y="322" width="62" height="68" rx="31" fill="#3D2810"/>
+    <rect x="474" y="327" width="47" height="58" rx="24" fill="#1a1008"/>
+    <!-- Decorative windows center -->
+    <rect x="278" y="283" width="18" height="9" rx="4" fill="#2A1A08" opacity=".6"/>
+    <rect x="308" y="283" width="18" height="9" rx="4" fill="#2A1A08" opacity=".6"/>
+    <rect x="474" y="283" width="18" height="9" rx="4" fill="#2A1A08" opacity=".6"/>
+    <rect x="504" y="283" width="18" height="9" rx="4" fill="#2A1A08" opacity=".6"/>
+
+    <!-- CLOCK TOWER -->
+    <rect x="325" y="198" width="150" height="85" fill="url(#walld2)"/>
+    <rect x="325" y="198" width="150" height="8"  fill="#C8A040"/>
+    <!-- Tower side windows -->
+    <rect x="336" y="214" width="14" height="18" rx="7" fill="#1B3A5C" opacity=".8"/>
+    <rect x="450" y="214" width="14" height="18" rx="7" fill="#1B3A5C" opacity=".8"/>
+    <rect x="336" y="246" width="14" height="18" rx="7" fill="#1B3A5C" opacity=".8"/>
+    <rect x="450" y="246" width="14" height="18" rx="7" fill="#1B3A5C" opacity=".8"/>
+    <!-- CLOCK -->
+    <circle cx="400" cy="236" r="32" fill="#F8F0D8" filter="url(#glow2)"/>
+    <circle cx="400" cy="236" r="30" fill="#FDF8EC"/>
+    <circle cx="400" cy="236" r="3.5" fill="#2A1A08"/>
+    <text x="400" y="218" text-anchor="middle" font-size="8" fill="#2A1A08" font-weight="bold" font-family="serif">12</text>
+    <text x="400" y="257" text-anchor="middle" font-size="8" fill="#2A1A08" font-weight="bold" font-family="serif">6</text>
+    <text x="422" y="240" text-anchor="middle" font-size="8" fill="#2A1A08" font-weight="bold" font-family="serif">3</text>
+    <text x="378" y="240" text-anchor="middle" font-size="8" fill="#2A1A08" font-weight="bold" font-family="serif">9</text>
+    <line x1="400" y1="236" x2="394" y2="216" stroke="#2A1A08" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="400" y1="236" x2="415" y2="226" stroke="#2A1A08" stroke-width="2"   stroke-linecap="round"/>
+    <line x1="400" y1="236" x2="400" y2="253" stroke="#C0392B" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- UPPER TOWER -->
+    <rect x="348" y="143" width="104" height="58" fill="#8B6B35"/>
+    <rect x="348" y="143" width="104" height="7"  fill="#C8A040"/>
+    <rect x="362" y="156" width="7"  height="16" rx="3" fill="#5B3A1A" opacity=".7"/>
+    <rect x="431" y="156" width="7"  height="16" rx="3" fill="#5B3A1A" opacity=".7"/>
+    <rect x="396" y="153" width="8"  height="20" rx="4" fill="#5B3A1A" opacity=".8"/>
+
+    <!-- ROOF GABLE -->
+    <polygon points="325,143 475,143 455,116 345,116" fill="#6B4F20"/>
+    <polygon points="325,143 475,143 455,116 345,116" fill="none" stroke="#C8A040" stroke-width="1.5"/>
+
+    <!-- FLAGPOLE + VIETNAMESE FLAG -->
+    <rect x="398" y="88" width="5" height="29" fill="#8B6B35"/>
+    <polygon points="398,88 403,88 400,71" fill="#C8A040"/>
+    <rect x="403" y="78" width="20" height="13" fill="#DA2034"/>
+    <polygon points="413,80 414.5,84.5 419,84.5 415.5,87.2 416.8,91.5 413,89 409.2,91.5 410.5,87.2 407,84.5 411.5,84.5" fill="#F5D76E"/>
+
+    <!-- ═══ XE BÁN BÁNH MÌ (xe cút kít tay) ═══ -->
+    <!-- Left side of building -->
+    <!-- Cart body/box -->
+    <rect x="155" y="340" width="58" height="32" rx="3" fill="#D4A030"/>
+    <rect x="155" y="340" width="58" height="6"  rx="2" fill="#E8B840"/>
+    <!-- Cart top -->
+    <polygon points="150,340 218,340 215,328 153,328" fill="#C8380A"/>
+    <polygon points="150,340 218,340 215,328 153,328" fill="none" stroke="#A02808" stroke-width="1"/>
+    <!-- Roof ridge -->
+    <rect x="152" y="327" width="64" height="3" rx="1" fill="#E84010"/>
+    <!-- Small roof curve ends -->
+    <path d="M150,340 Q147,335 153,328" fill="none" stroke="#C8380A" stroke-width="2"/>
+    <path d="M218,340 Q221,335 215,328" fill="none" stroke="#C8380A" stroke-width="2"/>
+    <!-- Glass front panel -->
+    <rect x="160" y="346" width="22" height="20" rx="2" fill="#A8D4E8" opacity=".5"/>
+    <rect x="186" y="346" width="22" height="20" rx="2" fill="#A8D4E8" opacity=".5"/>
+    <!-- Bread display inside -->
+    <ellipse cx="171" cy="354" rx="7" ry="4" fill="#D4881A"/>
+    <ellipse cx="171" cy="354" rx="5" ry="2.5" fill="#E8A030"/>
+    <ellipse cx="197" cy="354" rx="7" ry="4" fill="#D4881A"/>
+    <ellipse cx="197" cy="354" rx="5" ry="2.5" fill="#E8A030"/>
+    <!-- Cart frame/handle -->
+    <rect x="213" y="344" width="3"  height="28" fill="#6B4A20"/>
+    <rect x="213" y="369" width="22" height="3"  fill="#6B4A20" rx="1"/>
+    <!-- Small sign on cart -->
+    <rect x="157" y="332" width="36" height="8" rx="2" fill="#DA2034"/>
+    <text x="175" y="339" text-anchor="middle" font-size="5.5" fill="white" font-family="sans-serif" font-weight="bold">BÁNH MÌ</text>
+    <!-- Wheels -->
+    <circle cx="165" cy="374" r="8"  fill="#3D2810"/>
+    <circle cx="165" cy="374" r="5"  fill="#6B4A20"/>
+    <circle cx="165" cy="374" r="2"  fill="#C8A040"/>
+    <circle cx="204" cy="374" r="8"  fill="#3D2810"/>
+    <circle cx="204" cy="374" r="5"  fill="#6B4A20"/>
+    <circle cx="204" cy="374" r="2"  fill="#C8A040"/>
+    <!-- Wheel spokes -->
+    <line x1="165" y1="366" x2="165" y2="382" stroke="#C8A040" stroke-width="1" opacity=".7"/>
+    <line x1="157" y1="374" x2="173" y2="374" stroke="#C8A040" stroke-width="1" opacity=".7"/>
+    <line x1="159" y1="368" x2="171" y2="380" stroke="#C8A040" stroke-width="1" opacity=".5"/>
+    <line x1="171" y1="368" x2="159" y2="380" stroke="#C8A040" stroke-width="1" opacity=".5"/>
+    <line x1="204" y1="366" x2="204" y2="382" stroke="#C8A040" stroke-width="1" opacity=".7"/>
+    <line x1="196" y1="374" x2="212" y2="374" stroke="#C8A040" stroke-width="1" opacity=".7"/>
+    <!-- Cart vendor silhouette -->
+    <ellipse cx="238" cy="348" rx="8" ry="8" fill="#1a1008"/>
+    <rect x="232" y="355" width="12" height="20" rx="4" fill="#1a1008"/>
+    <rect x="228" y="360" width="8"  height="3"  rx="1" fill="#1a1008"/>
+
+    <!-- ═══ XE MÁY bên phải ═══ -->
+    <!-- Motorbike silhouette right side -->
+    <ellipse cx="590" cy="376" rx="12" ry="12" fill="#1a1008"/>
+    <ellipse cx="590" cy="376" rx="8"  ry="8"  fill="#2a2218"/>
+    <ellipse cx="620" cy="376" rx="11" ry="11" fill="#1a1008"/>
+    <ellipse cx="620" cy="376" rx="7"  ry="7"  fill="#2a2218"/>
+    <rect x="591" y="355" width="28" height="18" rx="6" fill="#1a1008"/>
+    <rect x="598" y="350" width="14" height="8"  rx="4" fill="#1a1008"/>
+    <!-- Rider -->
+    <ellipse cx="604" cy="348" rx="7" ry="7" fill="#1a1008"/>
+    <rect x="598" y="354" width="14" height="14" rx="3" fill="#1a1008"/>
+    <!-- Headlight glow -->
+    <circle cx="632" cy="366" r="4" fill="#F5D76E" opacity=".6" filter="url(#glow2)"/>
+    <!-- Another motorbike far right -->
+    <ellipse cx="660" cy="378" rx="9" ry="9" fill="#0D1510"/>
+    <ellipse cx="683" cy="378" rx="8" ry="8" fill="#0D1510"/>
+    <rect x="660" y="360" width="22" height="15" rx="5" fill="#0D1510"/>
+    <ellipse cx="670" cy="357" rx="5" ry="5" fill="#0D1510"/>
+
+    <!-- SHOP SIGNS (bảng hiệu) -->
+    <!-- Bảng Phở -->
+    <rect x="90" y="292" width="28" height="14" rx="2" fill="#DA2034"/>
+    <text x="104" y="302" text-anchor="middle" font-size="6" fill="white" font-family="sans-serif" font-weight="bold">PHỞ</text>
+    <!-- Bảng Cà Phê -->
+    <rect x="670" y="290" width="40" height="14" rx="2" fill="#1B3A5C"/>
+    <text x="690" y="300" text-anchor="middle" font-size="6" fill="#F5D76E" font-family="sans-serif" font-weight="bold">CÀ PHÊ</text>
+    <!-- Small hanging lanterns -->
+    <line x1="380" y1="270" x2="375" y2="285" stroke="#C8A040" stroke-width="1" opacity=".5"/>
+    <ellipse cx="375" cy="288" rx="4" ry="6" fill="#DA2034" opacity=".7"/>
+    <line x1="420" y1="270" x2="425" y2="285" stroke="#C8A040" stroke-width="1" opacity=".5"/>
+    <ellipse cx="425" cy="288" rx="4" ry="6" fill="#DA2034" opacity=".7"/>
+
+    <!-- WARM GROUND GLOW -->
+    <ellipse cx="400" cy="385" rx="220" ry="18" fill="#C8A040" opacity=".07"/>
+
+    <!-- CINEMATIC OVERLAY -->
+    <rect width="800" height="450" fill="black" opacity=".44"/>
+    <!-- Letterbox bars -->
+    <rect width="800" height="32" fill="black" opacity=".75"/>
+    <rect y="418" width="800" height="32" fill="black" opacity=".75"/>
+  </svg>
+
+  <!-- TEXT CONTENT -->
+  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;">
+
+    <!-- Line 1: Welcome -->
+    <div id="sp-l1" style="
+      font-family:'Be Vietnam Pro',sans-serif;
+      font-size:clamp(26px,5.5vw,60px);
+      font-weight:900;
+      color:#ffffff;
+      letter-spacing:.06em;
+      text-shadow:0 2px 24px rgba(0,0,0,.9), 0 0 60px rgba(0,0,0,.6);
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity .9s ease, transform .9s ease;
+      margin-bottom:1.5rem;
+      text-transform:uppercase;
+    ">Welcome to Vietnam</div>
+
+    <!-- Line 2: RAO — styled như tiếng rao đường phố -->
+    <div id="sp-l2" style="
+      font-family:'Be Vietnam Pro',sans-serif;
+      font-size:clamp(15px,2.8vw,28px);
+      font-weight:800;
+      font-style:italic;
+      color:#F5D76E;
+      letter-spacing:.02em;
+      text-shadow:0 2px 16px rgba(0,0,0,.95), 0 0 40px rgba(245,215,110,.3);
+      opacity:0;
+      transform:translateY(12px) rotate(-0.8deg);
+      transition:opacity .8s ease .7s, transform .8s ease .7s;
+      position:relative;
+      padding:0 1rem;
+      line-height:1.3;
+    ">
+      <!-- Dấu ngoặc kép kiểu loa phát thanh -->
+      <span style="font-size:1.6em;opacity:.5;vertical-align:-.1em;margin-right:.1em;">"</span>Bánh mì Sài Gòn, đặc biệt thơm ngon, 3 ngàn một ổ!<span style="font-size:1.6em;opacity:.5;vertical-align:-.1em;margin-left:.1em;">"</span>
+    </div>
+
+    <!-- Chú thích nhỏ bên dưới câu rao -->
+    <div id="sp-l3" style="
+      font-family:'Be Vietnam Pro',sans-serif;
+      font-size:clamp(10px,1.6vw,14px);
+      font-weight:400;
+      color:rgba(255,255,255,.6);
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      opacity:0;
+      transition:opacity .7s ease 1.3s;
+      margin-top:.6rem;
+    ">
+      ✦ &nbsp;The iconic street cry of Vietnamese bánh mì vendors&nbsp; ✦
+    </div>
+
+    <!-- ENTER BUTTON -->
+    <button id="sp-btn" onclick="enterApp()" style="
+      position:absolute;
+      bottom:clamp(38px,7vh,70px);
+      left:50%;
+      transform:translateX(-50%);
+      background:rgba(255,255,255,.1);
+      border:1.5px solid rgba(255,255,255,.45);
+      color:#fff;
+      font-family:'Be Vietnam Pro',sans-serif;
+      font-size:13px;
+      font-weight:700;
+      padding:12px 36px;
+      border-radius:30px;
+      cursor:pointer;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      backdrop-filter:blur(8px);
+      opacity:0;
+      transition:opacity .6s ease 1.6s, background .2s, border-color .2s;
+      pointer-events:none;
+    "
+    onmouseover="this.style.background='rgba(245,215,110,.18)';this.style.borderColor='rgba(245,215,110,.7)'"
+    onmouseout="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(255,255,255,.45)'">
+      Enter &nbsp;→
+    </button>
+  </div>
+</div>
+
+<style>
+@keyframes rao-swing {
+  0%   { transform:translateY(0) rotate(-0.8deg); }
+  25%  { transform:translateY(-3px) rotate(0.5deg); }
+  50%  { transform:translateY(0) rotate(-0.6deg); }
+  75%  { transform:translateY(-2px) rotate(0.3deg); }
+  100% { transform:translateY(0) rotate(-0.8deg); }
+}
+#sp-l2.visible { animation:rao-swing 3.5s ease-in-out infinite; }
+</style>
+
+<script>
+window.addEventListener('load', function() {
+  setTimeout(function(){
+    var l1=document.getElementById('sp-l1');
+    if(l1){l1.style.opacity='1';l1.style.transform='translateY(0)';}
+  }, 250);
+  setTimeout(function(){
+    var l2=document.getElementById('sp-l2');
+    if(l2){l2.style.opacity='1';l2.style.transform='translateY(0) rotate(-0.8deg)';l2.classList.add('visible');}
+  }, 900);
+  setTimeout(function(){
+    var l3=document.getElementById('sp-l3');
+    if(l3){l3.style.opacity='1';}
+  }, 1400);
+  setTimeout(function(){
+    var btn=document.getElementById('sp-btn');
+    if(btn){btn.style.opacity='1';btn.style.pointerEvents='auto';}
+  }, 1700);
+});
+function enterApp(){
+  var s=document.getElementById('splash');
+  s.style.transition='opacity .8s ease';
+  s.style.opacity='0';
+  setTimeout(function(){s.style.display='none';},800);
+}
+</script>
+
 
 <div class="pat"></div>
 
 <!-- HEADER -->
 <div class="hdr">
   <svg class="hdr-deco" viewBox="0 0 140 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <!-- Bamboo stalks -->
-    <rect x="20" y="0" width="8" height="300" fill="white"/>
-    <rect x="22" y="50" width="4" height="3" fill="rgba(0,0,0,.3)"/>
-    <rect x="22" y="100" width="4" height="3" fill="rgba(0,0,0,.3)"/>
-    <rect x="22" y="150" width="4" height="3" fill="rgba(0,0,0,.3)"/>
-    <rect x="22" y="200" width="4" height="3" fill="rgba(0,0,0,.3)"/>
-    <rect x="50" y="0" width="6" height="300" fill="white"/>
-    <rect x="52" y="70" width="3" height="3" fill="rgba(0,0,0,.3)"/>
-    <rect x="52" y="130" width="3" height="3" fill="rgba(0,0,0,.3)"/>
-    <rect x="52" y="190" width="3" height="3" fill="rgba(0,0,0,.3)"/>
-    <rect x="52" y="250" width="3" height="3" fill="rgba(0,0,0,.3)"/>
-    <rect x="80" y="0" width="7" height="300" fill="white"/>
-    <rect x="82" y="60" width="4" height="3" fill="rgba(0,0,0,.3)"/>
-    <rect x="82" y="120" width="4" height="3" fill="rgba(0,0,0,.3)"/>
-    <rect x="82" y="180" width="4" height="3" fill="rgba(0,0,0,.3)"/>
-    <rect x="82" y="240" width="4" height="3" fill="rgba(0,0,0,.3)"/>
-    <!-- Bamboo leaves -->
-    <ellipse cx="30" cy="40" rx="18" ry="6" transform="rotate(-30 30 40)" fill="white"/>
-    <ellipse cx="60" cy="90" rx="16" ry="5" transform="rotate(25 60 90)" fill="white"/>
-    <ellipse cx="90" cy="55" rx="20" ry="6" transform="rotate(-20 90 55)" fill="white"/>
-    <ellipse cx="35" cy="160" rx="18" ry="5" transform="rotate(30 35 160)" fill="white"/>
-    <ellipse cx="70" cy="200" rx="16" ry="5" transform="rotate(-25 70 200)" fill="white"/>
-    <ellipse cx="100" cy="160" rx="18" ry="5" transform="rotate(20 100 160)" fill="white"/>
+    <defs>
+      <pattern id="khanran" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+        <!-- Khăn rằn pattern: ô vuông chéo đỏ-trắng-đen -->
+        <rect width="20" height="20" fill="#8B1A1A" opacity=".15"/>
+        <rect x="0" y="0" width="10" height="10" fill="white" opacity=".08"/>
+        <rect x="10" y="10" width="10" height="10" fill="white" opacity=".08"/>
+        <line x1="0" y1="0" x2="20" y2="20" stroke="white" stroke-width="1" opacity=".12"/>
+        <line x1="20" y1="0" x2="0" y2="20" stroke="white" stroke-width="1" opacity=".08"/>
+        <rect x="8" y="8" width="4" height="4" fill="white" opacity=".15"/>
+      </pattern>
+    </defs>
+    <rect width="140" height="300" fill="url(#khanran)"/>
+    <!-- Vertical stripes đặc trưng khăn rằn -->
+    <rect x="0" y="0" width="3" height="300" fill="white" opacity=".06"/>
+    <rect x="20" y="0" width="1" height="300" fill="white" opacity=".1"/>
+    <rect x="40" y="0" width="3" height="300" fill="white" opacity=".06"/>
+    <rect x="60" y="0" width="1" height="300" fill="white" opacity=".1"/>
+    <rect x="80" y="0" width="3" height="300" fill="white" opacity=".06"/>
+    <rect x="100" y="0" width="1" height="300" fill="white" opacity=".1"/>
+    <rect x="120" y="0" width="3" height="300" fill="white" opacity=".06"/>
+    <!-- Horizontal stripes -->
+    <rect x="0" y="0" width="140" height="2" fill="white" opacity=".1"/>
+    <rect x="0" y="20" width="140" height="1" fill="white" opacity=".08"/>
+    <rect x="0" y="40" width="140" height="2" fill="white" opacity=".1"/>
+    <rect x="0" y="60" width="140" height="1" fill="white" opacity=".08"/>
+    <rect x="0" y="80" width="140" height="2" fill="white" opacity=".1"/>
+    <rect x="0" y="100" width="140" height="1" fill="white" opacity=".08"/>
+    <rect x="0" y="120" width="140" height="2" fill="white" opacity=".1"/>
+    <rect x="0" y="140" width="140" height="1" fill="white" opacity=".08"/>
+    <rect x="0" y="160" width="140" height="2" fill="white" opacity=".1"/>
+    <rect x="0" y="180" width="140" height="1" fill="white" opacity=".08"/>
+    <rect x="0" y="200" width="140" height="2" fill="white" opacity=".1"/>
+    <rect x="0" y="220" width="140" height="1" fill="white" opacity=".08"/>
+    <rect x="0" y="240" width="140" height="2" fill="white" opacity=".1"/>
+    <rect x="0" y="260" width="140" height="1" fill="white" opacity=".08"/>
+    <rect x="0" y="280" width="140" height="2" fill="white" opacity=".1"/>
   </svg>
 
   <div class="hdr-inner">
@@ -292,17 +772,18 @@ body::after{
       <div>
         <div class="brand">HappiTea Philippines<span>Bánh Mì Kitchen SOP — Internal Operations Reference</span></div>
         <div class="leaf-badge">🌿 Vietnamese Street Food</div>
+      
       </div>
     </div>
     <div class="nav">
-      <button class="ntab active" onclick="T('overview',this)">📋 Overview</button>
-      <button class="ntab" onclick="T('inventory',this)">🧾 Ingredients & Tools</button>
-      <button class="ntab" onclick="T('prep',this)">🔪 Mise en Place</button>
-      <button class="ntab" onclick="T('stock',this)">📦 Stock & Storage</button>
-      <button class="ntab" onclick="T('coldcut',this)">🥪 Cold Cut</button>
-      <button class="ntab" onclick="T('egg',this)">🍳 Fried Egg</button>
-      <button class="ntab" onclick="T('chicken',this)">🍗 Grilled Chicken</button>
-      <button class="ntab" onclick="T('schedule',this)">⏰ Daily Schedule</button>
+      <button class="ntab active" onclick="T('overview',this)" data-en="📋 Overview" data-vi="📋 Tổng quan">📋 Overview</button>
+      <button class="ntab" onclick="T('inventory',this)" data-en="🧾 Ingredients & Tools" data-vi="🧾 Nguyên liệu & Dụng cụ">🧾 Ingredients & Tools</button>
+      <button class="ntab" onclick="T('prep',this)" data-en="🔪 Mise en Place" data-vi="🔪 Sơ chế">🔪 Mise en Place</button>
+      <button class="ntab" onclick="T('stock',this)" data-en="📦 Stock & Storage" data-vi="📦 Nhập & Bảo quản">📦 Stock & Storage</button>
+      <button class="ntab" onclick="T('coldcut',this)" data-en="🥪 Cold Cut" data-vi="🥪 Thịt nguội">🥪 Cold Cut</button>
+      <button class="ntab" onclick="T('egg',this)" data-en="🍳 Fried Egg" data-vi="🍳 Trứng">🍳 Fried Egg</button>
+      <button class="ntab" onclick="T('chicken',this)" data-en="🍗 Grilled Chicken" data-vi="🍗 Gà nướng">🍗 Grilled Chicken</button>
+      <button class="ntab" onclick="T('schedule',this)" data-en="⏰ Daily Schedule" data-vi="⏰ Lịch ca">⏰ Daily Schedule</button>
     </div>
   </div>
 </div>
@@ -310,7 +791,7 @@ body::after{
 <!-- ═══════════ TAB 1: OVERVIEW ═══════════ -->
 <div id="p-overview" class="tab-panel active"><div class="wrap">
 <div class="hero"><div class="hero-deco">🎋</div>
-  <div class="hero-vi">Operations Overview</div>
+  <div class="hero-vi" data-en="Operations Overview" data-vi="Tổng quan vận hành">Operations Overview</div>
   <div class="hero-en">Equipment · Counter Setup · Philippines Notes</div>
   <div class="pills"><span class="pill">3 menu items</span><span class="pill">5–100 portions/day</span><span class="pill">Add-on at tea counter</span></div>
 </div>
@@ -329,9 +810,9 @@ body::after{
 ③ The smell of grilled meat and lemongrass will affect tea flavors if stations are mixed.<br>
 ④ If one staff member works both stations, wash hands and change apron when switching.
 </div>
-<div class="slabel">Required Equipment</div>
+<div class="slabel" data-en="Required Equipment" data-vi="Thiết bị cần thiết">Required Equipment</div>
 <div class="equip-card">
-  <div class="equip-card-head"><div class="equip-icon-wrap">🔆</div><div class="equip-name">Electric Toaster Oven (Lò nướng điện)</div><div class="equip-badge">REQUIRED</div></div>
+  <div class="equip-card-head"><div class="equip-icon-wrap">🔆</div><div class="equip-name">Electric Toaster Oven (Lò nướng điện)</div><div class="equip-badge" data-en="REQUIRED" data-vi="BẮT BUỘC">REQUIRED</div></div>
   <div class="equip-body"><div class="equip-img-row">
   <div class="equip-img-box"><img src="toaster-oven.png" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🔆<div>toaster-oven.png</div></div></div>
   <div class="equip-specs-right"><div class="equip-spec"><div class="spec-item"><div class="spec-label">Capacity</div><div class="spec-val">Min. 20 litres</div></div><div class="spec-item"><div class="spec-label">Power</div><div class="spec-val">1,200–1,800W</div></div><div class="spec-item"><div class="spec-label">Temperature</div><div class="spec-val">Adjustable 140–230°C</div></div><div class="spec-item"><div class="spec-label">Voltage</div><div class="spec-val">220V / 60Hz (PH)</div></div></div></div>
@@ -342,7 +823,7 @@ body::after{
 </div>
 
 <div class="equip-card">
-  <div class="equip-card-head"><div class="equip-icon-wrap">🔥</div><div class="equip-name">Single Burner Induction Cooktop (Bếp điện từ)</div><div class="equip-badge">REQUIRED</div></div>
+  <div class="equip-card-head"><div class="equip-icon-wrap">🔥</div><div class="equip-name">Single Burner Induction Cooktop (Bếp điện từ)</div><div class="equip-badge" data-en="REQUIRED" data-vi="BẮT BUỘC">REQUIRED</div></div>
   <div class="equip-body"><div class="equip-img-row">
   <div class="equip-img-box"><img src="induction-cooktop.png" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🔥<div>induction-cooktop.png</div></div></div>
   <div class="equip-specs-right"><div class="equip-spec"><div class="spec-item"><div class="spec-label">Power</div><div class="spec-val">1,800–2,000W</div></div><div class="spec-item"><div class="spec-label">Voltage</div><div class="spec-val">220V / 60Hz</div></div><div class="spec-item"><div class="spec-label">Surface</div><div class="spec-val">Tempered glass</div></div><div class="spec-item"><div class="spec-label">Heat levels</div><div class="spec-val">Multiple settings</div></div></div></div>
@@ -352,7 +833,7 @@ body::after{
 </div>
 
 <div class="equip-card">
-  <div class="equip-card-head"><div class="equip-icon-wrap">🍳</div><div class="equip-name">Ridged Grill Pan — for grilled chicken (Chảo grill)</div><div class="equip-badge">REQUIRED</div></div>
+  <div class="equip-card-head"><div class="equip-icon-wrap">🍳</div><div class="equip-name">Ridged Grill Pan — for grilled chicken (Chảo grill)</div><div class="equip-badge" data-en="REQUIRED" data-vi="BẮT BUỘC">REQUIRED</div></div>
   <div class="equip-body"><div class="equip-img-row">
   <div class="equip-img-box"><img src="grill-pan.png" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🍳<div>grill-pan.png</div></div></div>
   <div class="equip-specs-right"><div class="equip-spec"><div class="spec-item"><div class="spec-label">Shape</div><div class="spec-val">Square, ridged surface</div></div><div class="spec-item"><div class="spec-label">Size</div><div class="spec-val">26–28cm</div></div><div class="spec-item"><div class="spec-label">Material</div><div class="spec-val">Cast iron or alloy</div></div><div class="spec-item"><div class="spec-label">Base</div><div class="spec-val">Flat, magnetic (induction-ready)</div></div></div></div>
@@ -361,17 +842,17 @@ body::after{
 </div>
 
 <div class="equip-card">
-  <div class="equip-card-head"><div class="equip-icon-wrap">🥚</div><div class="equip-name">4-Hole Egg Pan — for fried eggs (Chảo chiên trứng 4 lỗ)</div><div class="equip-badge">REQUIRED</div></div>
+  <div class="equip-card-head"><div class="equip-icon-wrap">🥚</div><div class="equip-name">Small Non-Stick Frying Pan — for fried eggs (Chảo chiên trứng)</div><div class="equip-badge" data-en="REQUIRED" data-vi="BẮT BUỘC">REQUIRED</div></div>
   <div class="equip-body"><div class="equip-img-row">
   <div class="equip-img-box"><img src="frying-pan-small.png" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🥚<div>frying-pan-small.png</div></div></div>
-  <div class="equip-specs-right"><div class="equip-spec"><div class="spec-item"><div class="spec-label">Holes</div><div class="spec-val">4 circular moulds</div></div><div class="spec-item"><div class="spec-label">Coating</div><div class="spec-val">Non-stick granite</div></div><div class="spec-item"><div class="spec-label">Handle</div><div class="spec-val">Wooden grip</div></div><div class="spec-item"><div class="spec-label">Use</div><div class="spec-val">Fry eggs ONLY</div></div></div></div>
+  <div class="equip-specs-right"><div class="equip-spec"><div class="spec-item"><div class="spec-label">Size</div><div class="spec-val">20–22cm diameter</div></div><div class="spec-item"><div class="spec-label">Coating</div><div class="spec-val">Non-stick granite</div></div><div class="spec-item"><div class="spec-label">Handle</div><div class="spec-val">Ergonomic grip</div></div><div class="spec-item"><div class="spec-label">Use</div><div class="spec-val">Fry eggs only — dedicated pan</div></div></div></div>
 </div>
-<div class="equip-note-text">Fries up to <b>4 eggs simultaneously</b>. <b>Used exclusively for eggs</b> — do not use for chicken.</div>
-<div class="tip">💡 With a 4-hole pan, use <b>1 egg per bánh mì</b>. Allows 4 orders at the same time.</div></div>
+<div class="equip-note-text">Used to fry eggs for bánh mì trứng. <b>Dedicated pan for eggs only</b> — do not use for chicken or anything else. Non-stick surface ensures easy egg release and clean lacy edges.</div>
+<div class="tip">💡 Use <b>2 eggs per bánh mì</b>. Fry at high heat with enough oil to create crispy golden edges — this is the authentic Vietnamese style.</div></div>
 </div>
 
 <div class="equip-card">
-  <div class="equip-card-head"><div class="equip-icon-wrap">✂️</div><div class="equip-name">Kitchen Scissors — bread cutting (Kéo inox)</div><div class="equip-badge">IMPORTANT</div></div>
+  <div class="equip-card-head"><div class="equip-icon-wrap">✂️</div><div class="equip-name">Kitchen Scissors — bread cutting (Kéo inox)</div><div class="equip-badge" data-en="IMPORTANT" data-vi="QUAN TRỌNG">IMPORTANT</div></div>
   <div class="equip-body"><div class="equip-img-row">
   <div class="equip-img-box"><img src="bread-scissors.png" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">✂️<div>bread-scissors.png</div></div></div>
   <div class="equip-specs-right"><div class="equip-spec"><div class="spec-item"><div class="spec-label">Type</div><div class="spec-val">Stainless steel scissors</div></div><div class="spec-item"><div class="spec-label">Blade length</div><div class="spec-val">Min. 10cm</div></div><div class="spec-item"><div class="spec-label">Material</div><div class="spec-val">Stainless steel blades</div></div><div class="spec-item"><div class="spec-label">Quantity</div><div class="spec-val">2 pairs (1 spare)</div></div></div></div>
@@ -380,7 +861,7 @@ body::after{
 </div>
 
 <div class="equip-card">
-  <div class="equip-card-head"><div class="equip-icon-wrap">🥗</div><div class="equip-name">Refrigerated Ingredient Display (Tủ trưng bày nguyên liệu lạnh)</div><div class="equip-badge">HIGHLY RECOMMENDED</div></div>
+  <div class="equip-card-head"><div class="equip-icon-wrap">🥗</div><div class="equip-name">Refrigerated Ingredient Display (Tủ trưng bày nguyên liệu lạnh)</div><div class="equip-badge" data-en="HIGHLY RECOMMENDED" data-vi="KHUYẾN NGHỊ">HIGHLY RECOMMENDED</div></div>
   <div class="equip-body"><div class="equip-img-row">
   <div class="equip-img-box"><img src="salad-bar.png" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🥗<div>salad-bar.png</div></div></div>
   <div class="equip-specs-right"><div class="equip-spec"><div class="spec-item"><div class="spec-label">Type</div><div class="spec-val">Countertop, glass front</div></div><div class="spec-item"><div class="spec-label">Trays</div><div class="spec-val">5–6 removable trays</div></div><div class="spec-item"><div class="spec-label">Temp (trays)</div><div class="spec-val">2–8°C</div></div><div class="spec-item"><div class="spec-label">Voltage</div><div class="spec-val">220V / 60Hz</div></div></div></div>
@@ -389,8 +870,8 @@ body::after{
 <div class="tip">💡 Most important for food safety in Philippines (~30–35°C). Ingredients left out will spoil within 2 hours.</div></div>
 </div>
 
-<div class="slabel">Supporting Tools</div>
-<table class="ing-table">
+<div class="slabel" data-en="Supporting Tools" data-vi="Dụng cụ hỗ trợ">Supporting Tools</div>
+<div class="table-wrap"><table class="ing-table">
   <tr><th>Tool</th><th>Qty</th><th>Notes</th></tr>
   <tr><td><b>Butter spreader / palette knife</b></td><td style="text-align:right">2</td><td>Stainless steel, ~20cm</td></tr>
   <tr><td><b>White plastic cutting board</b></td><td style="text-align:right">1</td><td>Dedicated to bánh mì station only</td></tr>
@@ -400,25 +881,25 @@ body::after{
   <tr><td><b>Oil spray bottle</b></td><td style="text-align:right">1</td><td>Spray evenly before each use</td></tr>
   <tr><td><b>Food thermometer (probe)</b></td><td style="text-align:right">1</td><td>Chicken internal temp must reach ≥75°C</td></tr>
 </table>
-<div class="slabel">Packaging Set</div>
-<table class="ing-table">
+<div class="slabel" data-en="Packaging Set" data-vi="Bộ đóng gói">Packaging Set</div>
+<div class="table-wrap"><table class="ing-table">
   <tr><th>Item</th><th>Qty</th><th>Size / Notes</th></tr>
   <tr><td><b>Paper bread bag</b><div class="ing-sub">Oil-resistant kraft paper bag</div></td><td style="text-align:right">1 per portion</td><td>Size: 9.5×23×4.5cm (KV31). Fits 25cm roll.</td></tr>
   <tr><td><b>Paper napkin</b></td><td style="text-align:right">2 per portion</td><td>Placed inside the paper bag</td></tr>
   <tr><td><b>Small plastic carry bag</b></td><td style="text-align:right">1 per portion</td><td>Size: 11.5×31.5cm. Over the paper bag.</td></tr>
-</table>
+</table></div>
 <div class="notice red">⚠️ <b>Philippines voltage note:</b> Philippines uses 220V / 60Hz. Always confirm frequency compatibility before purchasing any appliance.</div>
 </div></div>
 
 <div id="p-inventory" class="tab-panel"><div class="wrap">
 <div class="hero"><div class="hero-deco">🌿</div>
-  <div class="hero-vi">Ingredients & Tools Reference</div>
+  <div class="hero-vi" data-en="Ingredients & Tools Reference" data-vi="Nguyên liệu & Dụng cụ">Ingredients & Tools Reference</div>
   <div class="hero-en">Visual guide — how to identify each item + alternatives if unavailable</div>
   <div class="pills"><span class="pill">📸 Photo reference</span><span class="pill">🔄 Substitutes listed</span></div>
 </div>
 <div class="notice green">📌 <span>All photos below are placeholders — filenames are set so you can upload matching photos to GitHub. If a specific item is unavailable, see the <b>Substitutes</b> section for each item.</span></div>
 
-<div class="slabel">Ingredients (9 items)</div>
+<div class="slabel" data-en="Ingredients (9 items)" data-vi="Nguyên liệu (9 loại)">Ingredients (9 items)</div>
 
 <div class="inv-card">
   <div class="inv-head"><span class="inv-num">01</span><div class="inv-title">Vietnamese Baguette (Bánh mì)</div><span class="tag daily">Daily order</span></div>
@@ -662,19 +1143,19 @@ body::after{
 </div>
 
 <div class="inv-card">
-  <div class="inv-head"><span class="inv-num">T4</span><div class="inv-title">4-Hole Egg Pan (for fried eggs)</div><span class="tag warn">Required</span></div>
+  <div class="inv-head"><span class="inv-num">T4</span><div class="inv-title">Small Non-Stick Frying Pan (for fried eggs)</div><span class="tag warn">Required</span></div>
   <div class="inv-body">
     <div class="inv-grid">
       <div class="inv-img-wrap"><img src="frying-pan-small.png" alt="frying-pan-small.png" style="width:100%;height:100%;object-fit:contain;cursor:pointer;background:#F1F8F1;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🥚<div>frying-pan-small.png</div></div></div>
       <div class="inv-info">
-        <span class="inv-key">Used for</span><span class="inv-val">Frying eggs for bánh mì trứng — 4 eggs simultaneously</span>
+        <span class="inv-key">Used for</span><span class="inv-val">Frying eggs for bánh mì trứng — 2 eggs per order</span>
         <span class="inv-key">Coating</span><span class="inv-val">Non-stick granite or chống dính</span>
-        <span class="inv-key">Important</span><span class="inv-val">Use ONLY for eggs — dedicated pan, never for chicken</span>
+        <span class="inv-key">Important</span><span class="inv-val">Dedicated pan for eggs only — never use for chicken</span>
       </div>
     </div>
     <div class="inv-alt">
-      <div class="inv-alt-title">🔄 If 4-hole pan unavailable:</div>
-      <div class="inv-alt-item"><span class="inv-alt-badge ok">OK</span> Small 20cm non-stick frying pan — fry 2 eggs at a time per order (revert to 2 eggs per bánh mì)</div>
+      <div class="inv-alt-title">🔄 Alternatives:</div>
+      <div class="inv-alt-item"><span class="inv-alt-badge ok">OK</span> Any 20–24cm non-stick pan — ensure induction-compatible base</div>
     </div>
   </div>
 </div>
@@ -763,7 +1244,7 @@ body::after{
 <!-- ═══════════ TAB 3: MISE EN PLACE ═══════════ -->
 <div id="p-prep" class="tab-panel"><div class="wrap">
 <div class="hero"><div class="hero-deco">🎋</div>
-  <div class="hero-vi">Prep Work — Before Service</div>
+  <div class="hero-vi" data-en="Prep Work — Before Service" data-vi="Sơ chế trước ca">Prep Work — Before Service</div>
   <div class="hero-en">How to prep each ingredient · Shape · Size · Storage</div>
   <div class="pills"><span class="pill">Done at start of each shift</span><span class="pill">Tools: tongs, scissors, cutting board</span></div>
 </div>
@@ -841,7 +1322,7 @@ body::after{
       <div class="prep-item"><div class="prep-img">📏</div><div class="prep-info"><div class="prep-iname">Portion size</div><div class="prep-ispec"><b>90g cooked chicken</b> per portion (≈120g raw marinated — ~25% weight loss when grilled).</div></div></div>
     </div>
     <div class="phase"><div class="phase-line"></div><div class="ptag b">Marinade — for 500g chicken breast (~5 portions)</div><div class="phase-line"></div></div>
-    <table class="ing-table">
+    <div class="table-wrap"><table class="ing-table">
       <tr><th>Marinade Ingredient</th><th>Amount</th></tr>
       <tr><td>Chicken breast, sliced 5mm</td><td>500g</td></tr>
       <tr><td>Lemongrass, finely minced (white part only)</td><td>40g (~2 large stalks)</td></tr>
@@ -865,13 +1346,13 @@ body::after{
 <!-- ═══════════ TAB 4: STOCK & STORAGE ═══════════ -->
 <div id="p-stock" class="tab-panel"><div class="wrap">
 <div class="hero"><div class="hero-deco">📦</div>
-  <div class="hero-vi">Stock & Storage Standards</div>
+  <div class="hero-vi" data-en="Stock & Storage Standards" data-vi="Nhập hàng & Bảo quản">Stock & Storage Standards</div>
   <div class="hero-en">Procurement frequency · Acceptance criteria · Storage rules</div>
   <div class="pills"><span class="pill">Daily baguette order</span><span class="pill">Check quality on receipt</span></div>
 </div>
 
-<div class="slabel">Procurement & Acceptance Standards</div>
-<table class="store-table">
+<div class="slabel" data-en="Procurement & Acceptance Standards" data-vi="Tiêu chuẩn nhập hàng">Procurement & Acceptance Standards</div>
+<div class="table-wrap"><table class="store-table">
   <tr><th>Ingredient</th><th>Order frequency</th><th>Accept if</th><th>Reject if</th></tr>
   <tr><td><b>Baguette</b></td><td><span class="tag daily">Daily</span></td><td>Even golden crust, airy white inside, no cracks, fresh aroma, 190–210g</td><td>Mould, crushed, sour smell, dense/wet inside</td></tr>
   <tr><td><b>Cha Lua (Pork Roll)</b></td><td><span class="tag cold">2–3×/week</span></td><td>Even pale pink, dry surface, mild aroma, ≥7 days to expiry</td><td>Grey/green tinge, slimy, sour smell, &lt;3 days to expiry</td></tr>
@@ -886,7 +1367,7 @@ body::after{
   <tr><td><b>Fish sauce, Maggi</b></td><td><span class="tag room">Every 1–2 weeks</span></td><td>Sealed or opened within use-by date</td><td>Sediment, colour change, off smell</td></tr>
 </table>
 
-<div class="slabel">Storage Rules</div>
+<div class="slabel" data-en="Storage Rules" data-vi="Quy tắc bảo quản">Storage Rules</div>
 <div class="std-card">
   <div class="std-row"><div class="std-key">🥗 Display fridge (2–8°C)</div><div class="std-val">Sliced cha lua · Sliced cold cut · Drained pickles · Sliced cucumber · Washed cilantro · Marinated chicken · Eggs</div></div>
   <div class="std-row"><div class="std-key">🫙 Opened jars (under counter fridge)</div><div class="std-val">Pâté · Vietnamese Butter · Pickle jar · Unopened cha lua</div></div>
@@ -908,7 +1389,7 @@ body::after{
 <div class="notice green">🇻🇳 <span>This is the <b>foundation item</b> — it uses all 4 core ingredients already in stock. Master this before moving to egg or grilled chicken.</span></div>
 
 <div class="slabel">Ingredient amounts — 1 portion (1 roll, 200g)</div>
-<table class="ing-table">
+<div class="table-wrap"><table class="ing-table">
   <tr><th>Ingredient</th><th>Amount</th><th>Measuring tool</th></tr>
   <tr><td>Vietnamese Baguette<div class="ing-sub">After warming in oven</div></td><td>1 roll / 200g</td><td>—</td></tr>
   <tr><td>Vietnamese Liver Pâté</td><td><b>20g</b></td><td>1 full tablespoon, levelled</td></tr>
@@ -920,10 +1401,10 @@ body::after{
   <tr><td>Fresh cilantro</td><td><b>5g</b></td><td>Small pinch (2-finger grab)</td></tr>
   <tr><td>Maggi seasoning</td><td><b>3ml</b></td><td>5–6 drops directly from bottle</td></tr>
   <tr><td>Fresh chili 🌶️ <span class="tag opt">Optional</span></td><td>2–3 thin slices</td><td>Ask customer first</td></tr>
-</table>
+</table></div>
 <div class="notice yellow">💡 <span>Once a week, weigh 5 random portions to verify amounts are correct. Acceptable margin: ±5g per ingredient.</span></div>
 
-<div class="phase"><div class="phase-line"></div><div class="ptag r">Assembly Steps — made to order</div><div class="phase-line"></div></div>
+<div class="phase"><div class="phase-line"></div><div class="ptag r" data-en="Assembly Steps — made to order" data-vi="Quy trình lắp ráp — theo order">Assembly Steps — made to order</div><div class="phase-line"></div></div>
 <div class="steps">
   <div class="step"><div class="step-head"><div class="step-num g">1</div><div class="step-title">Warm the bread in the oven</div><div class="step-time">3–4 min</div></div><div class="step-body"><div class="step-text">Place 1 roll in the toaster oven at <b>170–180°C, top+bottom heat</b>. Bake 3–4 minutes until crust is evenly crispy. <b>Do not over-bake</b> — the inside must stay soft and airy.</div><div class="tip">💡 Check: gently squeeze the roll — the crust should make a small crackle sound. Inside must still be soft and warm.</div></div></div>
   <div class="step"><div class="step-head"><div class="step-num g">2</div><div class="step-title">Cut the bread with scissors</div><div class="step-time">5 sec</div></div><div class="step-body"><div class="step-text">Place the warm roll flat on the cutting board. Use kitchen scissors to cut lengthwise, <b>¾ of the way through</b>. Open like a book — both halves remain connected at the bottom.</div><div class="wrn">⚠️ Do not cut all the way through. Scissors give a cleaner cut than a knife, especially on hot bread.</div></div></div>
@@ -951,16 +1432,16 @@ body::after{
 <div id="p-egg" class="tab-panel"><div class="wrap">
 <div class="hero"><div class="hero-deco">🍳</div>
   <div class="hero-vi">Bánh Mì Trứng</div>
-  <div class="hero-en">Vietnamese Fried Egg Sandwich — Crispy-edged sunny-side up egg</div>
+  <div class="hero-en">Vietnamese Fried Egg Sandwich — 2 crispy-edged sunny-side up eggs</div>
   <div class="pills"><span class="pill">⏱ 4–5 min</span><span class="pill">☀️ Great for breakfast</span><span class="pill">Requires frying</span></div>
 </div>
 <div class="notice blue">🍳 <span>Vietnamese fried egg (trứng ốp la) is defined by its <b>crispy lacy edges and runny yolk</b>. It is fried in hot oil — NOT butter. The crispy edge is what makes it authentically Vietnamese.</span></div>
 
 <div class="slabel">Ingredient amounts — 1 portion</div>
-<table class="ing-table">
+<div class="table-wrap"><table class="ing-table">
   <tr><th>Ingredient</th><th>Amount</th><th>Notes</th></tr>
   <tr><td>Vietnamese Baguette</td><td>1 roll / 200g</td><td>—</td></tr>
-  <tr><td>Egg</td><td><b>1 egg</b></td><td>With 4-hole pan, 1 egg per order (each hole = 1 egg)</td></tr>
+  <tr><td>Egg</td><td><b>2 eggs</b></td><td>Crack both eggs into the hot pan simultaneously</td></tr>
   <tr><td>Cooking oil</td><td><b>5ml per hole</b></td><td>Spray or pour — oil must be hot before adding egg</td></tr>
   <tr><td>Vietnamese Liver Pâté</td><td><b>15g</b></td><td>⅔ tablespoon</td></tr>
   <tr><td>Vietnamese Butter</td><td><b>15g</b></td><td>⅔ tablespoon</td></tr>
@@ -974,12 +1455,12 @@ body::after{
 
 <div class="phase"><div class="phase-line"></div><div class="ptag r">Step 1 — Fry the egg (run parallel with bread warming)</div><div class="phase-line"></div></div>
 <div class="steps">
-  <div class="step"><div class="step-head"><div class="step-num r">1</div><div class="step-title">Heat the 4-hole pan and oil</div><div class="step-time">45–60 sec</div></div><div class="step-body"><div class="step-text">Place the 4-hole egg pan on the induction cooktop at <b>heat level 7–8/10 (high)</b>. Add <b>5ml oil into each hole</b> you will use. Wait until the oil is <b>hot and shimmering</b>.</div><div class="tip">💡 Temperature test: drop a tiny splash of water into the oil — if it sizzles immediately, the oil is ready. Cold oil = no crispy edges.</div></div></div>
+  <div class="step"><div class="step-head"><div class="step-num r">1</div><div class="step-title">Heat the pan and oil</div><div class="step-time">45–60 sec</div></div><div class="step-body"><div class="step-text">Place the small non-stick frying pan (20–22cm) on the induction cooktop at <b>heat level 7–8/10 (high)</b>. Add <b>10ml oil</b> — enough to cover the pan base. Wait until the oil is <b>hot and shimmering</b>.</div><div class="tip">💡 Temperature test: drop a tiny splash of water into the oil — if it sizzles immediately, the oil is ready. Cold oil = no crispy edges.</div></div></div>
   <div class="step"><div class="step-head"><div class="step-num r">2</div><div class="step-title">Warm bread at the same time</div><div class="step-time">Parallel</div></div><div class="step-body"><div class="step-text">While the pan heats, place the roll in the toaster oven at 170–180°C. Time them to finish together.</div></div></div>
-  <div class="step"><div class="step-head"><div class="step-num r">3</div><div class="step-title">Crack egg into each hole</div><div class="step-time">90–120 sec</div></div><div class="step-body"><div class="step-text">Crack <b>1 egg per hole</b> directly into the hot oil. The white should immediately sizzle and start crisping at the edges. Sprinkle a small pinch of <b>salt and white pepper</b> over the white. Cook until:<br>→ White is <b>fully cooked</b> (no transparent parts)<br>→ Edges are <b>golden and lacy/crispy</b><br>→ <b>Yolk remains runny</b></div><div class="wrn">⚠️ Do NOT flip the egg. Do NOT cover the pan. Vietnamese fried egg is always sunny-side up. The runny yolk breaks when the customer bites in — that is the intended experience.</div></div></div>
+  <div class="step"><div class="step-head"><div class="step-num r">3</div><div class="step-title">Crack egg into each hole</div><div class="step-time">90–120 sec</div></div><div class="step-body"><div class="step-text">Crack <b>2 eggs</b> directly into the hot oil. The white should immediately sizzle and start crisping at the edges. Sprinkle a small pinch of <b>salt and white pepper</b> over the white. Cook until:<br>→ White is <b>fully cooked</b> (no transparent parts)<br>→ Edges are <b>golden and lacy/crispy</b><br>→ <b>Yolk remains runny</b></div><div class="wrn">⚠️ Do NOT flip the egg. Do NOT cover the pan. Vietnamese fried egg is always sunny-side up. The runny yolk breaks when the customer bites in — that is the intended experience.</div></div></div>
 </div>
 
-<div class="phase"><div class="phase-line"></div><div class="ptag r">Step 2 — Assembly</div><div class="phase-line"></div></div>
+<div class="phase"><div class="phase-line"></div><div class="ptag r" data-en="Step 2 — Assembly" data-vi="Bước 2 — Lắp ráp">Step 2 — Assembly</div><div class="phase-line"></div></div>
 <div class="steps">
   <div class="step"><div class="step-head"><div class="step-num g">4</div><div class="step-title">Cut and spread bread</div><div class="step-time">10 sec</div></div><div class="step-body"><div class="step-text">Remove bread from oven. Cut ¾ through with scissors. Spread <b>15g pâté</b> on top half, <b>15g butter</b> on bottom half.</div></div></div>
   <div class="step"><div class="step-head"><div class="step-num g">5</div><div class="step-title">Place egg and toppings</div><div class="step-time">15 sec</div></div><div class="step-body"><div class="step-text">① Slide the <b>fried egg</b> gently from the pan onto the butter side of the bread.<br>② Add <b>3 cucumber slices</b> alongside the egg.<br>③ Spoon <b>25g drained pickles</b> on top.<br>④ Sprinkle <b>5g spring onion</b>.<br>⑤ Drop <b>5–6 drops of Maggi</b>.</div><div class="tip">💡 Slide the egg gently — do not break the yolk. An intact yolk is part of the presentation.</div></div></div>
@@ -1007,7 +1488,7 @@ body::after{
 <div class="notice green">🌿 <span>Chicken <b>must be marinated at the start of shift</b> (best: overnight). Cook to order throughout the day. The sugar in the marinade creates the golden-brown caramelised colour and aroma — this is the signature of Vietnamese grilled meat.</span></div>
 
 <div class="slabel">Ingredient amounts — 1 portion</div>
-<table class="ing-table">
+<div class="table-wrap"><table class="ing-table">
   <tr><th>Ingredient</th><th>Amount</th><th>Notes</th></tr>
   <tr><td>Vietnamese Baguette</td><td>1 roll / 200g</td><td>—</td></tr>
   <tr><td>Grilled lemongrass chicken (from prep)<div class="ing-sub">Cooked weight</div></td><td><b>90g</b><div class="ing-sub">(≈120g raw marinated)</div></td><td>~25% weight loss during grilling</td></tr>
@@ -1017,7 +1498,7 @@ body::after{
   <tr><td>Cucumber slices</td><td><b>20g (4 slices)</b></td><td>—</td></tr>
   <tr><td>Fresh cilantro</td><td><b>5g</b></td><td>—</td></tr>
   <tr><td>Maggi seasoning</td><td><b>3ml</b></td><td>5–6 drops</td></tr>
-</table>
+</table></div>
 <div class="notice blue">💡 <span><b>No pâté for this item.</b> Spread butter on both sides of bread. The lemongrass chicken flavour is the star — pâté would overpower it.</span></div>
 
 <div class="phase"><div class="phase-line"></div><div class="ptag y">Step 1 — Grill the chicken (to order)</div><div class="phase-line"></div></div>
@@ -1029,7 +1510,7 @@ body::after{
   <div class="step"><div class="step-head"><div class="step-num y">5</div><div class="step-title">Rest chicken</div><div class="step-time">30 sec</div></div><div class="step-body"><div class="step-text">Remove from pan to the cutting board. Let rest 30 seconds before placing in bread — prevents steam from making the bread soggy.</div></div></div>
 </div>
 
-<div class="phase"><div class="phase-line"></div><div class="ptag r">Step 2 — Assembly (run parallel: warm bread while grilling)</div><div class="phase-line"></div></div>
+<div class="phase"><div class="phase-line"></div><div class="ptag r" data-en="Step 2 — Assembly (run parallel: warm bread while grilling)" data-vi="Bước 2 — Lắp ráp (song song khi nướng)">Step 2 — Assembly (run parallel: warm bread while grilling)</div><div class="phase-line"></div></div>
 <div class="steps">
   <div class="step"><div class="step-head"><div class="step-num g">6</div><div class="step-title">Warm bread and spread butter</div><div class="step-time">Parallel with steps 3–4</div></div><div class="step-body"><div class="step-text">Place roll in oven while grilling. Cut ¾ through with scissors. Spread <b>10g butter on top half + 10g butter on bottom half</b> (total 20g, both sides).</div></div></div>
   <div class="step"><div class="step-head"><div class="step-num g">7</div><div class="step-title">Layer chicken and toppings</div><div class="step-time">15 sec</div></div><div class="step-body"><div class="step-text">① Place <b>90g grilled chicken</b> along the bread using tongs.<br>② Add <b>4 cucumber slices (~20g)</b>.<br>③ Spoon <b>30g drained pickles</b>.<br>④ Add <b>5g cilantro</b>.<br>⑤ Drop <b>5–6 drops of Maggi (~3ml)</b>.</div></div></div>
@@ -1050,13 +1531,13 @@ body::after{
 <!-- ═══════════ TAB 8: DAILY SCHEDULE ═══════════ -->
 <div id="p-schedule" class="tab-panel"><div class="wrap">
 <div class="hero"><div class="hero-deco">⏰</div>
-  <div class="hero-vi">Daily Schedule</div>
+  <div class="hero-vi" data-en="Daily Schedule" data-vi="Lịch ca làm việc">Daily Schedule</div>
   <div class="hero-en">Bánh Mì Station — Opening · Service · Closing</div>
   <div class="pills"><span class="pill">Shift A: Opening prep</span><span class="pill">Shift B: Service</span><span class="pill">Shift C: Closing</span></div>
 </div>
 
 <div class="sched">
-  <div class="sched-head morning"><div class="sched-letter">A</div><div class="sched-title">Before Opening — Setup & Prep</div><div class="sched-time">30–45 min before</div></div>
+  <div class="sched-head morning"><div class="sched-letter">A</div><div class="sched-title" data-en="Before Opening — Setup & Prep" data-vi="Trước giờ mở bán — Chuẩn bị">Before Opening — Setup & Prep</div><div class="sched-time">30–45 min before</div></div>
   <div class="sched-body">
     <div class="sched-item"><div class="sched-check">□</div><b>Receive baguettes:</b> Accept delivery, check each roll (weight, colour, aroma, no mould). Arrange in bread box away from sunlight.</div>
     <div class="sched-item"><div class="sched-check">□</div><b>Check display fridge:</b> Verify temperature ≤8°C. Inspect all ingredients — colour, smell, expiry.</div>
@@ -1072,7 +1553,7 @@ body::after{
 </div>
 
 <div class="sched">
-  <div class="sched-head day"><div class="sched-letter">B</div><div class="sched-title">During Service</div><div class="sched-time">Made to order</div></div>
+  <div class="sched-head day"><div class="sched-letter">B</div><div class="sched-title" data-en="During Service" data-vi="Trong giờ phục vụ">During Service</div><div class="sched-time">Made to order</div></div>
   <div class="sched-body">
     <div class="sched-item"><div class="sched-check">□</div><b>Cook to order only:</b> Never pre-assemble. Maximum 3 minutes per portion from order to handoff.</div>
     <div class="sched-item"><div class="sched-check">□</div><b>Restock check every 30 min:</b> Check all containers in display fridge. Refill when below 30% capacity.</div>
@@ -1084,7 +1565,7 @@ body::after{
 </div>
 
 <div class="sched">
-  <div class="sched-head night"><div class="sched-letter">C</div><div class="sched-title">End of Shift — Clean & Store</div><div class="sched-time">After closing</div></div>
+  <div class="sched-head night"><div class="sched-letter">C</div><div class="sched-title" data-en="End of Shift — Clean & Store" data-vi="Cuối ca — Dọn dẹp & Lưu trữ">End of Shift — Clean & Store</div><div class="sched-time">After closing</div></div>
   <div class="sched-body">
     <div class="sched-item"><div class="sched-check">□</div><b>Leftover baguettes:</b> Discard all remaining rolls — do not keep overnight.</div>
     <div class="sched-item"><div class="sched-check">□</div><b>Prepped cucumber:</b> Discard all — do not store overnight.</div>
@@ -1138,5 +1619,308 @@ function openImg(src){var lb=document.getElementById('lightbox');document.getEle
     </div>
   </div>
 </div>
+
+
+<script>
+// ══════════════════════════════
+// LANGUAGE SYSTEM
+// ══════════════════════════════
+var LANG = 'en';
+var VI_CACHE = {};
+var VI_TRANSLATED = false;
+var VI_LOADING = false;
+
+// Tất cả cặp EN→VI được cache sẵn để không cần gọi API mỗi lần
+var VI_MAP = {
+  // NAV TABS
+  "📋 Overview": "📋 Tổng quan",
+  "🧾 Ingredients & Tools": "🧾 Nguyên liệu & Dụng cụ",
+  "🔪 Mise en Place": "🔪 Sơ chế",
+  "📦 Stock & Storage": "📦 Nhập hàng & Bảo quản",
+  "🥪 Cold Cut": "🥪 Thịt nguội",
+  "🍳 Fried Egg": "🍳 Trứng",
+  "🍗 Grilled Chicken": "🍗 Gà nướng",
+  "⏰ Daily Schedule": "⏰ Lịch ca",
+
+  // HERO TITLES
+  "Operations Overview": "Tổng quan vận hành",
+  "Equipment · Counter Setup · Philippines Notes": "Thiết bị · Setup quầy · Lưu ý Philippines",
+  "Ingredients & Tools Reference": "Hướng dẫn nhận biết nguyên liệu & dụng cụ",
+  "Visual guide — how to identify each item + alternatives if unavailable": "Nhận dạng bằng hình ảnh — lựa chọn thay thế nếu không có hàng",
+  "Prep Work — Before Service": "Sơ chế & Chuẩn bị trước ca",
+  "How to prep each ingredient · Shape · Size · Storage": "Cách sơ chế từng nguyên liệu · Hình dạng · Kích thước · Bảo quản",
+  "Stock & Storage Standards": "Tiêu chuẩn nhập hàng & bảo quản",
+  "Procurement frequency · Acceptance criteria · Storage rules": "Tần suất nhập · Tiêu chuẩn chấp nhận · Quy tắc bảo quản",
+  "Vietnamese Cold Cut Sandwich — Foundation item": "Bánh mì thịt nguội — Món nền cơ bản",
+  "Vietnamese Fried Egg Sandwich — 2 crispy-edged sunny-side up eggs": "Bánh mì trứng — Trứng ốp la viền giòn kiểu Việt",
+  "Lemongrass Grilled Chicken Sandwich — Premium item": "Bánh mì gà nướng sả — Món cao cấp",
+  "Daily Schedule": "Lịch ca làm việc",
+  "Bánh Mì Station — Opening · Service · Closing": "Quầy bánh mì — Mở ca · Phục vụ · Đóng ca",
+
+  // PILLS
+  "3 menu items": "3 món bánh mì",
+  "5–100 portions/day": "5–100 phần/ngày",
+  "Add-on at tea counter": "Bán kèm tại quầy trà",
+  "Trial Phase Summary": "Tóm tắt giai đoạn thử nghiệm",
+  "Weight per roll": "Trọng lượng/ổ",
+  "Length per roll": "Chiều dài/ổ",
+  "Portions/day": "Phần/ngày",
+  "Assembly time": "Thời gian lắp ráp",
+  "⏱ <3 min": "⏱ Dưới 3 phút",
+  "✅ No cooking needed": "✅ Không cần nấu",
+  "Master this first": "Học món này trước",
+  "☀️ Great for breakfast": "☀️ Phù hợp buổi sáng",
+  "Requires frying": "Cần chiên",
+  "⭐ Premium": "⭐ Cao cấp",
+  "Marinate ahead": "Ướp trước ca",
+  "Shift A: Opening prep": "Ca A: Chuẩn bị mở ca",
+  "Shift B: Service": "Ca B: Phục vụ",
+  "Shift C: Closing": "Ca C: Đóng ca",
+  "📸 Photo reference": "📸 Tham khảo hình ảnh",
+  "🔄 Substitutes listed": "🔄 Có phương án thay thế",
+  "Done at start of each shift": "Làm đầu mỗi ca",
+  "Tools: tongs, scissors, cutting board": "Dụng cụ: kẹp, kéo, thớt",
+  "Daily baguette order": "Nhập bánh mì hàng ngày",
+  "Check quality on receipt": "Kiểm tra chất lượng khi nhận",
+
+  // SECTION LABELS
+  "Required Equipment": "Thiết bị cần thiết",
+  "Supporting Tools": "Dụng cụ hỗ trợ",
+  "Packaging Set": "Bộ đóng gói",
+  "Ingredients (9 items)": "Nguyên liệu (9 loại)",
+  "Tools & Equipment (6 items)": "Thiết bị & Dụng cụ (6 loại)",
+  "Procurement & Acceptance Standards": "Tiêu chuẩn nhập hàng",
+  "Storage Rules": "Quy tắc bảo quản",
+  "Ingredient amounts — 1 portion (1 roll, 200g)": "Định lượng — 1 phần (1 ổ 200g)",
+  "Quality Check": "Kiểm tra chất lượng",
+  "Marinade — for 500g chicken breast (~5 portions)": "Công thức ướp — 500g ức gà (~5 phần)",
+
+  // SCHEDULE
+  "Before Opening — Setup & Prep": "Trước giờ mở bán — Chuẩn bị",
+  "30–45 min before": "30–45 phút trước ca",
+  "During Service": "Trong giờ phục vụ",
+  "Made to order": "Làm theo order",
+  "End of Shift — Clean & Store": "Cuối ca — Dọn dẹp & Lưu trữ",
+  "After closing": "Sau giờ đóng cửa",
+
+  // EQUIP BADGES
+  "REQUIRED": "BẮT BUỘC",
+  "IMPORTANT": "QUAN TRỌNG",
+  "HIGHLY RECOMMENDED": "KHUYẾN NGHỊ CAO",
+
+  // ALT BADGES
+  "OK": "Dùng được",
+  "Do NOT use": "Không dùng",
+  "Use with caution": "Dùng cẩn thận",
+  "Best": "Tốt nhất",
+  "Acceptable": "Tạm được",
+
+  // TAGS
+  "Daily order": "Nhập hàng ngày",
+  "Keep refrigerated": "Giữ lạnh",
+  "Refrigerate after opening": "Giữ lạnh sau khi mở",
+  "Room temperature": "Nhiệt độ phòng",
+  "Order regularly": "Mua thường xuyên",
+  "Required": "Bắt buộc",
+  "Highly recommended": "Khuyến nghị cao",
+  "Optional only": "Tuỳ chọn",
+
+  // FOOTER
+  "Document Information": "Thông tin tài liệu",
+  "Researched & Developed by": "Nghiên cứu & Phát triển bởi",
+  "R&D Department — Phúc Tea Vietnam": "Bộ phận R&D — Phúc Tea Việt Nam",
+  "Brand": "Thương hiệu",
+  "HappiTea Philippines (International brand of Phúc Tea Vietnam)": "HappiTea Philippines (Thương hiệu quốc tế của Phúc Tea Việt Nam)",
+  "Confidentiality": "Bảo mật",
+  "🔒 Internal use only — do not share outside the HappiTea / Phúc Tea system or brand network.": "🔒 Chỉ dùng nội bộ — không chia sẻ ngoài hệ thống HappiTea / Phúc Tea.",
+
+  // STEP TIMES
+  "3–4 min": "3–4 phút",
+  "5 sec": "5 giây",
+  "10 sec": "10 giây",
+  "15 sec": "15 giây",
+  "Parallel": "Song song",
+  "90 sec": "90 giây",
+  "60–90 sec": "60–90 giây",
+  "30 sec": "30 giây",
+  "1–2 min": "1–2 phút",
+  "45–60 sec": "45–60 giây",
+  "90–120 sec": "90–120 giây",
+  "5–6 min": "5–6 phút",
+  "4–5 min": "4–5 phút",
+  "Parallel with steps 3–4": "Song song với bước 3–4",
+  "Parallel with grilling": "Song song khi nướng gà",
+
+  // QC
+  "Crust is crispy and warm — not soft or damp": "Vỏ bánh giòn và ấm — không mềm hoặc ướt",
+  "Pâté and butter spread evenly to all edges — both layers visible when opened": "Pate và bơ phết đều đến các góc — thấy rõ 2 lớp khi mở bánh",
+  "Meat covers the full length of the bread, not bunched in one spot": "Thịt phủ đều dọc theo chiều dài bánh",
+  "Pickles are drained — no liquid pooling inside the bread": "Dưa chua đã ráo — không có nước đọng bên trong",
+  "Cilantro is fresh green — not yellowed or wilted": "Ngò rí xanh tươi — không vàng héo",
+  "Bread is fully packaged and closed before handoff": "Bánh được gói kín trước khi giao",
+
+  // SCHED ITEMS
+  "Shift A: Opening prep": "Ca A: Chuẩn bị mở ca",
+  "Shift B: Service": "Ca B: Phục vụ",
+  "Shift C: Closing": "Ca C: Đóng ca",
+};
+
+function setLang(lang) {
+  LANG = lang;
+  // Update toggle UI
+  var enBtn = document.getElementById('btn-en');
+  var viBtn = document.getElementById('btn-vi');
+  if (lang === 'en') {
+    enBtn.style.background = '#fff';
+    enBtn.style.color = '#1B5E20';
+    viBtn.style.background = 'transparent';
+    viBtn.style.color = 'rgba(255,255,255,.7)';
+  } else {
+    viBtn.style.background = '#fff';
+    viBtn.style.color = '#1B5E20';
+    enBtn.style.background = 'transparent';
+    enBtn.style.color = 'rgba(255,255,255,.7)';
+  }
+  applyLang(lang);
+}
+
+function applyLang(lang) {
+  // 1. Switch short labels from map
+  var els = document.querySelectorAll('[data-en]');
+  if (els.length === 0) {
+    addDataAttrs();
+    els = document.querySelectorAll('[data-en]');
+  }
+  els.forEach(function(el) {
+    if (lang === 'vi' && el.getAttribute('data-vi')) {
+      el.textContent = el.getAttribute('data-vi');
+    } else if (lang === 'en' && el.getAttribute('data-en')) {
+      el.textContent = el.getAttribute('data-en');
+    }
+  });
+
+  // 2. Switch AI-translated long content
+  document.querySelectorAll('[data-vi-done]').forEach(function(el) {
+    if (lang === 'vi') {
+      el.innerText = el.getAttribute('data-vi-text') || el.innerText;
+    } else {
+      var orig = el.getAttribute('data-en-orig');
+      if (orig) el.innerHTML = orig;
+    }
+  });
+
+  // 3. Trigger AI translation on first VI switch
+  if (lang === 'vi' && !VI_TRANSLATED) {
+    translateWithAI();
+  }
+}
+
+function addDataAttrs() {
+  // Tag elements matching our map
+  var walker = document.createTreeWalker(
+    document.getElementById('p-overview') ? document.body : document.body,
+    NodeFilter.SHOW_TEXT,
+    null, false
+  );
+  // Simple approach: tag specific elements by their text content
+  Object.keys(VI_MAP).forEach(function(en) {
+    var vi = VI_MAP[en];
+    // Find elements containing this exact text
+    document.querySelectorAll('.ntab, .hero-vi, .hero-en, .pill, .summary-title, .sum-label, .slabel, .equip-badge, .inv-alt-badge, .tag, .step-title, .step-time, .sched-title, .sched-time, .ptag, .prep-title, .inv-title, .phase-tag').forEach(function(el) {
+      if (el.textContent.trim() === en && !el.getAttribute('data-en')) {
+        el.setAttribute('data-en', en);
+        el.setAttribute('data-vi', vi);
+      }
+    });
+  });
+}
+
+function translateWithAI() {
+  if (VI_LOADING) return;
+  VI_LOADING = true;
+
+  // Show loading indicator
+  var indicator = document.createElement('div');
+  indicator.id = 'vi-loading';
+  indicator.style.cssText = 'position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:rgba(27,94,32,.95);color:#fff;padding:10px 20px;border-radius:20px;font-size:13px;font-weight:600;z-index:9999;font-family:sans-serif;box-shadow:0 4px 20px rgba(0,0,0,.3);';
+  indicator.innerHTML = '🌿 Đang dịch sang tiếng Việt...';
+  document.body.appendChild(indicator);
+
+  // Collect all long text content to translate
+  var toTranslate = [];
+  var targetEls = [];
+
+  document.querySelectorAll('.step-text, .equip-note-text, .tip, .wrn, .inf, .inv-val, .inv-alt-item, .prep-ispec, .std-val, .sched-item, .notice, .qc-item, .ing-sub').forEach(function(el) {
+    var text = el.innerText.trim();
+    if (text.length > 10 && !el.getAttribute('data-vi-done')) {
+      toTranslate.push(text);
+      targetEls.push(el);
+    }
+  });
+
+  if (toTranslate.length === 0) {
+    VI_TRANSLATED = true;
+    VI_LOADING = false;
+    document.body.removeChild(indicator);
+    return;
+  }
+
+  // Batch translate via Claude API
+  var batchSize = 30;
+  var batches = [];
+  for (var i = 0; i < toTranslate.length; i += batchSize) {
+    batches.push({ texts: toTranslate.slice(i, i+batchSize), els: targetEls.slice(i, i+batchSize) });
+  }
+
+  var batchIndex = 0;
+  function processBatch() {
+    if (batchIndex >= batches.length) {
+      VI_TRANSLATED = true;
+      VI_LOADING = false;
+      if (document.getElementById('vi-loading')) document.body.removeChild(indicator);
+      return;
+    }
+    var batch = batches[batchIndex];
+    var prompt = "Translate the following English food service SOP texts to Vietnamese. Return ONLY a JSON array of translated strings in the same order. No extra text, no markdown backticks.\n" + JSON.stringify(batch.texts);
+
+    fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 4000,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(data) {
+      try {
+        var raw = data.content[0].text.trim();
+        raw = raw.replace(/```json|```/g, '').trim();
+        var translated = JSON.parse(raw);
+        batch.els.forEach(function(el, i) {
+          if (translated[i]) {
+            el.setAttribute('data-en-orig', el.innerHTML);
+            el.setAttribute('data-vi-done', '1');
+            el.setAttribute('data-vi-text', translated[i]);
+            if (LANG === 'vi') el.innerText = translated[i];
+          }
+        });
+      } catch(e) { console.warn('Parse error batch', batchIndex, e); }
+      batchIndex++;
+      indicator.innerHTML = '🌿 Đang dịch... (' + Math.min(batchIndex * batchSize, toTranslate.length) + '/' + toTranslate.length + ')';
+      processBatch();
+    })
+    .catch(function(e) {
+      console.warn('API error', e);
+      batchIndex++;
+      processBatch();
+    });
+  }
+  processBatch();
+}
+
+// AI-translated content switching handled inside applyLang directly
+</script>
 
 </body></html>
