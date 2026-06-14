@@ -216,9 +216,9 @@ body::after{
 .inv-title{font-size:13px;font-weight:800;color:var(--ink);flex:1;}
 .inv-body{padding:14px;}
 .inv-grid{display:grid;grid-template-columns:120px 1fr;gap:12px;margin-bottom:12px;}
-.inv-img-wrap{width:120px;height:120px;border-radius:10px;overflow:hidden;border:1px solid var(--border);flex-shrink:0;background:#F1F8F1;}
+.inv-img-wrap{width:100px;height:100px;border-radius:10px;overflow:hidden;border:1px solid var(--border);flex-shrink:0;background:#F1F8F1;}
 .inv-img-wrap img{width:100%;height:100%;object-fit:contain;cursor:pointer;background:#F1F8F1;}
-.inv-img-ph{width:120px;height:120px;background:#F1F8F1;border:2px dashed var(--gborder);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:26px;text-align:center;padding:8px;}
+.inv-img-ph{width:100px;height:100px;background:#F1F8F1;border:2px dashed var(--gborder);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:26px;text-align:center;padding:8px;}
 .inv-img-ph div{font-size:9px;color:var(--blue);font-family:monospace;margin-top:4px;word-break:break-all;}
 .inv-info{display:flex;flex-direction:column;gap:6px;}
 .inv-key{font-weight:700;color:var(--gdark);display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;}
@@ -321,9 +321,9 @@ body::after{
 <div class="equip-card">
   <div class="equip-card-head"><div class="equip-icon-wrap">🔆</div><div class="equip-name">Electric Toaster Oven (Lò nướng điện)</div><div class="equip-badge">REQUIRED</div></div>
   <div class="equip-body">
-    <div class="img-placeholder-wrap" style="margin-bottom:8px;">
-  <img onclick="openImg(this.src)" style="cursor:pointer" src="toaster-oven.png" alt="Photo of toaster oven" style="width:100%;height:200px;object-fit:contain;border-radius:10px;display:block;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-  <div class="img-placeholder" style="display:none">
+    <div class="img-placeholder-wrap" style="display:flex;gap:12px;align-items:flex-start;margin-bottom:10px;">
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="toaster-oven.png" alt="Photo of toaster oven" style="width:100px;height:100px;flex-shrink:0;object-fit:contain;border-radius:10px;display:block;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+  <div class="img-placeholder" style="display:none;flex-shrink:0;">
     <div class="img-placeholder-icon">🖼️</div>
     <div class="img-placeholder-text">Photo of toaster oven</div>
     <div class="img-placeholder-file">toaster-oven.png</div>
@@ -344,9 +344,9 @@ body::after{
 <div class="equip-card">
   <div class="equip-card-head"><div class="equip-icon-wrap">🔥</div><div class="equip-name">Single Burner Induction Cooktop (Bếp điện từ)</div><div class="equip-badge">REQUIRED</div></div>
   <div class="equip-body">
-    <div class="img-placeholder-wrap" style="margin-bottom:8px;">
-  <img onclick="openImg(this.src)" style="cursor:pointer" src="induction-cooktop.png" alt="Photo of induction cooktop" style="width:100%;height:200px;object-fit:contain;border-radius:10px;display:block;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-  <div class="img-placeholder" style="display:none">
+    <div class="img-placeholder-wrap" style="display:flex;gap:12px;align-items:flex-start;margin-bottom:10px;">
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="induction-cooktop.png" alt="Photo of induction cooktop" style="width:100px;height:100px;flex-shrink:0;object-fit:contain;border-radius:10px;display:block;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+  <div class="img-placeholder" style="display:none;flex-shrink:0;">
     <div class="img-placeholder-icon">🖼️</div>
     <div class="img-placeholder-text">Photo of induction cooktop</div>
     <div class="img-placeholder-file">induction-cooktop.png</div>
@@ -366,9 +366,9 @@ body::after{
 <div class="equip-card">
   <div class="equip-card-head"><div class="equip-icon-wrap">🍳</div><div class="equip-name">Ridged Grill Pan — for grilled chicken (Chảo grill)</div><div class="equip-badge">REQUIRED</div></div>
   <div class="equip-body">
-    <div class="img-placeholder-wrap" style="margin-bottom:8px;">
-  <img onclick="openImg(this.src)" style="cursor:pointer" src="grill-pan.png" alt="Photo of grill pan" style="width:100%;height:200px;object-fit:contain;border-radius:10px;display:block;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-  <div class="img-placeholder" style="display:none">
+    <div class="img-placeholder-wrap" style="display:flex;gap:12px;align-items:flex-start;margin-bottom:10px;">
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="grill-pan.png" alt="Photo of grill pan" style="width:100px;height:100px;flex-shrink:0;object-fit:contain;border-radius:10px;display:block;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+  <div class="img-placeholder" style="display:none;flex-shrink:0;">
     <div class="img-placeholder-icon">🖼️</div>
     <div class="img-placeholder-text">Photo of grill pan</div>
     <div class="img-placeholder-file">grill-pan.png</div>
@@ -387,9 +387,9 @@ body::after{
 <div class="equip-card">
   <div class="equip-card-head"><div class="equip-icon-wrap">🥚</div><div class="equip-name">4-Hole Egg Pan — for fried eggs (Chảo chiên trứng 4 lỗ)</div><div class="equip-badge">REQUIRED</div></div>
   <div class="equip-body">
-    <div class="img-placeholder-wrap" style="margin-bottom:8px;">
-  <img onclick="openImg(this.src)" style="cursor:pointer" src="frying-pan-small.png" alt="Photo of 4-hole egg pan" style="width:100%;height:200px;object-fit:contain;border-radius:10px;display:block;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-  <div class="img-placeholder" style="display:none">
+    <div class="img-placeholder-wrap" style="display:flex;gap:12px;align-items:flex-start;margin-bottom:10px;">
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="frying-pan-small.png" alt="Photo of 4-hole egg pan" style="width:100px;height:100px;flex-shrink:0;object-fit:contain;border-radius:10px;display:block;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+  <div class="img-placeholder" style="display:none;flex-shrink:0;">
     <div class="img-placeholder-icon">🖼️</div>
     <div class="img-placeholder-text">Photo of 4-hole egg pan</div>
     <div class="img-placeholder-file">frying-pan-small.png</div>
@@ -409,9 +409,9 @@ body::after{
 <div class="equip-card">
   <div class="equip-card-head"><div class="equip-icon-wrap">✂️</div><div class="equip-name">Kitchen Scissors — bread cutting (Kéo inox)</div><div class="equip-badge">IMPORTANT</div></div>
   <div class="equip-body">
-    <div class="img-placeholder-wrap" style="margin-bottom:8px;">
-  <img onclick="openImg(this.src)" style="cursor:pointer" src="bread-scissors.png" alt="Photo of kitchen scissors" style="width:100%;height:200px;object-fit:contain;border-radius:10px;display:block;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-  <div class="img-placeholder" style="display:none">
+    <div class="img-placeholder-wrap" style="display:flex;gap:12px;align-items:flex-start;margin-bottom:10px;">
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="bread-scissors.png" alt="Photo of kitchen scissors" style="width:100px;height:100px;flex-shrink:0;object-fit:contain;border-radius:10px;display:block;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+  <div class="img-placeholder" style="display:none;flex-shrink:0;">
     <div class="img-placeholder-icon">🖼️</div>
     <div class="img-placeholder-text">Photo of kitchen scissors</div>
     <div class="img-placeholder-file">bread-scissors.png</div>
@@ -430,9 +430,9 @@ body::after{
 <div class="equip-card">
   <div class="equip-card-head"><div class="equip-icon-wrap">🥗</div><div class="equip-name">Refrigerated Ingredient Display (Tủ trưng bày nguyên liệu lạnh)</div><div class="equip-badge">HIGHLY RECOMMENDED</div></div>
   <div class="equip-body">
-    <div class="img-placeholder-wrap" style="margin-bottom:8px;">
-  <img onclick="openImg(this.src)" style="cursor:pointer" src="salad-bar.png" alt="Photo of refrigerated salad showcase" style="width:100%;height:200px;object-fit:contain;border-radius:10px;display:block;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-  <div class="img-placeholder" style="display:none">
+    <div class="img-placeholder-wrap" style="display:flex;gap:12px;align-items:flex-start;margin-bottom:10px;">
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="salad-bar.png" alt="Photo of refrigerated salad showcase" style="width:100px;height:100px;flex-shrink:0;object-fit:contain;border-radius:10px;display:block;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+  <div class="img-placeholder" style="display:none;flex-shrink:0;">
     <div class="img-placeholder-icon">🖼️</div>
     <div class="img-placeholder-text">Photo of refrigerated salad showcase</div>
     <div class="img-placeholder-file">salad-bar.png</div>
@@ -789,7 +789,7 @@ body::after{
     <div class="inv-grid3">
       <div class="inv-pkg-item">
         <div style="height:90px;background:#F5F0E8;overflow:hidden;position:relative;">
-  <img onclick="openImg(this.src)" style="cursor:pointer" src="tui-giay-banh-mi.png" alt="Túi giấy bánh mì" style="width:100%;height:100%;object-fit:contain;display:block;background:#F5F5F0;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="tui-giay-banh-mi.png" alt="Túi giấy bánh mì" style="width:100%;height:120px;object-fit:contain;display:block;background:#F5F5F0;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
   <div style="display:none;height:90px;background:#F5F0E8;align-items:center;justify-content:center;font-size:28px;">🧧</div>
 </div>
         <div class="inv-pkg-label">① Paper bag</div>
@@ -797,7 +797,7 @@ body::after{
       </div>
       <div class="inv-pkg-item">
         <div style="height:90px;background:#F8F8F8;overflow:hidden;position:relative;">
-  <img onclick="openImg(this.src)" style="cursor:pointer" src="khan-giay.png" alt="Khăn giấy" style="width:100%;height:100%;object-fit:contain;display:block;background:#F5F5F0;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="khan-giay.png" alt="Khăn giấy" style="width:100%;height:120px;object-fit:contain;display:block;background:#F5F5F0;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
   <div style="display:none;height:90px;background:#F8F8F8;align-items:center;justify-content:center;font-size:28px;">🧻</div>
 </div>
         <div class="inv-pkg-label">② Paper napkin</div>
@@ -805,7 +805,7 @@ body::after{
       </div>
       <div class="inv-pkg-item">
         <div style="height:90px;background:#F0F4F8;overflow:hidden;position:relative;">
-  <img onclick="openImg(this.src)" style="cursor:pointer" src="tui-nilon.png" alt="Túi ni-lông" style="width:100%;height:100%;object-fit:contain;display:block;background:#F5F5F0;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="tui-nilon.png" alt="Túi ni-lông" style="width:100%;height:120px;object-fit:contain;display:block;background:#F5F5F0;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
   <div style="display:none;height:90px;background:#F0F4F8;align-items:center;justify-content:center;font-size:28px;">🛍️</div>
 </div>
         <div class="inv-pkg-label">③ Plastic carry bag</div>
@@ -866,8 +866,14 @@ body::after{
   <div class="prep-head"><span style="font-size:18px">🥒</span><div class="prep-title">Cucumber & Cilantro — Fresh Vegetables</div></div>
   <div class="prep-body">
     <div class="prep-grid">
-      <div class="prep-item"><div class="prep-img">🥒</div><div class="prep-info"><div class="prep-iname">Cucumber</div><div class="prep-ispec">Slice at 45°, <b>4–5mm thick</b>. <b>4 slices (~20g)</b> per portion. Do not prep more than 2 hours ahead.</div></div></div>
-      <div class="prep-item"><div class="prep-img">🌿</div><div class="prep-info"><div class="prep-iname">Cilantro</div><div class="prep-ispec">Wash, shake dry. Remove roots and tough stems. <b>5g (1 small pinch)</b> per portion.</div></div></div>
+      <div class="prep-item"><div class="prep-img" style="padding:0;overflow:hidden;">
+  <img src="cucumber.png" alt="Cucumber" style="width:100%;height:100%;object-fit:contain;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+  <div style="display:none;font-size:32px;line-height:80px;text-align:center;">🥒</div>
+</div><div class="prep-info"><div class="prep-iname">Cucumber</div><div class="prep-ispec">Slice at 45°, <b>4–5mm thick</b>. <b>4 slices (~20g)</b> per portion. Do not prep more than 2 hours ahead.</div></div></div>
+      <div class="prep-item"><div class="prep-img" style="padding:0;overflow:hidden;">
+  <img src="ngo-ri.png" alt="Cilantro" style="width:100%;height:100%;object-fit:contain;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+  <div style="display:none;font-size:32px;line-height:80px;text-align:center;">🌿</div>
+</div><div class="prep-info"><div class="prep-iname">Cilantro</div><div class="prep-ispec">Wash, shake dry. Remove roots and tough stems. <b>5g (1 small pinch)</b> per portion.</div></div></div>
     </div>
     <div class="std-card" style="margin-top:8px">
       <div class="std-row"><div class="std-key">Cucumber (prepped)</div><div class="std-val">Sealed container, 2–8°C. Use within <b>the same day — do not keep overnight</b>.</div></div>
