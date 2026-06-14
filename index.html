@@ -217,7 +217,7 @@ body::after{
 .inv-body{padding:14px;}
 .inv-grid{display:grid;grid-template-columns:120px 1fr;gap:12px;margin-bottom:12px;}
 .inv-img-wrap{width:120px;height:120px;border-radius:10px;overflow:hidden;border:1px solid var(--border);flex-shrink:0;background:#F1F8F1;}
-.inv-img-wrap img{width:100%;height:100%;object-fit:cover;}
+.inv-img-wrap img{width:100%;height:100%;object-fit:contain;cursor:pointer;background:#F1F8F1;}
 .inv-img-ph{width:120px;height:120px;background:#F1F8F1;border:2px dashed var(--gborder);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:26px;text-align:center;padding:8px;}
 .inv-img-ph div{font-size:9px;color:var(--blue);font-family:monospace;margin-top:4px;word-break:break-all;}
 .inv-info{display:flex;flex-direction:column;gap:6px;}
@@ -322,7 +322,7 @@ body::after{
   <div class="equip-card-head"><div class="equip-icon-wrap">🔆</div><div class="equip-name">Electric Toaster Oven (Lò nướng điện)</div><div class="equip-badge">REQUIRED</div></div>
   <div class="equip-body">
     <div class="img-placeholder-wrap" style="margin-bottom:8px;">
-  <img src="toaster-oven.png" alt="Photo of toaster oven" style="width:100%;height:160px;object-fit:cover;border-radius:10px;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="toaster-oven.png" alt="Photo of toaster oven" style="width:100%;height:200px;object-fit:contain;border-radius:10px;display:block;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
   <div class="img-placeholder" style="display:none">
     <div class="img-placeholder-icon">🖼️</div>
     <div class="img-placeholder-text">Photo of toaster oven</div>
@@ -345,7 +345,7 @@ body::after{
   <div class="equip-card-head"><div class="equip-icon-wrap">🔥</div><div class="equip-name">Single Burner Induction Cooktop (Bếp điện từ)</div><div class="equip-badge">REQUIRED</div></div>
   <div class="equip-body">
     <div class="img-placeholder-wrap" style="margin-bottom:8px;">
-  <img src="induction-cooktop.png" alt="Photo of induction cooktop" style="width:100%;height:160px;object-fit:cover;border-radius:10px;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="induction-cooktop.png" alt="Photo of induction cooktop" style="width:100%;height:200px;object-fit:contain;border-radius:10px;display:block;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
   <div class="img-placeholder" style="display:none">
     <div class="img-placeholder-icon">🖼️</div>
     <div class="img-placeholder-text">Photo of induction cooktop</div>
@@ -367,7 +367,7 @@ body::after{
   <div class="equip-card-head"><div class="equip-icon-wrap">🍳</div><div class="equip-name">Ridged Grill Pan — for grilled chicken (Chảo grill)</div><div class="equip-badge">REQUIRED</div></div>
   <div class="equip-body">
     <div class="img-placeholder-wrap" style="margin-bottom:8px;">
-  <img src="grill-pan.png" alt="Photo of grill pan" style="width:100%;height:160px;object-fit:cover;border-radius:10px;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="grill-pan.png" alt="Photo of grill pan" style="width:100%;height:200px;object-fit:contain;border-radius:10px;display:block;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
   <div class="img-placeholder" style="display:none">
     <div class="img-placeholder-icon">🖼️</div>
     <div class="img-placeholder-text">Photo of grill pan</div>
@@ -388,7 +388,7 @@ body::after{
   <div class="equip-card-head"><div class="equip-icon-wrap">🥚</div><div class="equip-name">4-Hole Egg Pan — for fried eggs (Chảo chiên trứng 4 lỗ)</div><div class="equip-badge">REQUIRED</div></div>
   <div class="equip-body">
     <div class="img-placeholder-wrap" style="margin-bottom:8px;">
-  <img src="frying-pan-small.png" alt="Photo of 4-hole egg pan" style="width:100%;height:160px;object-fit:cover;border-radius:10px;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="frying-pan-small.png" alt="Photo of 4-hole egg pan" style="width:100%;height:200px;object-fit:contain;border-radius:10px;display:block;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
   <div class="img-placeholder" style="display:none">
     <div class="img-placeholder-icon">🖼️</div>
     <div class="img-placeholder-text">Photo of 4-hole egg pan</div>
@@ -410,7 +410,7 @@ body::after{
   <div class="equip-card-head"><div class="equip-icon-wrap">✂️</div><div class="equip-name">Kitchen Scissors — bread cutting (Kéo inox)</div><div class="equip-badge">IMPORTANT</div></div>
   <div class="equip-body">
     <div class="img-placeholder-wrap" style="margin-bottom:8px;">
-  <img src="bread-scissors.png" alt="Photo of kitchen scissors" style="width:100%;height:160px;object-fit:cover;border-radius:10px;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="bread-scissors.png" alt="Photo of kitchen scissors" style="width:100%;height:200px;object-fit:contain;border-radius:10px;display:block;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
   <div class="img-placeholder" style="display:none">
     <div class="img-placeholder-icon">🖼️</div>
     <div class="img-placeholder-text">Photo of kitchen scissors</div>
@@ -431,7 +431,7 @@ body::after{
   <div class="equip-card-head"><div class="equip-icon-wrap">🥗</div><div class="equip-name">Refrigerated Ingredient Display (Tủ trưng bày nguyên liệu lạnh)</div><div class="equip-badge">HIGHLY RECOMMENDED</div></div>
   <div class="equip-body">
     <div class="img-placeholder-wrap" style="margin-bottom:8px;">
-  <img src="salad-bar.png" alt="Photo of refrigerated salad showcase" style="width:100%;height:160px;object-fit:cover;border-radius:10px;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="salad-bar.png" alt="Photo of refrigerated salad showcase" style="width:100%;height:200px;object-fit:contain;border-radius:10px;display:block;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
   <div class="img-placeholder" style="display:none">
     <div class="img-placeholder-icon">🖼️</div>
     <div class="img-placeholder-text">Photo of refrigerated salad showcase</div>
@@ -488,7 +488,7 @@ body::after{
   <div class="inv-head"><span class="inv-num">01</span><div class="inv-title">Vietnamese Baguette (Bánh mì)</div><span class="tag daily">Daily order</span></div>
   <div class="inv-body">
     <div class="inv-grid">
-      <div class="inv-img-wrap"><img src="banh-mi-baguette.png" alt="banh-mi-baguette.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🥖<div>banh-mi-baguette.png</div></div></div>
+      <div class="inv-img-wrap"><img onclick="openImg(this.src)" style="cursor:pointer" src="banh-mi-baguette.png" alt="banh-mi-baguette.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🥖<div>banh-mi-baguette.png</div></div></div>
       <div class="inv-info">
         <span class="inv-key">How to identify</span><span class="inv-val">Thin golden crust, light airy inside, ~25cm long, ~200g weight</span>
         <span class="inv-key">Smell</span><span class="inv-val">Light buttery aroma when freshly baked</span>
@@ -509,7 +509,7 @@ body::after{
   <div class="inv-head"><span class="inv-num">02</span><div class="inv-title">Vietnamese Pork Roll — Chả Lụa</div><span class="tag cold">Keep refrigerated</span></div>
   <div class="inv-body">
     <div class="inv-grid">
-      <div class="inv-img-wrap"><img src="cha-lua.png" alt="cha-lua.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🍖<div>cha-lua.png</div></div></div>
+      <div class="inv-img-wrap"><img onclick="openImg(this.src)" style="cursor:pointer" src="cha-lua.png" alt="cha-lua.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🍖<div>cha-lua.png</div></div></div>
       <div class="inv-info">
         <span class="inv-key">How to identify</span><span class="inv-val">Cylindrical shape wrapped in banana leaf or plastic film. Pale pink inside, smooth texture.</span>
         <span class="inv-key">Smell</span><span class="inv-val">Mild savoury aroma, no sour smell</span>
@@ -529,7 +529,7 @@ body::after{
   <div class="inv-head"><span class="inv-num">03</span><div class="inv-title">Ham / Cold Cut (Thịt nguội / Giăm bông)</div><span class="tag cold">Keep refrigerated</span></div>
   <div class="inv-body">
     <div class="inv-grid">
-      <div class="inv-img-wrap"><img src="ham-coldcut.png" alt="ham-coldcut.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🥩<div>ham-coldcut.png</div></div></div>
+      <div class="inv-img-wrap"><img onclick="openImg(this.src)" style="cursor:pointer" src="ham-coldcut.png" alt="ham-coldcut.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🥩<div>ham-coldcut.png</div></div></div>
       <div class="inv-info">
         <span class="inv-key">How to identify</span><span class="inv-val">Thin pink slices, sold in vacuum-sealed packaging</span>
         <span class="inv-key">Preferred type</span><span class="inv-val">Pre-sliced at ~2mm — saves prep time</span>
@@ -549,7 +549,7 @@ body::after{
   <div class="inv-head"><span class="inv-num">04</span><div class="inv-title">Vietnamese Liver Pâté (Pate gan)</div><span class="tag cold">Refrigerate after opening</span></div>
   <div class="inv-body">
     <div class="inv-grid">
-      <div class="inv-img-wrap"><img src="pate-gan.png" alt="pate-gan.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🫙<div>pate-gan.png</div></div></div>
+      <div class="inv-img-wrap"><img onclick="openImg(this.src)" style="cursor:pointer" src="pate-gan.png" alt="pate-gan.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🫙<div>pate-gan.png</div></div></div>
       <div class="inv-info">
         <span class="inv-key">How to identify</span><span class="inv-val">Glass or plastic jar, grey-brown colour, smooth surface</span>
         <span class="inv-key">Smell</span><span class="inv-val">Mild liver aroma — no off smell</span>
@@ -569,7 +569,7 @@ body::after{
   <div class="inv-head"><span class="inv-num">05</span><div class="inv-title">Vietnamese Butter (Bơ Việt Nam)</div><span class="tag cold">Keep refrigerated</span></div>
   <div class="inv-body">
     <div class="inv-grid">
-      <div class="inv-img-wrap"><img src="bo-viet-nam.png" alt="bo-viet-nam.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🧈<div>bo-viet-nam.png</div></div></div>
+      <div class="inv-img-wrap"><img onclick="openImg(this.src)" style="cursor:pointer" src="bo-viet-nam.png" alt="bo-viet-nam.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🧈<div>bo-viet-nam.png</div></div></div>
       <div class="inv-info">
         <span class="inv-key">How to identify</span><span class="inv-val">Glass jar, pale yellow, soft and creamy (spreadable straight from fridge)</span>
         <span class="inv-key">Smell</span><span class="inv-val">Light buttery aroma</span>
@@ -590,7 +590,7 @@ body::after{
   <div class="inv-head"><span class="inv-num">06</span><div class="inv-title">Vietnamese Pickles — Carrot & Daikon (Dưa chua)</div><span class="tag cold">Keep refrigerated</span></div>
   <div class="inv-body">
     <div class="inv-grid">
-      <div class="inv-img-wrap"><img src="dua-chua.png" alt="dua-chua.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🥕<div>dua-chua.png</div></div></div>
+      <div class="inv-img-wrap"><img onclick="openImg(this.src)" style="cursor:pointer" src="dua-chua.png" alt="dua-chua.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🥕<div>dua-chua.png</div></div></div>
       <div class="inv-info">
         <span class="inv-key">How to identify</span><span class="inv-val">Glass jar, julienned orange carrot + white daikon, in clear pickling liquid</span>
         <span class="inv-key">Taste</span><span class="inv-val">Balanced sweet-sour, crisp — not mushy</span>
@@ -610,7 +610,7 @@ body::after{
   <div class="inv-head"><span class="inv-num">07</span><div class="inv-title">Fresh Cilantro (Ngò rí / Wansoy)</div><span class="tag daily">Order regularly</span></div>
   <div class="inv-body">
     <div class="inv-grid">
-      <div class="inv-img-wrap"><img src="ngo-ri.png" alt="ngo-ri.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🌿<div>ngo-ri.png</div></div></div>
+      <div class="inv-img-wrap"><img onclick="openImg(this.src)" style="cursor:pointer" src="ngo-ri.png" alt="ngo-ri.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🌿<div>ngo-ri.png</div></div></div>
       <div class="inv-info">
         <span class="inv-key">How to identify</span><span class="inv-val">Bright green, small leaves, strong distinctive aroma</span>
         <span class="inv-key">Philippine name</span><span class="inv-val">"Wansoy" or "Coriander" — sold at wet markets and supermarkets</span>
@@ -629,7 +629,7 @@ body::after{
   <div class="inv-head"><span class="inv-num">08</span><div class="inv-title">Maggi Seasoning Sauce (Nước tương Maggi)</div><span class="tag room">Room temperature</span></div>
   <div class="inv-body">
     <div class="inv-grid">
-      <div class="inv-img-wrap"><img src="maggi-sauce.png" alt="maggi-sauce.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🍶<div>maggi-sauce.png</div></div></div>
+      <div class="inv-img-wrap"><img onclick="openImg(this.src)" style="cursor:pointer" src="maggi-sauce.png" alt="maggi-sauce.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🍶<div>maggi-sauce.png</div></div></div>
       <div class="inv-info">
         <span class="inv-key">How to identify</span><span class="inv-val">Small dark glass bottle, red-yellow label — sold at every supermarket in PH</span>
         <span class="inv-key">How to use</span><span class="inv-val">Drop directly from bottle, 5–6 drops (~3ml) along the length of the bread</span>
@@ -648,7 +648,7 @@ body::after{
   <div class="inv-head"><span class="inv-num">09</span><div class="inv-title">Fresh Chili 🌶️ <span class="tag opt">Optional only</span></div></div>
   <div class="inv-body">
     <div class="inv-grid">
-      <div class="inv-img-wrap"><img src="ot-tuoi.png" alt="ot-tuoi.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🌶️<div>ot-tuoi.png</div></div></div>
+      <div class="inv-img-wrap"><img onclick="openImg(this.src)" style="cursor:pointer" src="ot-tuoi.png" alt="ot-tuoi.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🌶️<div>ot-tuoi.png</div></div></div>
       <div class="inv-info">
         <span class="inv-key">Important</span><span class="inv-val">Only add when customer specifically requests it — never add automatically</span>
         <span class="inv-key">Type</span><span class="inv-val">Green or red finger chili, thinly sliced ~2mm</span>
@@ -669,7 +669,7 @@ body::after{
   <div class="inv-head"><span class="inv-num">T1</span><div class="inv-title">Electric Toaster Oven</div><span class="tag warn">Required</span></div>
   <div class="inv-body">
     <div class="inv-grid">
-      <div class="inv-img-wrap"><img src="toaster-oven.png" alt="toaster-oven.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🔆<div>toaster-oven.png</div></div></div>
+      <div class="inv-img-wrap"><img onclick="openImg(this.src)" style="cursor:pointer" src="toaster-oven.png" alt="toaster-oven.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🔆<div>toaster-oven.png</div></div></div>
       <div class="inv-info">
         <span class="inv-key">Used for</span><span class="inv-val">Warming the baguette before assembly</span>
         <span class="inv-key">Setting</span><span class="inv-val">170–180°C, top+bottom heat, 3–4 min</span>
@@ -690,7 +690,7 @@ body::after{
   <div class="inv-head"><span class="inv-num">T2</span><div class="inv-title">Single Burner Induction Cooktop</div><span class="tag warn">Required</span></div>
   <div class="inv-body">
     <div class="inv-grid">
-      <div class="inv-img-wrap"><img src="induction-cooktop.png" alt="induction-cooktop.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🔥<div>induction-cooktop.png</div></div></div>
+      <div class="inv-img-wrap"><img onclick="openImg(this.src)" style="cursor:pointer" src="induction-cooktop.png" alt="induction-cooktop.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🔥<div>induction-cooktop.png</div></div></div>
       <div class="inv-info">
         <span class="inv-key">Used for</span><span class="inv-val">Frying eggs + grilling chicken</span>
         <span class="inv-key">Pan requirement</span><span class="inv-val">Must use magnetic-base pans — test with a magnet on pan bottom</span>
@@ -710,7 +710,7 @@ body::after{
   <div class="inv-head"><span class="inv-num">T3</span><div class="inv-title">Ridged Grill Pan (for chicken)</div><span class="tag warn">Required</span></div>
   <div class="inv-body">
     <div class="inv-grid">
-      <div class="inv-img-wrap"><img src="grill-pan.png" alt="grill-pan.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🍳<div>grill-pan.png</div></div></div>
+      <div class="inv-img-wrap"><img onclick="openImg(this.src)" style="cursor:pointer" src="grill-pan.png" alt="grill-pan.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🍳<div>grill-pan.png</div></div></div>
       <div class="inv-info">
         <span class="inv-key">Used for</span><span class="inv-val">Grilling lemongrass chicken — creates authentic char marks</span>
         <span class="inv-key">Size</span><span class="inv-val">26–28cm square</span>
@@ -729,7 +729,7 @@ body::after{
   <div class="inv-head"><span class="inv-num">T4</span><div class="inv-title">4-Hole Egg Pan (for fried eggs)</div><span class="tag warn">Required</span></div>
   <div class="inv-body">
     <div class="inv-grid">
-      <div class="inv-img-wrap"><img src="frying-pan-small.png" alt="frying-pan-small.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🥚<div>frying-pan-small.png</div></div></div>
+      <div class="inv-img-wrap"><img onclick="openImg(this.src)" style="cursor:pointer" src="frying-pan-small.png" alt="frying-pan-small.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🥚<div>frying-pan-small.png</div></div></div>
       <div class="inv-info">
         <span class="inv-key">Used for</span><span class="inv-val">Frying eggs for bánh mì trứng — 4 eggs simultaneously</span>
         <span class="inv-key">Coating</span><span class="inv-val">Non-stick granite or Teflon</span>
@@ -747,7 +747,7 @@ body::after{
   <div class="inv-head"><span class="inv-num">T5</span><div class="inv-title">Kitchen Scissors / Shears (for bread)</div><span class="tag warn">Required</span></div>
   <div class="inv-body">
     <div class="inv-grid">
-      <div class="inv-img-wrap"><img src="bread-scissors.png" alt="bread-scissors.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">✂️<div>bread-scissors.png</div></div></div>
+      <div class="inv-img-wrap"><img onclick="openImg(this.src)" style="cursor:pointer" src="bread-scissors.png" alt="bread-scissors.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">✂️<div>bread-scissors.png</div></div></div>
       <div class="inv-info">
         <span class="inv-key">Used for</span><span class="inv-val">Cutting baguette lengthwise ¾ through — faster and cleaner than a knife</span>
         <span class="inv-key">Material</span><span class="inv-val">Stainless steel blades, plastic handles</span>
@@ -766,7 +766,7 @@ body::after{
   <div class="inv-head"><span class="inv-num">T6</span><div class="inv-title">Refrigerated Ingredient Display</div><span class="tag warn">Highly recommended</span></div>
   <div class="inv-body">
     <div class="inv-grid">
-      <div class="inv-img-wrap"><img src="salad-bar.png" alt="salad-bar.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🥗<div>salad-bar.png</div></div></div>
+      <div class="inv-img-wrap"><img onclick="openImg(this.src)" style="cursor:pointer" src="salad-bar.png" alt="salad-bar.png" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="inv-img-ph" style="display:none">🥗<div>salad-bar.png</div></div></div>
       <div class="inv-info">
         <span class="inv-key">Used for</span><span class="inv-val">Keep all fresh prepped ingredients cold and accessible at counter</span>
         <span class="inv-key">Temperature</span><span class="inv-val">2–8°C in the ingredient trays</span>
@@ -789,7 +789,7 @@ body::after{
     <div class="inv-grid3">
       <div class="inv-pkg-item">
         <div style="height:90px;background:#F5F0E8;overflow:hidden;position:relative;">
-  <img src="tui-giay-banh-mi.png" alt="Túi giấy bánh mì" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="tui-giay-banh-mi.png" alt="Túi giấy bánh mì" style="width:100%;height:100%;object-fit:contain;display:block;background:#F5F5F0;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
   <div style="display:none;height:90px;background:#F5F0E8;align-items:center;justify-content:center;font-size:28px;">🧧</div>
 </div>
         <div class="inv-pkg-label">① Paper bag</div>
@@ -797,7 +797,7 @@ body::after{
       </div>
       <div class="inv-pkg-item">
         <div style="height:90px;background:#F8F8F8;overflow:hidden;position:relative;">
-  <img src="khan-giay.png" alt="Khăn giấy" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="khan-giay.png" alt="Khăn giấy" style="width:100%;height:100%;object-fit:contain;display:block;background:#F5F5F0;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
   <div style="display:none;height:90px;background:#F8F8F8;align-items:center;justify-content:center;font-size:28px;">🧻</div>
 </div>
         <div class="inv-pkg-label">② Paper napkin</div>
@@ -805,7 +805,7 @@ body::after{
       </div>
       <div class="inv-pkg-item">
         <div style="height:90px;background:#F0F4F8;overflow:hidden;position:relative;">
-  <img src="tui-nilon.png" alt="Túi ni-lông" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="tui-nilon.png" alt="Túi ni-lông" style="width:100%;height:100%;object-fit:contain;display:block;background:#F5F5F0;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
   <div style="display:none;height:90px;background:#F0F4F8;align-items:center;justify-content:center;font-size:28px;">🛍️</div>
 </div>
         <div class="inv-pkg-label">③ Plastic carry bag</div>
@@ -849,7 +849,7 @@ body::after{
   <div class="prep-body">
     <div class="prep-grid">
       <div class="prep-item"><div class="prep-img" style="padding:0;overflow:hidden;">
-  <img src="cha-lua-slice.png" alt="Cha lua slice" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="cha-lua-slice.png" alt="Cha lua slice" style="width:100%;height:100%;object-fit:contain;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
   <div style="display:none;font-size:32px;line-height:80px;text-align:center;">🍖</div>
 </div><div class="prep-info"><div class="prep-iname">Slice shape</div><div class="prep-ispec">Round, cut at 30–45° angle. Thickness: <b>3mm</b>, diameter ~5cm.</div></div></div>
       <div class="prep-item"><div class="prep-img">📏</div><div class="prep-info"><div class="prep-iname">Portion size</div><div class="prep-ispec"><b>3 slices = ~30g</b> per bánh mì portion.</div></div></div>
@@ -893,7 +893,7 @@ body::after{
   <div class="prep-body">
     <div class="prep-grid">
       <div class="prep-item"><div class="prep-img" style="padding:0;overflow:hidden;">
-  <img src="chicken-slice.png" alt="Chicken slice" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+  <img onclick="openImg(this.src)" style="cursor:pointer" src="chicken-slice.png" alt="Chicken slice" style="width:100%;height:100%;object-fit:contain;background:#F1F8F1;cursor:pointer;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
   <div style="display:none;font-size:32px;line-height:80px;text-align:center;">🍖</div>
 </div><div class="prep-info"><div class="prep-iname">Slice shape</div><div class="prep-ispec">Thin slices, <b>5mm thick</b>, 5–7cm long. Cut across the grain.</div></div></div>
       <div class="prep-item"><div class="prep-img">📏</div><div class="prep-info"><div class="prep-iname">Portion size</div><div class="prep-ispec"><b>90g cooked chicken</b> per portion (≈120g raw marinated — ~25% weight loss when grilled).</div></div></div>
@@ -1172,6 +1172,18 @@ function T(id,btn){
   document.getElementById('p-'+id).classList.add('active');
   btn.classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+
+<div id="lightbox" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);z-index:9999;cursor:zoom-out;align-items:center;justify-content:center;">
+  <img id="lightbox-img" src="" style="max-width:92%;max-height:92%;object-fit:contain;border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,.5);"/>
+  <div style="position:absolute;top:18px;right:22px;color:#fff;font-size:28px;font-weight:700;cursor:pointer;" onclick="document.getElementById('lightbox').style.display='none'">✕</div>
+</div>
+<script>
+function openImg(src){
+  var lb=document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src=src;
+  lb.style.display='flex';
 }
 </script>
 </body>
