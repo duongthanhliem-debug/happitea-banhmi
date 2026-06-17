@@ -3,7 +3,7 @@
 <link rel="icon" type="image/png" href="happitea-banhmi.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HappiTea - Bánh Mì Kitchen SOP</title>
+<title>HappiTea - Bánh Mì</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap');
 :root{
@@ -795,7 +795,7 @@ function enterApp(){
     <div class="nav">
       <button class="ntab active" onclick="T('overview',this)" data-en="📋 Overview" data-vi="📋 Tổng quan">📋 Overview</button>
       <button class="ntab" onclick="T('inventory',this)" data-en="🧾 Ingredients & Tools" data-vi="🧾 Nguyên liệu & Dụng cụ">🧾 Ingredients & Tools</button>
-      <button class="ntab" onclick="T('prep',this)" data-en="🔪 Mise en Place" data-vi="🔪 Sơ chế">🔪 Mise en Place</button>
+      <button class="ntab" onclick="T('prep',this)" data-en="🔪 Prep Work" data-vi="🔪 Sơ chế">🔪 Prep Work</button>
       <button class="ntab" onclick="T('stock',this)" data-en="📦 Stock & Storage" data-vi="📦 Nhập & Bảo quản">📦 Stock & Storage</button>
       <button class="ntab" onclick="T('coldcut',this)" data-en="🥪 Cold Cut" data-vi="🥪 Thịt nguội">🥪 Cold Cut</button>
       <button class="ntab" onclick="T('egg',this)" data-en="🍳 Fried Egg" data-vi="🍳 Trứng">🍳 Fried Egg</button>
@@ -806,213 +806,7 @@ function enterApp(){
 </div>
 
 <!-- ═══════════ TAB 1: OVERVIEW ═══════════ -->
-<div id="p-menu" class="tab-panel active"><div class="wrap">
-
-<div class="hero"><div class="hero-deco">🍽️</div>
-  <div class="hero-vi">Menu Đề Xuất</div>
-  <div class="hero-en">Suggested Menu — 3 Vietnamese Bánh Mì items for HappiTea Philippines</div>
-  <div class="pills"><span class="pill">3 món khởi đầu</span><span class="pill">Văn hóa đường phố Việt Nam</span></div>
-</div>
-
-<div class="notice green">🇻🇳 <span>Bánh mì là món ăn đường phố biểu tượng của Việt Nam — sự kết hợp giữa <b>bánh baguette kiểu Pháp</b> (di sản thời Pháp thuộc) và <b>nguyên liệu địa phương Việt</b>. Đây chính là minh chứng cho sự giao thoa văn hóa Đông-Tây độc đáo của ẩm thực Việt.</span></div>
-
-<!-- MÓN 1: THỊT NGUỘI -->
-<div class="prep-card">
-  <div class="prep-head"><span style="font-size:18px">🥪</span><div class="prep-title">1. Bánh Mì Thịt Nguội — Cold Cut</div></div>
-  <div class="prep-body">
-    <svg viewBox="0 0 200 120" style="width:100%;height:110px;">
-    <ellipse cx="100" cy="65" rx="92" ry="38" fill="#B9762C"/>
-    <ellipse cx="100" cy="58" rx="80" ry="28" fill="#FFF5DC"/>
-    <ellipse cx="100" cy="48" rx="76" ry="10" fill="#D88080"/>
-    <ellipse cx="100" cy="62" rx="76" ry="9" fill="#E8A878"/>
-    <circle cx="50" cy="55" r="4" fill="#E8821E"/><circle cx="80" cy="58" r="4" fill="#E8821E"/><circle cx="120" cy="56" r="4" fill="#5BA84A"/><circle cx="150" cy="55" r="4" fill="#5BA84A"/>
-    <ellipse cx="100" cy="32" rx="88" ry="20" fill="#B9762C"/>
-    <ellipse cx="100" cy="26" rx="76" ry="12" fill="#FFF8E8"/>
-    <circle cx="55" cy="22" r="2" fill="#D4A845"/><circle cx="75" cy="18" r="2" fill="#D4A845"/>
-    <circle cx="100" cy="16" r="2" fill="#D4A845"/><circle cx="125" cy="18" r="2" fill="#D4A845"/>
-    <circle cx="145" cy="22" r="2" fill="#D4A845"/>
-  </svg>
-    <div class="std-card" style="margin-top:10px;">
-      <div class="std-row"><div class="std-key">Thành phần</div><div class="std-val">Pâté gan, bơ Việt Nam, chả lụa, thịt nguội/giăm bông, dưa chua cà rốt-củ cải, dưa leo, ngò rí, nước tương Maggi</div></div>
-      <div class="std-row"><div class="std-key">Mùi vị</div><div class="std-val">Béo nhẹ từ pâté và bơ, mặn ngọt hài hòa từ thịt và Maggi, giòn chua thanh từ dưa chua, thơm tươi từ ngò rí — tổng hòa nhiều lớp vị trong một miếng cắn.</div></div>
-      <div class="std-row"><div class="std-key">Văn hóa</div><div class="std-val">Đây là phiên bản <b>bánh mì nền tảng</b> — món ăn sáng/trưa phổ biến nhất trên đường phố Việt Nam, thường bán tại các xe đẩy nhỏ từ 5h sáng. Pâté gan là di sản ẩm thực Pháp được Việt hóa hoàn toàn.</div></div>
-      <div class="std-row"><div class="std-key">Trải nghiệm ăn</div><div class="std-val">Vỏ giòn tan ngay khi cắn, sau đó là lớp nhân mềm béo, rồi vị chua giòn của dưa chua cắt ngang vị béo — không bị ngấy.</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- MÓN 2: TRỨNG -->
-<div class="prep-card">
-  <div class="prep-head"><span style="font-size:18px">🍳</span><div class="prep-title">2. Bánh Mì Trứng — Fried Egg</div></div>
-  <div class="prep-body">
-    <svg viewBox="0 0 200 120" style="width:100%;height:110px;">
-    <ellipse cx="100" cy="65" rx="92" ry="38" fill="#B9762C"/>
-    <ellipse cx="100" cy="58" rx="80" ry="28" fill="#FFF5DC"/>
-    <ellipse cx="95" cy="52" rx="34" ry="22" fill="#FFFBEF"/>
-    <ellipse cx="95" cy="52" rx="34" ry="22" fill="none" stroke="#F0D060" stroke-width="2" opacity=".6"/>
-    <circle cx="95" cy="52" r="13" fill="#F5A623"/>
-    <circle cx="91" cy="48" r="4" fill="#FFD27A" opacity=".7"/>
-    <circle cx="140" cy="60" r="4" fill="#5BA84A"/><circle cx="155" cy="58" r="4" fill="#5BA84A"/>
-    <ellipse cx="100" cy="32" rx="88" ry="20" fill="#B9762C"/>
-    <ellipse cx="100" cy="26" rx="76" ry="12" fill="#FFF8E8"/>
-    <circle cx="55" cy="22" r="2" fill="#D4A845"/><circle cx="75" cy="18" r="2" fill="#D4A845"/>
-    <circle cx="100" cy="16" r="2" fill="#D4A845"/><circle cx="125" cy="18" r="2" fill="#D4A845"/>
-    <circle cx="145" cy="22" r="2" fill="#D4A845"/>
-  </svg>
-    <div class="std-card" style="margin-top:10px;">
-      <div class="std-row"><div class="std-key">Thành phần</div><div class="std-val">Trứng ốp la (2 trứng), pâté gan, bơ Việt Nam, dưa chua, dưa leo, hành lá, muối, tiêu trắng, nước tương Maggi</div></div>
-      <div class="std-row"><div class="std-key">Mùi vị</div><div class="std-val">Lòng đỏ béo ngậy chảy ra khi cắn, viền trứng giòn cháy cạnh thơm mùi dầu nóng, vị mặn nhẹ vừa phải từ Maggi và muối, hành lá thơm nhẹ.</div></div>
-      <div class="std-val" style="margin-top:0"></div>
-      <div class="std-row"><div class="std-key">Văn hóa</div><div class="std-val">Món <b>ăn sáng truyền thống</b> của người Việt — trứng ốp la chiên trong dầu nóng để tạo viền giòn là kỹ thuật đặc trưng, khác hoàn toàn với trứng chiên kiểu Tây dùng bơ.</div></div>
-      <div class="std-row"><div class="std-key">Trải nghiệm ăn</div><div class="std-val">Cắn vào sẽ thấy lòng đỏ còn lỏng chảy ra hòa với pâté và bơ — đây là điểm "gây nghiện" khiến khách quay lại.</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- MÓN 3: GÀ NƯỚNG -->
-<div class="prep-card">
-  <div class="prep-head"><span style="font-size:18px">🍗</span><div class="prep-title">3. Bánh Mì Gà Nướng Sả — Grilled Lemongrass Chicken</div></div>
-  <div class="prep-body">
-    <svg viewBox="0 0 200 120" style="width:100%;height:110px;">
-    <ellipse cx="100" cy="65" rx="92" ry="38" fill="#B9762C"/>
-    <ellipse cx="100" cy="58" rx="80" ry="28" fill="#FFF5DC"/>
-    <ellipse cx="60" cy="55" rx="20" ry="11" fill="#C8821E" transform="rotate(-8 60 55)"/>
-    <ellipse cx="60" cy="55" rx="20" ry="11" fill="none" stroke="#8B5010" stroke-width="1.5" transform="rotate(-8 60 55)"/>
-    <line x1="50" y1="50" x2="70" y2="60" stroke="#8B5010" stroke-width="1.5" opacity=".5"/>
-    <line x1="53" y1="60" x2="68" y2="50" stroke="#8B5010" stroke-width="1.5" opacity=".5"/>
-    <ellipse cx="100" cy="58" rx="20" ry="11" fill="#D89030" transform="rotate(5 100 58)"/>
-    <ellipse cx="100" cy="58" rx="20" ry="11" fill="none" stroke="#8B5010" stroke-width="1.5" transform="rotate(5 100 58)"/>
-    <ellipse cx="140" cy="54" rx="20" ry="11" fill="#C8821E" transform="rotate(-5 140 54)"/>
-    <ellipse cx="140" cy="54" rx="20" ry="11" fill="none" stroke="#8B5010" stroke-width="1.5" transform="rotate(-5 140 54)"/>
-    <circle cx="55" cy="62" r="3.5" fill="#5BA84A"/><circle cx="150" cy="64" r="3.5" fill="#5BA84A"/>
-    <ellipse cx="100" cy="32" rx="88" ry="20" fill="#B9762C"/>
-    <ellipse cx="100" cy="26" rx="76" ry="12" fill="#FFF8E8"/>
-    <circle cx="55" cy="22" r="2" fill="#D4A845"/><circle cx="75" cy="18" r="2" fill="#D4A845"/>
-    <circle cx="100" cy="16" r="2" fill="#D4A845"/><circle cx="125" cy="18" r="2" fill="#D4A845"/>
-    <circle cx="145" cy="22" r="2" fill="#D4A845"/>
-  </svg>
-    <div class="std-card" style="margin-top:10px;">
-      <div class="std-row"><div class="std-key">Thành phần</div><div class="std-val">Gà ướp sả-tỏi-nước mắm-đường nướng vàng, bơ Việt Nam (không pâté), dưa chua, dưa leo, ngò rí, nước tương Maggi</div></div>
-      <div class="std-row"><div class="std-key">Mùi vị</div><div class="std-val">Thơm nồng mùi sả đặc trưng, ngọt nhẹ từ đường caramen hóa khi nướng, vị umami đậm từ nước mắm, gà nướng có lớp ngoài cháy cạnh thơm, bên trong mềm ẩm.</div></div>
-      <div class="std-row"><div class="std-key">Văn hóa</div><div class="std-val"><b>Sả (lemongrass)</b> là gia vị đặc trưng nhất của ẩm thực Việt Nam — xuất hiện trong hầu hết món nướng. Đây là món <b>cao cấp nhất</b> trong 3 món, thường được khách quốc tế yêu thích nhất vì hương vị "rất Việt Nam".</div></div>
-      <div class="std-row"><div class="std-key">Trải nghiệm ăn</div><div class="std-val">Mùi sả thơm bay ra ngay khi mở bánh — đây là điểm khác biệt tạo ấn tượng đầu tiên mạnh nhất so với 2 món còn lại.</div></div>
-    </div>
-  </div>
-</div>
-
-<div class="notice yellow">💡 <span><b>Gợi ý R&D mở rộng sau:</b> Bánh mì chả cá, bánh mì xíu mại, bánh mì heo quay — đều là các món bánh mì phổ biến khác tại Việt Nam có thể nghiên cứu thêm khi mô hình thử nghiệm thành công.</span></div>
-
-</div></div>
-
-<div id="p-cost" class="tab-panel"><div class="wrap">
-
-<div class="hero"><div class="hero-deco">💰</div>
-  <div class="hero-vi">Chi Phí Nguyên Liệu</div>
-  <div class="hero-en">Estimated ingredient cost per portion — Philippines market prices</div>
-  <div class="pills"><span class="pill">Đơn vị: 1 phần / 1 ổ bánh mì</span><span class="pill">Tiền tệ: PHP (₱)</span></div>
-</div>
-
-<div class="notice yellow">⚠️ <span><b>Lưu ý quan trọng:</b> Giá có dấu ✓ là giá Liêm cung cấp thực tế. Giá có dấu ~ là <b>ước tính dựa trên giá thị trường Philippines</b> (Tridge, PSA Philippines, chợ bán lẻ) — cần Liêm xác nhận lại với nhà cung cấp thực tế trước khi dùng để tính giá bán.</span></div>
-
-<div class="slabel">Giá nguyên liệu gốc (theo đơn vị mua)</div>
-<div class="table-wrap"><table class="ing-table">
-  <tr><th>Nguyên liệu</th><th>Đơn vị mua</th><th>Giá (₱)</th></tr>
-  <tr><td>Pâté gan (Liver Pâté) ✓</td><td>250g/hũ</td><td>₱250</td></tr>
-  <tr><td>Dưa chua đóng hũ (Pickled veggies) ✓</td><td>250g/hũ</td><td>₱170</td></tr>
-  <tr><td>Bơ Việt Nam (Vietnamese Butter) ✓</td><td>250g/hũ</td><td>₱150</td></tr>
-  <tr><td>Bánh mì baguette ✓</td><td>1 ổ</td><td>₱25</td></tr>
-  <tr><td>Chả lụa (500g, ước theo set Liêm gửi) ✓</td><td>500g</td><td>₱450</td></tr>
-  <tr><td>Pâté (set 500g, theo giá Liêm gửi) ✓</td><td>500g</td><td>₱350</td></tr>
-  <tr><td>Thịt nguội / Giăm bông (Ham) ~</td><td>1kg</td><td>~₱420</td></tr>
-  <tr><td>Dưa leo tươi (Cucumber) ~</td><td>1kg</td><td>~₱60</td></tr>
-  <tr><td>Ngò rí (Cilantro/Wansoy) ~</td><td>100g</td><td>~₱20</td></tr>
-  <tr><td>Trứng gà (Egg) ~</td><td>1 quả</td><td>~₱9.2</td></tr>
-  <tr><td>Ức gà (Chicken breast) ~</td><td>1kg</td><td>~₱260</td></tr>
-  <tr><td>Sả (Lemongrass) ~</td><td>100g</td><td>~₱15</td></tr>
-  <tr><td>Tỏi (Garlic) ~</td><td>100g</td><td>~₱25</td></tr>
-  <tr><td>Nước mắm (Fish sauce) ~</td><td>1 lít</td><td>~₱120</td></tr>
-  <tr><td>Đường trắng (Sugar) ~</td><td>1kg</td><td>~₱70</td></tr>
-  <tr><td>Dầu ăn (Cooking oil) ~</td><td>1 lít</td><td>~₱90</td></tr>
-  <tr><td>Nước tương Maggi ~</td><td>1 chai 410ml</td><td>~₱85</td></tr>
-  <tr><td>Hành lá (Spring onion) ~</td><td>100g</td><td>~₱15</td></tr>
-  <tr><td>Muối + Tiêu (Salt + Pepper) ~</td><td>—</td><td>~₱1 (cho lượng nhỏ)</td></tr>
-</table></div>
-
-<div class="slabel">Bộ đóng gói (Packaging)</div>
-<div class="table-wrap"><table class="ing-table">
-  <tr><th>Item</th><th>Đơn vị mua</th><th>Giá (₱)</th></tr>
-  <tr><td>Túi giấy bánh mì (KV31) ~</td><td>100 túi</td><td>~₱180 (₱1.8/túi)</td></tr>
-  <tr><td>Khăn giấy ~</td><td>200 tờ/gói</td><td>~₱60 (₱0.3/tờ)</td></tr>
-  <tr><td>Túi ni-lông thực phẩm ~</td><td>100 túi</td><td>~₱100 (₱1/túi)</td></tr>
-</table></div>
-
-<div class="phase"><div class="phase-line"></div><div class="ptag g">Cost / phần — Bánh Mì Thịt Nguội</div><div class="phase-line"></div></div>
-<div class="table-wrap"><table class="ing-table">
-  <tr><th>Nguyên liệu</th><th>Lượng dùng</th><th>Cost (₱)</th></tr>
-  <tr><td>Bánh mì</td><td>1 ổ</td><td>₱25.00</td></tr>
-  <tr><td>Pâté gan</td><td>20g</td><td>₱20.00</td></tr>
-  <tr><td>Bơ Việt Nam</td><td>15g</td><td>₱9.00</td></tr>
-  <tr><td>Chả lụa</td><td>30g</td><td>₱27.00</td></tr>
-  <tr><td>Thịt nguội</td><td>30g</td><td>₱12.60</td></tr>
-  <tr><td>Dưa chua</td><td>30g</td><td>₱20.40</td></tr>
-  <tr><td>Dưa leo</td><td>20g</td><td>₱1.20</td></tr>
-  <tr><td>Ngò rí</td><td>5g</td><td>₱1.00</td></tr>
-  <tr><td>Maggi</td><td>3ml</td><td>₱0.60</td></tr>
-  <tr><td>Bao bì (3 món)</td><td>1 set</td><td>₱3.10</td></tr>
-  <tr style="background:#E8F5E9"><td><b>TỔNG COST</b></td><td></td><td><b>₱119.90</b></td></tr>
-</table></div>
-
-<div class="phase"><div class="phase-line"></div><div class="ptag g">Cost / phần — Bánh Mì Trứng</div><div class="phase-line"></div></div>
-<div class="table-wrap"><table class="ing-table">
-  <tr><th>Nguyên liệu</th><th>Lượng dùng</th><th>Cost (₱)</th></tr>
-  <tr><td>Bánh mì</td><td>1 ổ</td><td>₱25.00</td></tr>
-  <tr><td>Trứng gà</td><td>2 quả</td><td>₱18.40</td></tr>
-  <tr><td>Dầu ăn</td><td>10ml</td><td>₱0.90</td></tr>
-  <tr><td>Pâté gan</td><td>15g</td><td>₱15.00</td></tr>
-  <tr><td>Bơ Việt Nam</td><td>15g</td><td>₱9.00</td></tr>
-  <tr><td>Dưa chua</td><td>25g</td><td>₱17.00</td></tr>
-  <tr><td>Dưa leo</td><td>15g</td><td>₱0.90</td></tr>
-  <tr><td>Hành lá</td><td>5g</td><td>₱0.75</td></tr>
-  <tr><td>Muối + Tiêu</td><td>1g</td><td>₱0.10</td></tr>
-  <tr><td>Maggi</td><td>3ml</td><td>₱0.60</td></tr>
-  <tr><td>Bao bì (3 món)</td><td>1 set</td><td>₱3.10</td></tr>
-  <tr style="background:#E8F5E9"><td><b>TỔNG COST</b></td><td></td><td><b>₱90.75</b></td></tr>
-</table></div>
-
-<div class="phase"><div class="phase-line"></div><div class="ptag g">Cost / phần — Bánh Mì Gà Nướng Sả</div><div class="phase-line"></div></div>
-<div class="table-wrap"><table class="ing-table">
-  <tr><th>Nguyên liệu</th><th>Lượng dùng</th><th>Cost (₱)</th></tr>
-  <tr><td>Bánh mì</td><td>1 ổ</td><td>₱25.00</td></tr>
-  <tr><td>Ức gà (120g sống)</td><td>120g</td><td>₱31.20</td></tr>
-  <tr><td>Sả</td><td>8g (~1/5 phần marinade)</td><td>₱1.20</td></tr>
-  <tr><td>Tỏi</td><td>3g</td><td>₱0.75</td></tr>
-  <tr><td>Nước mắm</td><td>6ml</td><td>₱0.72</td></tr>
-  <tr><td>Đường</td><td>3g</td><td>₱0.21</td></tr>
-  <tr><td>Dầu ăn (marinade + xịt chảo)</td><td>8ml</td><td>₱0.72</td></tr>
-  <tr><td>Bơ Việt Nam</td><td>20g</td><td>₱12.00</td></tr>
-  <tr><td>Dưa chua</td><td>30g</td><td>₱20.40</td></tr>
-  <tr><td>Dưa leo</td><td>20g</td><td>₱1.20</td></tr>
-  <tr><td>Ngò rí</td><td>5g</td><td>₱1.00</td></tr>
-  <tr><td>Maggi</td><td>3ml</td><td>₱0.60</td></tr>
-  <tr><td>Bao bì (3 món)</td><td>1 set</td><td>₱3.10</td></tr>
-  <tr style="background:#E8F5E9"><td><b>TỔNG COST</b></td><td></td><td><b>₱98.10</b></td></tr>
-</table></div>
-
-<div class="summary">
-  <div class="summary-title">Tóm tắt Food Cost / Phần</div>
-  <div class="summary-grid">
-    <div class="sum-item"><div class="sum-val">₱120</div><div class="sum-label">Thịt nguội</div></div>
-    <div class="sum-item"><div class="sum-val">₱91</div><div class="sum-label">Trứng</div></div>
-    <div class="sum-item"><div class="sum-val">₱98</div><div class="sum-label">Gà nướng sả</div></div>
-    <div class="sum-item"><div class="sum-val">₱103</div><div class="sum-label">Trung bình 3 món</div></div>
-  </div>
-</div>
-
-<div class="notice blue">📌 <span><b>Chưa bao gồm:</b> chi phí điện/gas vận hành, hao hụt nguyên liệu (waste %), chi phí nhân công, chi phí vận chuyển/logistics nhập hàng. Đây chỉ là <b>food cost nguyên liệu trực tiếp</b>. Liêm cần cộng thêm các chi phí này để ra giá vốn đầy đủ trước khi định giá bán.</span></div>
-
-</div></div>
-
-<div id="p-overview" class="tab-panel"><div class="wrap">
+<div id="p-overview" class="tab-panel active"><div class="wrap">
 <div class="hero"><svg viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg" style="position:absolute;right:0;top:0;height:100%;width:120px;pointer-events:none;opacity:.22;">
   <!-- Thân tre 1 -->
   <rect x="72" y="0" width="9" height="200" rx="4" fill="white"/>
