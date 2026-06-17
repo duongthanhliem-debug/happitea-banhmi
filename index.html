@@ -3,7 +3,7 @@
 <link rel="icon" type="image/png" href="happitea-banhmi.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HappiTea - Bánh Mì</title>
+<title>HappiTea - Bánh Mì Kitchen SOP</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap');
 :root{
@@ -793,9 +793,11 @@ function enterApp(){
       </div>
     </div>
     <div class="nav">
-      <button class="ntab active" onclick="T('overview',this)" data-en="📋 Overview" data-vi="📋 Tổng quan">📋 Overview</button>
+      <button class="ntab active" onclick="T('menu',this)">🍽️ Menu</button>
+      <button class="ntab" onclick="T('cost',this)">💰 Cost</button>
+      <button class="ntab" onclick="T('overview',this)" data-en="📋 Overview" data-vi="📋 Tổng quan">📋 Overview</button>
       <button class="ntab" onclick="T('inventory',this)" data-en="🧾 Ingredients & Tools" data-vi="🧾 Nguyên liệu & Dụng cụ">🧾 Ingredients & Tools</button>
-      <button class="ntab" onclick="T('prep',this)" data-en="🔪 Prep Work" data-vi="🔪 Sơ chế">🔪 Prep Work</button>
+      <button class="ntab" onclick="T('prep',this)" data-en="🔪 Mise en Place" data-vi="🔪 Sơ chế">🔪 Mise en Place</button>
       <button class="ntab" onclick="T('stock',this)" data-en="📦 Stock & Storage" data-vi="📦 Nhập & Bảo quản">📦 Stock & Storage</button>
       <button class="ntab" onclick="T('coldcut',this)" data-en="🥪 Cold Cut" data-vi="🥪 Thịt nguội">🥪 Cold Cut</button>
       <button class="ntab" onclick="T('egg',this)" data-en="🍳 Fried Egg" data-vi="🍳 Trứng">🍳 Fried Egg</button>
@@ -806,7 +808,184 @@ function enterApp(){
 </div>
 
 <!-- ═══════════ TAB 1: OVERVIEW ═══════════ -->
-<div id="p-overview" class="tab-panel active"><div class="wrap">
+<div id="p-menu" class="tab-panel active"><div class="wrap">
+<div class="hero"><div class="hero-deco">🍽️</div>
+  <div class="hero-vi">Recommended Menu</div>
+  <div class="hero-en">3 Bánh Mì items — Ingredients, flavor profile, and Vietnamese cultural heritage</div>
+  <div class="pills"><span class="pill">3 starter items</span><span class="pill">Vietnamese street food culture</span></div>
+</div>
+
+<div class="notice green">🇻🇳 <span>Bánh mì is Vietnam's iconic street food — a fusion of the <b>French-style baguette</b> (a legacy of French colonial rule) with <b>local Vietnamese ingredients</b>. It stands as a true symbol of East-West culinary exchange.</span></div>
+
+<!-- ITEM 1: COLD CUT -->
+<div class="prep-card">
+  <div class="prep-head"><span style="font-size:18px">🥪</span><div class="prep-title">1. Bánh Mì Thịt Nguội — Cold Cut</div></div>
+  <div class="prep-body">
+    <div style="width:100%;height:160px;border-radius:10px;overflow:hidden;background:#F1F8F1;position:relative;">
+      <img src="Banhmithitnguoi.png" alt="Bánh Mì Thịt Nguội" style="width:100%;height:100%;object-fit:cover;cursor:pointer;display:block;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div style="display:none;width:100%;height:160px;align-items:center;justify-content:center;flex-direction:column;gap:6px;color:var(--ink3);font-size:13px;">
+        <span style="font-size:32px;">🖼️</span><span>Bánh Mì Thịt Nguội</span><span style="font-size:10px;font-family:monospace;color:var(--blue);">Banhmithitnguoi.png</span>
+      </div>
+    </div>
+    <div class="std-card" style="margin-top:10px;">
+      <div class="std-row"><div class="std-key">Ingredients</div><div class="std-val">Liver pâté, Vietnamese butter, cha lua (Vietnamese pork roll), ham/cold cut, pickled carrot &amp; daikon, cucumber, cilantro, Maggi seasoning</div></div>
+      <div class="std-row"><div class="std-key">Flavor profile</div><div class="std-val">Mild richness from the pâté and butter, balanced sweet-savory notes from the meats and Maggi, a refreshing tang from the pickles, and fresh aroma from cilantro — multiple layers of flavor in every bite.</div></div>
+      <div class="std-row"><div class="std-key">Cultural note</div><div class="std-val">This is the <b>foundational bánh mì</b> — the most common breakfast/lunch item sold on Vietnamese streets, often from small carts starting as early as 5am. Liver pâté is a French culinary legacy, fully adapted into Vietnamese cuisine.</div></div>
+      <div class="std-row"><div class="std-key">Eating experience</div><div class="std-val">The crust shatters crisply on the first bite, followed by the soft, rich filling, then the tangy crunch of pickles cuts through the richness — never greasy.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ITEM 2: FRIED EGG -->
+<div class="prep-card">
+  <div class="prep-head"><span style="font-size:18px">🍳</span><div class="prep-title">2. Bánh Mì Trứng — Fried Egg</div></div>
+  <div class="prep-body">
+    <div style="width:100%;height:160px;border-radius:10px;overflow:hidden;background:#F1F8F1;position:relative;">
+      <img src="banhmitrung.png" alt="Bánh Mì Trứng" style="width:100%;height:100%;object-fit:cover;cursor:pointer;display:block;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div style="display:none;width:100%;height:160px;align-items:center;justify-content:center;flex-direction:column;gap:6px;color:var(--ink3);font-size:13px;">
+        <span style="font-size:32px;">🖼️</span><span>Bánh Mì Trứng</span><span style="font-size:10px;font-family:monospace;color:var(--blue);">banhmitrung.png</span>
+      </div>
+    </div>
+    <div class="std-card" style="margin-top:10px;">
+      <div class="std-row"><div class="std-key">Ingredients</div><div class="std-val">2 fried eggs (crispy-edge style), liver pâté, Vietnamese butter, pickled carrot &amp; daikon, cucumber, spring onion, salt &amp; white pepper, Maggi seasoning</div></div>
+      <div class="std-row"><div class="std-key">Flavor profile</div><div class="std-val">Rich runny yolk that bursts on the first bite, crispy charred egg edges with a fragrant hot-oil aroma, gentle saltiness from Maggi and salt, light fresh notes from spring onion.</div></div>
+      <div class="std-row"><div class="std-key">Cultural note</div><div class="std-val">A <b>traditional Vietnamese breakfast</b> — frying the egg sunny-side-up in hot oil to create crispy lacy edges is a distinctly Vietnamese technique, very different from Western butter-fried eggs.</div></div>
+      <div class="std-row"><div class="std-key">Eating experience</div><div class="std-val">Biting in releases the still-runny yolk, which mixes with the pâté and butter — this is the "addictive" moment that brings customers back.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ITEM 3: GRILLED CHICKEN -->
+<div class="prep-card">
+  <div class="prep-head"><span style="font-size:18px">🍗</span><div class="prep-title">3. Bánh Mì Gà Nướng Sả — Grilled Lemongrass Chicken</div></div>
+  <div class="prep-body">
+    <div style="width:100%;height:160px;border-radius:10px;overflow:hidden;background:#F1F8F1;position:relative;">
+      <img src="banhmiganuongsa.png" alt="Bánh Mì Gà Nướng Sả" style="width:100%;height:100%;object-fit:cover;cursor:pointer;display:block;" onclick="openImg(this.src)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div style="display:none;width:100%;height:160px;align-items:center;justify-content:center;flex-direction:column;gap:6px;color:var(--ink3);font-size:13px;">
+        <span style="font-size:32px;">🖼️</span><span>Bánh Mì Gà Nướng Sả</span><span style="font-size:10px;font-family:monospace;color:var(--blue);">banhmiganuongsa.png</span>
+      </div>
+    </div>
+    <div class="std-card" style="margin-top:10px;">
+      <div class="std-row"><div class="std-key">Ingredients</div><div class="std-val">Chicken marinated in lemongrass, garlic, fish sauce, and sugar, then grilled until golden; Vietnamese butter (no pâté), pickled carrot &amp; daikon, cucumber, cilantro, Maggi seasoning</div></div>
+      <div class="std-row"><div class="std-key">Flavor profile</div><div class="std-val">Bold lemongrass aroma, gentle caramelized sweetness from grilling, deep umami from fish sauce — the chicken has charred, fragrant edges with a juicy, tender center.</div></div>
+      <div class="std-row"><div class="std-key">Cultural note</div><div class="std-val"><b>Lemongrass</b> is Vietnam's most signature aromatic — found in nearly every grilled dish. This is the <b>most premium</b> of the three items, and typically the favorite among international guests for its distinctly "Vietnamese" character.</div></div>
+      <div class="std-row"><div class="std-key">Eating experience</div><div class="std-val">The lemongrass fragrance hits as soon as the sandwich is opened — the strongest first impression of the three items.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="notice yellow">💡 <span><b>Future R&amp;D suggestions:</b> Bánh mì chả cá (fish cake), bánh mì xíu mại (pork meatball), bánh mì heo quay (roast pork) — all popular bánh mì variations in Vietnam that could be explored once the trial model proves successful.</span></div>
+
+</div></div>
+
+<div id="p-cost" class="tab-panel"><div class="wrap">
+<div class="hero"><div class="hero-deco">💰</div>
+  <div class="hero-vi">Ingredient Cost Reference</div>
+  <div class="hero-en">Per-portion raw material cost — based on Philippines partner pricing + estimates</div>
+  <div class="pills"><span class="pill">Cost reference only</span><span class="pill">Not final selling price</span></div>
+</div>
+
+<div class="notice red">⚠️ <span><b>These figures are estimated reference costs only — not final or fully accurate.</b> Prices marked <span style="background:var(--glight);color:var(--gdark);padding:1px 6px;border-radius:6px;font-weight:700;">Partner</span> were confirmed directly by the Philippines partner. Prices marked <span style="background:#FFF3E0;color:#E65100;padding:1px 6px;border-radius:6px;font-weight:700;">Est.</span> are <b>estimated</b> from general Philippines market research and are placeholders only. Accurate costs can only be finalized once the Philippines partner provides: (1) confirmed pricing for every ingredient, (2) the actual unit/packaging size as purchased locally, and (3) the confirmed size and weight of the baguette used in Philippines.</span></div>
+
+<div class="slabel">Base Unit Prices</div>
+<div class="table-wrap">
+<table class="ing-table">
+  <tr><th>Ingredient</th><th>Unit Price</th><th>Cost / unit</th><th>Source</th></tr>
+  <tr><td>Liver pâté</td><td>₱250 / 250g</td><td>₱1.00/g</td><td><span class="tag daily">Partner</span></td></tr>
+  <tr><td>Pickled vegetables (bottled)</td><td>₱170 / 250g</td><td>₱0.68/g</td><td><span class="tag daily">Partner</span></td></tr>
+  <tr><td>Vietnamese butter</td><td>₱150 / 250g</td><td>₱0.60/g</td><td><span class="tag daily">Partner</span></td></tr>
+  <tr><td>Bánh mì bread (baguette)</td><td>₱25 / piece</td><td>₱25.00/pc</td><td><span class="tag daily">Partner</span></td></tr>
+  <tr><td>Liver pâté (bulk reference)</td><td>₱350 / 500g</td><td>₱0.70/g</td><td><span class="tag daily">Partner</span></td></tr>
+  <tr><td>Vietnamese butter (bulk reference)</td><td>₱450 / 500g</td><td>₱0.90/g</td><td><span class="tag daily">Partner</span></td></tr>
+  <tr><td>Ham / cold cut</td><td>~₱280 / kg</td><td>~₱0.28/g</td><td><span class="tag opt">Est.</span></td></tr>
+  <tr><td>Cha lua</td><td>~₱450 / kg</td><td>~₱0.45/g</td><td><span class="tag opt">Est.</span></td></tr>
+  <tr><td>Chicken breast</td><td>~₱250 / kg</td><td>~₱0.25/g</td><td><span class="tag opt">Est.</span></td></tr>
+  <tr><td>Eggs</td><td>~₱9.50 / piece</td><td>~₱9.50/pc</td><td><span class="tag opt">Est.</span></td></tr>
+  <tr><td>Cucumber</td><td>~₱55 / kg</td><td>~₱0.055/g</td><td><span class="tag opt">Est.</span></td></tr>
+  <tr><td>Cilantro</td><td>~₱150 / kg</td><td>~₱0.15/g</td><td><span class="tag opt">Est.</span></td></tr>
+  <tr><td>Maggi seasoning</td><td>~₱90 / 300ml</td><td>~₱0.30/ml</td><td><span class="tag opt">Est.</span></td></tr>
+  <tr><td>Cooking oil</td><td>~₱80 / liter</td><td>~₱0.08/ml</td><td><span class="tag opt">Est.</span></td></tr>
+  <tr><td>Lemongrass</td><td>~₱100 / kg</td><td>~₱0.10/g</td><td><span class="tag opt">Est.</span></td></tr>
+  <tr><td>Garlic</td><td>~₱250 / kg</td><td>~₱0.25/g</td><td><span class="tag opt">Est.</span></td></tr>
+  <tr><td>Fish sauce</td><td>~₱100 / liter</td><td>~₱0.10/ml</td><td><span class="tag opt">Est.</span></td></tr>
+  <tr><td>Sugar</td><td>~₱70 / kg</td><td>~₱0.07/g</td><td><span class="tag opt">Est.</span></td></tr>
+  <tr><td>Packaging set (bag+napkin+plastic)</td><td>~₱3.00 / set</td><td>~₱3.00/portion</td><td><span class="tag opt">Est.</span></td></tr>
+</table>
+</div>
+
+<div class="slabel">Per-Portion Cost — Bánh Mì Thịt Nguội (Cold Cut)</div>
+<div class="table-wrap">
+<table class="ing-table">
+  <tr><th>Ingredient</th><th>Amount</th><th>Cost</th></tr>
+  <tr><td>Bread</td><td>1 pc</td><td>₱25.00</td></tr>
+  <tr><td>Liver pâté</td><td>20g</td><td>₱20.00</td></tr>
+  <tr><td>Vietnamese butter</td><td>15g</td><td>₱9.00</td></tr>
+  <tr><td>Pickled vegetables</td><td>30g</td><td>₱20.40</td></tr>
+  <tr><td>Cha lua</td><td>30g</td><td>₱13.50 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Ham / cold cut</td><td>30g</td><td>₱8.40 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Cucumber</td><td>20g</td><td>₱1.10 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Cilantro</td><td>5g</td><td>₱0.75 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Maggi seasoning</td><td>3ml</td><td>₱0.90 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Packaging</td><td>1 set</td><td>₱3.00 <span class="ing-sub">est.</span></td></tr>
+  <tr style="font-weight:800;background:var(--glight);"><td>TOTAL ESTIMATED COST</td><td>1 portion</td><td style="color:var(--gdark);font-size:14px;">₱102.05</td></tr>
+</table>
+</div>
+
+<div class="slabel">Per-Portion Cost — Bánh Mì Trứng (Fried Egg)</div>
+<div class="table-wrap">
+<table class="ing-table">
+  <tr><th>Ingredient</th><th>Amount</th><th>Cost</th></tr>
+  <tr><td>Bread</td><td>1 pc</td><td>₱25.00</td></tr>
+  <tr><td>Liver pâté</td><td>15g</td><td>₱15.00</td></tr>
+  <tr><td>Vietnamese butter</td><td>15g</td><td>₱9.00</td></tr>
+  <tr><td>Pickled vegetables</td><td>25g</td><td>₱17.00</td></tr>
+  <tr><td>Eggs</td><td>2 pcs</td><td>₱19.00 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Cooking oil</td><td>10ml</td><td>₱0.80 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Cucumber</td><td>15g</td><td>₱0.83 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Spring onion</td><td>5g</td><td>₱0.75 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Salt &amp; white pepper</td><td>1g</td><td>₱0.20 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Maggi seasoning</td><td>3ml</td><td>₱0.90 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Packaging</td><td>1 set</td><td>₱3.00 <span class="ing-sub">est.</span></td></tr>
+  <tr style="font-weight:800;background:var(--glight);"><td>TOTAL ESTIMATED COST</td><td>1 portion</td><td style="color:var(--gdark);font-size:14px;">₱90.48</td></tr>
+</table>
+</div>
+
+<div class="slabel">Per-Portion Cost — Bánh Mì Gà Nướng Sả (Grilled Chicken)</div>
+<div class="table-wrap">
+<table class="ing-table">
+  <tr><th>Ingredient</th><th>Amount</th><th>Cost</th></tr>
+  <tr><td>Bread</td><td>1 pc</td><td>₱25.00</td></tr>
+  <tr><td>Vietnamese butter</td><td>20g</td><td>₱12.00</td></tr>
+  <tr><td>Pickled vegetables</td><td>30g</td><td>₱20.40</td></tr>
+  <tr><td>Chicken breast (marinated, raw)</td><td>~120g</td><td>₱30.00 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Lemongrass (marinade share)</td><td>~8g</td><td>₱0.80 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Garlic (marinade share)</td><td>~3g</td><td>₱0.75 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Fish sauce (marinade share)</td><td>~6ml</td><td>₱0.60 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Sugar (marinade share)</td><td>~3g</td><td>₱0.21 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Cooking oil</td><td>8ml</td><td>₱0.64 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Cucumber</td><td>20g</td><td>₱1.10 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Cilantro</td><td>5g</td><td>₱0.75 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Maggi seasoning</td><td>3ml</td><td>₱0.90 <span class="ing-sub">est.</span></td></tr>
+  <tr><td>Packaging</td><td>1 set</td><td>₱3.00 <span class="ing-sub">est.</span></td></tr>
+  <tr style="font-weight:800;background:var(--glight);"><td>TOTAL ESTIMATED COST</td><td>1 portion</td><td style="color:var(--gdark);font-size:14px;">₱96.15</td></tr>
+</table>
+</div>
+
+<div class="summary">
+  <div class="summary-title">Estimated Cost Summary — All 3 Items</div>
+  <div class="summary-grid">
+    <div class="sum-item"><div class="sum-val">₱102</div><div class="sum-label">Cold Cut</div></div>
+    <div class="sum-item"><div class="sum-val">₱90</div><div class="sum-label">Fried Egg</div></div>
+    <div class="sum-item"><div class="sum-val">₱96</div><div class="sum-label">Grilled Chicken</div></div>
+    <div class="sum-item"><div class="sum-val">₱96</div><div class="sum-label">Average cost/portion</div></div>
+  </div>
+</div>
+
+<div class="notice red">⚠️ <b>Important:</b> Items marked "est." use placeholder Philippines market prices and are <b>not final</b>. To calculate the real, accurate cost per portion, the Philippines partner needs to provide: confirmed prices for every remaining ingredient, the actual purchase unit/packaging size for each item, and the confirmed bread size/weight used locally. These figures also exclude labor, electricity, rent allocation, equipment depreciation, and profit margin — please consult Phúc Tea Vietnam finance / R&amp;D before setting final retail prices.</div>
+
+</div></div>
+
+<div id="p-overview" class="tab-panel"><div class="wrap">
 <div class="hero"><svg viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg" style="position:absolute;right:0;top:0;height:100%;width:120px;pointer-events:none;opacity:.22;">
   <!-- Thân tre 1 -->
   <rect x="72" y="0" width="9" height="200" rx="4" fill="white"/>
