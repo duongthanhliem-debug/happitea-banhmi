@@ -801,8 +801,9 @@ function enterApp(){
       <button class="ntab" onclick="T('stock',this)" data-en="📦 Stock & Storage" data-vi="📦 Nhập & Bảo quản">📦 Stock & Storage</button>
       <button class="ntab" onclick="T('coldcut',this)" data-en="🥪 Cold Cut" data-vi="🥪 Thịt nguội">🥪 Cold Cut</button>
       <button class="ntab" onclick="T('egg',this)" data-en="🍳 Fried Egg" data-vi="🍳 Trứng">🍳 Fried Egg</button>
-      <button class="ntab" onclick="T('chicken',this)" data-en="🍗 Grilled Chicken" data-vi="🍗 Gà nướng">🍗 Grilled Chicken</button>
+      <button class="ntab" onclick="T('chicken',this)" data-en="🍗 Grilled Chicken" data-vi="🍗 Gà nướng">🍗 Grilled Chicken <span style="font-size:9px;opacity:.7;">(Phase 2)</span></button>
       <button class="ntab" onclick="T('schedule',this)" data-en="⏰ Daily Schedule" data-vi="⏰ Lịch ca">⏰ Daily Schedule</button>
+      <button class="ntab" onclick="T('pilot',this)">🚀 Pilot Launch</button>
     </div>
   </div>
 </div>
@@ -1030,7 +1031,7 @@ function enterApp(){
     <div class="sum-item"><div class="sum-val">200g</div><div class="sum-label">Weight per roll</div></div>
     <div class="sum-item"><div class="sum-val">25cm</div><div class="sum-label">Length per roll</div></div>
     <div class="sum-item"><div class="sum-val">5–100</div><div class="sum-label">Portions/day</div></div>
-    <div class="sum-item"><div class="sum-val">≤3 min</div><div class="sum-label">Assembly time</div></div>
+    <div class="sum-item"><div class="sum-val">5–7 min</div><div class="sum-label">Made-fresh time</div></div>
   </div>
 </div>
 <div class="notice red">⚠️ <b>Bánh Mì counter must be fully separate from the tea counter:</b><br>
@@ -1039,6 +1040,11 @@ function enterApp(){
 ③ The smell of grilled meat and lemongrass will affect tea flavors if stations are mixed.<br>
 ④ If one staff member works both stations, wash hands and change apron when switching.
 </div>
+<div class="notice red">⚠️ <b>Staffing rule — non-negotiable:</b><br>
+Bánh mì service requires a <b>minimum of 2 staff per shift</b> when offering made-to-order items (fried egg, grilled chicken). One person cannot safely run the tea counter AND fry eggs / grill chicken to order at the same time — this creates both food-safety risk (raw egg/chicken near tea prep) and unacceptable wait times.<br><br>
+If only 1 staff member is scheduled, <b>do not offer bánh mì trứng or bánh mì gà nướng</b> — Cold Cut only (no cooking required) may still be sold by 1 person.
+</div>
+<div class="notice blue">⏱️ <b>Realistic timing commitment:</b> Bánh mì is <b>made fresh to order, not pre-made</b>. Quote customers <b>5–7 minutes</b> for fried egg or grilled chicken items, especially during rush hours (multiple orders queued on a single induction cooktop). Cold Cut (no cooking) can be ready in under 2 minutes.</div>
 <div class="slabel" data-en="Required Equipment" data-vi="Thiết bị cần thiết">Required Equipment</div>
 <div class="equip-card">
   <div class="equip-card-head"><div class="equip-icon-wrap">🔆</div><div class="equip-name">Electric Toaster Oven (Lò nướng điện)</div><div class="equip-badge" data-en="REQUIRED" data-vi="BẮT BUỘC">REQUIRED</div></div>
@@ -1108,7 +1114,7 @@ function enterApp(){
   <tr><td><b>Small stainless tongs</b></td><td style="text-align:right">2</td><td>For handling meat — never use bare hands</td></tr>
   <tr><td><b>Serving spoons</b></td><td style="text-align:right">3</td><td>Dedicated spoon per ingredient</td></tr>
   <tr><td><b>Oil spray bottle</b></td><td style="text-align:right">1</td><td>Spray evenly before each use</td></tr>
-  <tr><td><b>Food thermometer (probe)</b></td><td style="text-align:right">1</td><td>Chicken internal temp must reach ≥75°C</td></tr>
+  <tr><td><b>Sharp knife (for visual check)</b></td><td style="text-align:right">1</td><td>Used to cut into thickest chicken piece — check for white/opaque color, no pink, clear juices</td></tr>
 </table>
 </div>
 <div class="slabel" data-en="Packaging Set" data-vi="Bộ đóng gói">Packaging Set</div>
@@ -1584,23 +1590,23 @@ function enterApp(){
 </div><div class="prep-info"><div class="prep-iname">Slice shape</div><div class="prep-ispec">Thin slices, <b>5mm thick</b>, 5–7cm long. Cut across the grain.</div></div></div>
       <div class="prep-item"><div class="prep-img">📏</div><div class="prep-info"><div class="prep-iname">Portion size</div><div class="prep-ispec"><b>90g cooked chicken</b> per portion (≈120g raw marinated — ~25% weight loss when grilled).</div></div></div>
     </div>
-    <div class="phase"><div class="phase-line"></div><div class="ptag b">Marinade — for 500g chicken breast (~5 portions)</div><div class="phase-line"></div></div>
+    <div class="phase"><div class="phase-line"></div><div class="ptag b">Marinade — for 200g chicken breast (~2 portions, per shift batch)</div><div class="phase-line"></div></div>
     <div class="table-wrap"><table class="ing-table">
       <tr><th>Marinade Ingredient</th><th>Amount</th></tr>
-      <tr><td>Chicken breast, sliced 5mm</td><td>500g</td></tr>
-      <tr><td>Lemongrass, finely minced (white part only)</td><td>40g (~2 large stalks)</td></tr>
-      <tr><td>Garlic, minced</td><td>15g (~4 cloves)</td></tr>
-      <tr><td>Fish sauce (nước mắm)</td><td>30ml</td></tr>
-      <tr><td>White sugar</td><td>15g</td></tr>
-      <tr><td>Cooking oil</td><td>15ml</td></tr>
-      <tr><td>Ground black pepper</td><td>2g</td></tr>
-      <tr><td>Turmeric powder (optional, for colour)</td><td>2g</td></tr>
+      <tr><td>Chicken breast, sliced 5mm</td><td>200g</td></tr>
+      <tr><td>Lemongrass, finely minced (white part only)</td><td>16g (~1 stalk)</td></tr>
+      <tr><td>Garlic, minced</td><td>6g (~2 cloves)</td></tr>
+      <tr><td>Fish sauce (nước mắm)</td><td>12ml</td></tr>
+      <tr><td>White sugar</td><td>6g</td></tr>
+      <tr><td>Cooking oil</td><td>6ml</td></tr>
+      <tr><td>Ground black pepper</td><td>1g</td></tr>
+      <tr><td>Turmeric powder (optional, for colour)</td><td>1g</td></tr>
     </table>
 </div>
     <div class="std-card">
       <div class="std-row"><div class="std-key">Marinate time</div><div class="std-val">Minimum <b>30 minutes</b>. Best: marinate previous evening, use next morning.</div></div>
       <div class="std-row"><div class="std-key">Storage</div><div class="std-val">Sealed container, 2–8°C. Use within <b>24 hours</b> of marinating.</div></div>
-      <div class="std-row"><div class="std-key">Daily batch</div><div class="std-val">Trial phase: marinate <b>500g per day</b> (~5 portions). Adjust based on sales.</div></div>
+      <div class="std-row"><div class="std-key">Daily batch</div><div class="std-val">Trial phase: marinate <b>200g per shift</b> (~2 portions), not 500g/day. Marinate in small batches 2–3 times per shift based on real-time order volume — this avoids over-preparing and discarding unused marinated chicken at closing. Scale up batch size only after sales data shows consistent demand.</div></div>
     </div>
   </div>
 </div>
@@ -1645,13 +1651,14 @@ function enterApp(){
 </svg><div class="hero-deco">📦</div>
   <div class="hero-vi" data-en="Stock & Storage Standards" data-vi="Nhập hàng & Bảo quản">Stock & Storage Standards</div>
   <div class="hero-en">Procurement frequency · Acceptance criteria · Storage rules</div>
-  <div class="pills"><span class="pill">Daily baguette order</span><span class="pill">Check quality on receipt</span></div>
+  <div class="pills"><span class="pill">Frozen bread, thawed per shift</span><span class="pill">Check quality on receipt</span></div>
 </div>
 
+<div class="notice blue">🥖 <b>Bread supply model:</b> Bánh mì bread is <b>imported frozen</b> by the Philippines partner, then <b>thawed per shift (2 batches/day — morning &amp; afternoon)</b> and <b>re-baked/toasted fresh</b> at the counter before assembly. This avoids depending on a daily fresh-bread delivery (single point of failure) while still serving warm, crispy bread to the customer. Bread is <b>never thawed all at once for the full day</b> — thaw only what is needed for each shift window to avoid waste and staleness.</div>
 <div class="slabel" data-en="Procurement & Acceptance Standards" data-vi="Tiêu chuẩn nhập hàng">Procurement & Acceptance Standards</div>
 <div class="table-wrap"><table class="store-table">
   <tr><th>Ingredient</th><th>Order frequency</th><th>Accept if</th><th>Reject if</th></tr>
-  <tr><td><b>Baguette</b></td><td><span class="tag daily">Daily</span></td><td>Even golden crust, airy white inside, no cracks, fresh aroma, 190–210g</td><td>Mould, crushed, sour smell, dense/wet inside</td></tr>
+  <tr><td><b>Baguette (frozen, imported)</b></td><td><span class="tag cold">Per shift (2×/day)</span></td><td>Frozen solid, no ice crystals/freezer burn, intact packaging, within expiry date</td><td>Soft/partially thawed on delivery, freezer burn, damaged packaging, past expiry</td></tr>
   <tr><td><b>Cha Lua (Pork Roll)</b></td><td><span class="tag cold">2–3×/week</span></td><td>Even pale pink, dry surface, mild aroma, ≥7 days to expiry</td><td>Grey/green tinge, slimy, sour smell, &lt;3 days to expiry</td></tr>
   <tr><td><b>Ham / Cold Cut</b></td><td><span class="tag cold">Weekly</span></td><td>Even pink, no sliminess, fresh meat smell, ≥7 days to expiry</td><td>Brown/grey discolouration, slimy, off smell</td></tr>
   <tr><td><b>Pâté (jar)</b></td><td><span class="tag cold">Weekly</span></td><td>Lid intact, even grey-brown colour, no liquid separation</td><td>Bulging lid, discoloured, off smell</td></tr>
@@ -1669,7 +1676,9 @@ function enterApp(){
 <div class="std-card">
   <div class="std-row"><div class="std-key">🥗 Display fridge (2–8°C)</div><div class="std-val">Sliced cha lua · Sliced cold cut · Drained pickles · Sliced cucumber · Washed cilantro · Marinated chicken · Eggs</div></div>
   <div class="std-row"><div class="std-key">🫙 Opened jars (under counter fridge)</div><div class="std-val">Pâté · Vietnamese Butter · Pickle jar · Unopened cha lua</div></div>
-  <div class="std-row"><div class="std-key">🌡️ Room temperature</div><div class="std-val">Baguette (in bread box, away from sunlight) · Unopened jars (pâté, butter, pickles)</div></div>
+  <div class="std-row"><div class="std-key">❄️ Frozen storage</div><div class="std-val">Baguette — keep frozen until needed for thaw batch. Do not refreeze once thawed.</div></div>
+      <div class="std-row"><div class="std-key">🌡️ Room temperature</div><div class="std-val">Thawed baguette for current shift only (in bread box, away from sunlight) · Unopened jars (pâté, butter, pickles)</div></div>
+      <div class="std-row"><div class="std-key">🥖 Thaw &amp; re-bake procedure</div><div class="std-val">Move frozen bread from freezer to room temp <b>30–45 min before shift starts</b> (2× per day: morning batch + afternoon batch). Once thawed, <b>toast in the oven at 170–180°C for 3–4 min</b> before assembly to restore crispness. Only thaw the quantity needed for that shift — do not thaw the full day's stock at once.</div></div>
   <div class="std-row"><div class="std-key">⏰ Nhập trước dùng trước rule</div><div class="std-val"><b>First In, First Out:</b> Items ordered first must be used first. Label all opened items with opening date.</div></div>
 </div>
 
@@ -1796,10 +1805,10 @@ function enterApp(){
   </defs>
 </svg><div class="hero-deco">🍳</div>
   <div class="hero-vi">Bánh Mì Trứng</div>
-  <div class="hero-en">Vietnamese Fried Egg Sandwich — 2 crispy-edged sunny-side up eggs</div>
+  <div class="hero-en">Vietnamese Fried Egg Sandwich — 2 crispy-edged eggs, fully cooked</div>
   <div class="pills"><span class="pill">⏱ 4–5 min</span><span class="pill">☀️ Great for breakfast</span><span class="pill">Requires frying</span></div>
 </div>
-<div class="notice blue">🍳 <span>Vietnamese fried egg (trứng ốp la) is defined by its <b>crispy lacy edges and runny yolk</b>. It is fried in hot oil — NOT butter. The crispy edge is what makes it authentically Vietnamese.</span></div>
+<div class="notice blue">🍳 <span>Vietnamese fried egg (trứng ốp la) is fried in hot oil — NOT butter — for <b>crispy lacy edges</b>. For Philippines food-safety compliance, eggs are cooked <b>fully through (over-well)</b> — no runny yolk.</span></div>
 
 <div class="slabel">Ingredient amounts — 1 portion</div>
 <div class="table-wrap"><table class="ing-table">
@@ -1822,23 +1831,23 @@ function enterApp(){
 <div class="steps">
   <div class="step"><div class="step-head"><div class="step-num r">1</div><div class="step-title">Heat the pan and oil</div><div class="step-time">45–60 sec</div></div><div class="step-body"><div class="step-text">Place the small non-stick frying pan (20–22cm) on the induction cooktop at <b>heat level 7–8/10 (high)</b>. Add <b>10ml oil</b> — enough to cover the pan base. Wait until the oil is <b>hot and shimmering</b>.</div><div class="tip">💡 Temperature test: drop a tiny splash of water into the oil — if it sizzles immediately, the oil is ready. Cold oil = no crispy edges.</div></div></div>
   <div class="step"><div class="step-head"><div class="step-num r">2</div><div class="step-title">Warm bread at the same time</div><div class="step-time">Parallel</div></div><div class="step-body"><div class="step-text">While the pan heats, place the roll in the toaster oven at 170–180°C. Time them to finish together.</div></div></div>
-  <div class="step"><div class="step-head"><div class="step-num r">3</div><div class="step-title">Crack egg into each hole</div><div class="step-time">90–120 sec</div></div><div class="step-body"><div class="step-text">Crack <b>2 eggs</b> directly into the hot oil. The white should immediately sizzle and start crisping at the edges. Sprinkle a small pinch of <b>salt and white pepper</b> over the white. Cook until:<br>→ White is <b>fully cooked</b> (no transparent parts)<br>→ Edges are <b>golden and lacy/crispy</b><br>→ <b>Yolk remains runny</b></div><div class="wrn">⚠️ Do NOT flip the egg. Do NOT cover the pan. Vietnamese fried egg is always sunny-side up. The runny yolk breaks when the customer bites in — that is the intended experience.</div></div></div>
+  <div class="step"><div class="step-head"><div class="step-num r">3</div><div class="step-title">Crack egg into each hole</div><div class="step-time">90–120 sec</div></div><div class="step-body"><div class="step-text">Crack <b>2 eggs</b> directly into the hot oil. The white should immediately sizzle and start crisping at the edges. Sprinkle a small pinch of <b>salt and white pepper</b> over the white. Cook until:<br>→ White is <b>fully cooked</b> (no transparent parts)<br>→ Edges are <b>golden and lacy/crispy</b><br>→ <b>Yolk is fully set / cooked through</b> (no runny center) — gently break the yolk with the spatula partway through cooking if needed to ensure it cooks through evenly</div><div class="wrn">⚠️ Food safety: eggs must be cooked <b>fully through, yolk fully set</b> — no runny/liquid yolk. This is required for Philippines food-safety compliance, especially at ambient kitchen temperatures. Do not serve undercooked eggs.</div></div></div>
 </div>
 
 <div class="phase"><div class="phase-line"></div><div class="ptag r" data-en="Step 2 — Assembly" data-vi="Bước 2 — Lắp ráp">Step 2 — Assembly</div><div class="phase-line"></div></div>
 <div class="steps">
   <div class="step"><div class="step-head"><div class="step-num g">4</div><div class="step-title">Cut and spread bread</div><div class="step-time">10 sec</div></div><div class="step-body"><div class="step-text">Remove bread from oven. Cut ¾ through with scissors. Spread <b>15g pâté</b> on top half, <b>15g butter</b> on bottom half.</div></div></div>
-  <div class="step"><div class="step-head"><div class="step-num g">5</div><div class="step-title">Place egg and toppings</div><div class="step-time">15 sec</div></div><div class="step-body"><div class="step-text">① Slide the <b>fried egg</b> gently from the pan onto the butter side of the bread.<br>② Add <b>3 cucumber slices</b> alongside the egg.<br>③ Spoon <b>25g drained pickles</b> on top.<br>④ Sprinkle <b>5g spring onion</b>.<br>⑤ Drop <b>5–6 drops of Maggi</b>.</div><div class="tip">💡 Slide the egg gently — do not break the yolk. An intact yolk is part of the presentation.</div></div></div>
-  <div class="step"><div class="step-head"><div class="step-num g">6</div><div class="step-title">Package and serve</div><div class="step-time">5 sec</div></div><div class="step-body"><div class="step-text">Fold the roll gently (do not press hard — will break the yolk). Place in paper bag + napkins + plastic bag. Tell the customer: <em>"The yolk is runny — that's the Vietnamese style, it's delicious!"</em></div></div></div>
+  <div class="step"><div class="step-head"><div class="step-num g">5</div><div class="step-title">Place egg and toppings</div><div class="step-time">15 sec</div></div><div class="step-body"><div class="step-text">① Slide the <b>fried egg</b> gently from the pan onto the butter side of the bread.<br>② Add <b>3 cucumber slices</b> alongside the egg.<br>③ Spoon <b>25g drained pickles</b> on top.<br>④ Sprinkle <b>5g spring onion</b>.<br>⑤ Drop <b>5–6 drops of Maggi</b>.</div><div class="tip">💡 Slide the egg gently onto the bread once fully cooked. A neatly intact (but fully set) egg still looks appetizing — presentation matters even when fully cooked.</div></div></div>
+  <div class="step"><div class="step-head"><div class="step-num g">6</div><div class="step-title">Package and serve</div><div class="step-time">5 sec</div></div><div class="step-body"><div class="step-text">Fold the roll and place in paper bag + napkins + plastic bag. Serve immediately while warm.</div></div></div>
 </div>
 
 <div class="phase"><div class="phase-line"></div><div class="ptag g">Quality Check</div><div class="phase-line"></div></div>
 <div class="qc-list">
   <div class="qc-item"><div class="qc-ok">✓</div>Egg white fully cooked — no transparent or raw-looking areas</div>
   <div class="qc-item"><div class="qc-ok">✓</div>Edges golden and lacy/crispy (not pale or flat)</div>
-  <div class="qc-item"><div class="qc-ok">✓</div>Yolk still runny — not hard-cooked</div>
+  <div class="qc-item"><div class="qc-ok">✓</div>Yolk fully cooked through — no runny/liquid center (food-safety requirement)</div>
   <div class="qc-item"><div class="qc-ok">✓</div>Bread crust crispy and warm</div>
-  <div class="qc-item"><div class="qc-ok qc-x">✗</div>Yolk fully cooked/hard → oil too hot or cooked too long — reduce heat and time</div>
+  <div class="qc-item"><div class="qc-ok qc-x">✗</div>Yolk still runny/liquid → not safe to serve — return to heat or discard and start over</div>
   <div class="qc-item"><div class="qc-ok qc-x">✗</div>White edges pale, not crispy → oil not hot enough — wait longer before adding egg</div>
 </div>
 </div></div>
@@ -1883,6 +1892,7 @@ function enterApp(){
   <div class="hero-en">Lemongrass Grilled Chicken Sandwich — Premium item</div>
   <div class="pills"><span class="pill">⏱ 5–6 min</span><span class="pill">⭐ Premium</span><span class="pill">Marinate ahead</span></div>
 </div>
+<div class="notice yellow">🚦 <b>Phase 2 item — not part of initial pilot launch.</b> Grilled chicken is the most complex item (marinating, two-sided grilling, doneness check) and requires the most cooktop time. <b>Phase 1 pilot should launch with Cold Cut + Fried Egg only.</b> Add this item once staff are confident and consistent with the simpler items — typically after 2–4 weeks of stable operation.</div>
 <div class="notice green">🌿 <span>Chicken <b>must be marinated at the start of shift</b> (best: overnight). Cook to order throughout the day. The sugar in the marinade creates the golden-brown caramelised colour and aroma — this is the signature of Vietnamese grilled meat.</span></div>
 
 <div class="slabel">Ingredient amounts — 1 portion</div>
@@ -1904,7 +1914,7 @@ function enterApp(){
   <div class="step"><div class="step-head"><div class="step-num y">1</div><div class="step-title">Heat the grill pan</div><div class="step-time">1–2 min</div></div><div class="step-body"><div class="step-text">Place grill pan on induction cooktop at <b>heat level 8–9/10</b>. Spray <b>5ml oil</b> evenly over the ridges. Wait until the pan is very hot — <b>a drop of water should evaporate instantly on contact</b>.</div><div class="tip">💡 A properly hot pan is critical. If the pan is not hot enough, the chicken will stick to the ridges and not develop grill marks.</div></div></div>
   <div class="step"><div class="step-head"><div class="step-num y">2</div><div class="step-title">Place chicken slices on pan</div><div class="step-time">—</div></div><div class="step-body"><div class="step-text">Using tongs, take <b>120g marinated chicken</b> from the fridge. Lay slices in a <b>single layer — do not overlap</b>. Place on the hot grill pan — it should sizzle immediately.</div><div class="wrn">⚠️ Never stack chicken slices. Overlapping pieces will not cook evenly and will not develop grill marks.</div></div></div>
   <div class="step"><div class="step-head"><div class="step-num y">3</div><div class="step-title">Grill side 1</div><div class="step-time">90 sec</div></div><div class="step-body"><div class="step-text"><b>Do not touch or move</b> the chicken for the first 90 seconds. After 90 seconds, lift one piece with tongs to check the underside — it should show <b>clear golden-brown grill marks</b>. If not yet marked, wait another 20–30 seconds.</div></div></div>
-  <div class="step"><div class="step-head"><div class="step-num y">4</div><div class="step-title">Flip — Grill side 2</div><div class="step-time">60–90 sec</div></div><div class="step-body"><div class="step-text">Flip each piece with tongs. Grill for another 60–90 seconds. <b>Check doneness:</b> cut through the thickest piece — inside must be <b>completely white, no pink</b>. Or use food thermometer: <b>≥75°C inside</b>.</div><div class="wrn">⚠️ Any pink inside = not fully cooked. Continue grilling. Never serve undercooked chicken.</div></div></div>
+  <div class="step"><div class="step-head"><div class="step-num y">4</div><div class="step-title">Flip — Grill side 2</div><div class="step-time">60–90 sec</div></div><div class="step-body"><div class="step-text">Flip each piece with tongs. Grill for another 60–90 seconds (total 2–3 min per side depending on slice thickness). <b>Check doneness by sight — cut through the thickest piece:</b> inside must be <b>completely white/opaque, with clear juices — no pink color, no cloudy/red liquid</b>.</div><div class="wrn">⚠️ Any pink inside = not fully cooked. Continue grilling. Never serve undercooked chicken.</div></div></div>
   <div class="step"><div class="step-head"><div class="step-num y">5</div><div class="step-title">Rest chicken</div><div class="step-time">30 sec</div></div><div class="step-body"><div class="step-text">Remove from pan to the cutting board. Let rest 30 seconds before placing in bread — prevents steam from making the bread soggy.</div></div></div>
 </div>
 
@@ -2015,8 +2025,99 @@ function enterApp(){
 ① Wash hands with soap before handling any food, and after touching phone, face, or hair.<br>
 ② Never use bare hands to handle meat or vegetables — always use tongs.<br>
 ③ Any perishable food left outside refrigeration for more than 2 hours must be discarded.<br>
-④ Chicken that has not reached ≥75°C internally must never be served.
+④ Chicken with any pink color or cloudy/red juices when cut must never be served — return to heat or discard.
 </div>
+</div></div>
+
+<div id="p-pilot" class="tab-panel"><div class="wrap">
+<div class="hero"><div class="hero-deco">🚀</div>
+  <div class="hero-vi">Pilot Launch Appendix</div>
+  <div class="hero-en">Business layer — pricing, staffing, supply, training, and success metrics</div>
+  <div class="pills"><span class="pill">For BOD review</span><span class="pill">Operational + commercial layer</span></div>
+</div>
+
+<div class="notice blue">📋 <span>This appendix covers what a kitchen SOP alone cannot: <b>pricing, staffing economics, supply resilience, training accountability, and pilot success criteria.</b> Figures marked with placeholders require BOD/partner confirmation before finalizing.</span></div>
+
+<div class="slabel">1. Phase 1 Scope — Reduced to 2 Items</div>
+<div class="std-card">
+  <div class="std-row"><div class="std-key">Phase 1 (Pilot)</div><div class="std-val"><b>Bánh Mì Thịt Nguội (Cold Cut)</b> + <b>Bánh Mì Trứng (Fried Egg)</b> only. No cooking required for Cold Cut; only frying (not grilling) for Egg — lower complexity, lower risk, faster staff ramp-up.</div></div>
+  <div class="std-row"><div class="std-key">Phase 2 (after 2–4 weeks stable)</div><div class="std-val"><b>Bánh Mì Gà Nướng Sả (Grilled Chicken)</b> — added once staff are confident and consistent with Phase 1 items and sales data justifies expanding the menu.</div></div>
+</div>
+
+<div class="slabel">2. Staffing &amp; Station Rules</div>
+<div class="std-card">
+  <div class="std-row"><div class="std-key">Minimum staffing</div><div class="std-val"><b>2 staff per shift required</b> to offer made-to-order items (fried egg). 1 staff member may sell Cold Cut only (no cooking).</div></div>
+  <div class="std-row"><div class="std-key">Station separation</div><div class="std-val">Bánh mì station must be physically separate from tea station — no shared tools, cooktop, or oven (see Overview tab for full rule).</div></div>
+  <div class="std-row"><div class="std-key">Realistic timing</div><div class="std-val">Quote customers <b>5–7 minutes</b> for cooked items, especially during rush hours with multiple queued orders on one induction cooktop. Do not promise "under 3 minutes."</div></div>
+</div>
+
+<div class="slabel">3. Batch &amp; Waste Model</div>
+<div class="std-card">
+  <div class="std-row"><div class="std-key">Bread</div><div class="std-val">Imported frozen, thawed <b>2× per shift</b> (morning + afternoon) in small quantities matched to expected volume — not thawed all at once for the full day.</div></div>
+  <div class="std-row"><div class="std-key">Chicken marinade (Phase 2)</div><div class="std-val">Marinate in <b>200g batches</b> (~2 portions) <b>2–3× per shift</b> based on real-time orders — not 500g/day. Reduces unsold marinated stock at closing.</div></div>
+  <div class="std-row"><div class="std-key">Fully-loaded cost reminder</div><div class="std-val">The Cost tab shows <b>raw ingredient cost only</b>. Real cost-per-portion at low volume (5–30 portions/day) must also account for: bread/ingredient waste from over-prep, labor cost for the 2nd required staff member, and electricity. Actual fully-loaded cost will likely run <b>higher</b> than the raw ingredient figures shown in the Cost tab — track actual waste during the pilot to calibrate.</div></div>
+</div>
+
+<div class="slabel">4. Food Safety Decisions</div>
+<div class="std-card">
+  <div class="std-row"><div class="std-key">Egg doneness</div><div class="std-val">Changed from runny-yolk to <b>fully cooked (over-well)</b> — required given ambient kitchen temperatures in Philippines and food-safety risk of undercooked egg. See Fried Egg tab.</div></div>
+  <div class="std-row"><div class="std-key">Chicken doneness</div><div class="std-val">Changed from probe-thermometer (≥75°C) to <b>standardized visual check</b> — cut thickest piece, must be white/opaque with clear juices, no pink. Probe thermometers are impractical for part-time staff without proper training; visual check is more teachable and consistent. See Grilled Chicken tab.</div></div>
+  <div class="std-row"><div class="std-key">⚠️ Action required before launch</div><div class="std-val">Confirm with Philippines partner/legal: any local food-safety regulations (FDA/DOH) regarding street-food preparation, egg doneness standards, or street-food vendor licensing that may apply.</div></div>
+</div>
+
+<div class="slabel">5. Pricing &amp; Combo — <span style="color:var(--red);">Requires BOD confirmation</span></div>
+<div class="table-wrap"><table class="ing-table">
+  <tr><th>Item</th><th>Est. raw cost</th><th>Suggested margin</th><th>Suggested retail price</th></tr>
+  <tr><td>Bánh Mì Thịt Nguội</td><td>~₱102</td><td>55–60%</td><td>~₱220–260 <span class="ing-sub">(BOD to confirm)</span></td></tr>
+  <tr><td>Bánh Mì Trứng</td><td>~₱90</td><td>55–60%</td><td>~₱200–230 <span class="ing-sub">(BOD to confirm)</span></td></tr>
+  <tr><td>Bánh Mì Gà Nướng Sả</td><td>~₱96</td><td>55–65%</td><td>~₱230–270 <span class="ing-sub">(BOD to confirm, Phase 2)</span></td></tr>
+</table></div>
+<div class="notice yellow">💡 <span><b>Combo suggestion (aligns with PH brand positioning):</b><br>
+🟣 <b>Pinoy Happi</b> = Ube drink + Bánh Mì — suggested <b>10–15% discount</b> vs. buying separately, to drive average order value.<br>
+🇻🇳 <b>Buhay Vietnam</b> = Cà Phê Sữa Đá + Bánh Mì — positioned as the "full Vietnam experience," may sustain a smaller discount or none.<br>
+<b>BOD to confirm:</b> final margin floor, combo discount %, and whether combos are time-limited (e.g., breakfast hours only).</span></div>
+
+<div class="slabel">6. Bread Supply Chain</div>
+<div class="std-card">
+  <div class="std-row"><div class="std-key">Primary model (decided)</div><div class="std-val">Philippines partner <b>imports bread frozen</b>, thaws per shift, and <b>re-bakes/toasts fresh</b> at the counter before serving. Removes daily-fresh-delivery as a single point of failure.</div></div>
+  <div class="std-row"><div class="std-key">Optional/fallback model</div><div class="std-val">Local bolillo or small French-style roll as backup if frozen import is disrupted — acceptable substitute per Stock &amp; Storage tab, though not 100% authentic to Vietnamese baguette texture.</div></div>
+  <div class="std-row"><div class="std-key">⚠️ Action required</div><div class="std-val">Confirm: frozen bread supplier, shipping/customs lead time, minimum order quantity, and a backup supplier in case of delay or stockout.</div></div>
+</div>
+
+<div class="slabel">7. Training &amp; Sign-off</div>
+<div class="table-wrap"><table class="ing-table">
+  <tr><th>Day</th><th>Activity</th></tr>
+  <tr><td>Day 1–2</td><td>HQ-led training (remote or in-person) — full SOP walkthrough, food safety standards, equipment use</td></tr>
+  <tr><td>Day 3–4</td><td>Philippines staff practice under supervision — assembly speed, quality consistency</td></tr>
+  <tr><td>Day 5</td><td>Sign-off test — staff must demonstrate consistent quality before selling to real customers</td></tr>
+  <tr><td>Week 1 live</td><td>HQ monitors remotely via daily photo/report check-ins</td></tr>
+</table></div>
+<div class="notice yellow">⚠️ <span><b>BOD to confirm:</b> Does HQ send someone on-site for week 1, or is remote support sufficient? Who signs off that PH staff are ready to sell to real customers?</span></div>
+
+<div class="slabel">8. Pilot KPIs &amp; Go/No-Go Thresholds</div>
+<div class="table-wrap"><table class="ing-table">
+  <tr><th>Metric</th><th>Continue / Expand</th><th>Pause / Adjust</th></tr>
+  <tr><td>Portions sold per day</td><td>≥15/day</td><td>&lt;8/day after 2 weeks</td></tr>
+  <tr><td>Actual margin (fully-loaded)</td><td>≥45%</td><td>&lt;30%</td></tr>
+  <tr><td>Customer feedback</td><td>≥4/5 average</td><td>&lt;3/5 average</td></tr>
+  <tr><td>Ingredient waste rate</td><td>&lt;15%</td><td>&gt;25%</td></tr>
+</table></div>
+<div class="notice yellow">⚠️ <span><b>BOD to confirm:</b> Pilot duration (2 weeks? 1 month?), who compiles and reviews the report, and reporting frequency to HQ (daily/weekly).</span></div>
+
+<div class="slabel">9. Strategic Supply Lock-in (Optional)</div>
+<div class="std-card">
+  <div class="std-row"><div class="std-key">Concept</div><div class="std-val">Designate 1–2 core ingredients (e.g., Vietnamese liver pâté, Vietnamese butter) as <b>HQ-supplied only</b> — not locally sourced by the partner. This protects recipe authenticity/quality AND creates a structural dependency that strengthens the franchise relationship.</div></div>
+  <div class="std-row"><div class="std-key">⚠️ Action required if adopted</div><div class="std-val">Requires a stable export/import supply chain (logistics, customs clearance) to Philippines before this can be committed to in a partner agreement.</div></div>
+</div>
+
+<div class="slabel">10. Liability &amp; Responsibility</div>
+<div class="std-card">
+  <div class="std-row"><div class="std-key">Suggested framework</div><div class="std-val"><b>HQ Phúc Tea Vietnam</b> is responsible for: recipe, SOP, and core ingredient standards (pâté/butter).<br><b>Philippines partner</b> is responsible for: correct execution of SOP, local ingredient sourcing, and on-site operations.</div></div>
+  <div class="std-row"><div class="std-key">⚠️ Action required</div><div class="std-val">This division of responsibility should be written into the franchise/partnership agreement — not left as an informal understanding. Confirm with Legal.</div></div>
+</div>
+
+<div class="notice red">📌 <b>Summary for BOD:</b> This appendix surfaces the business decisions still needed before a full launch: final retail pricing, combo discount %, bread supplier commitment, training sign-off owner, pilot duration, and liability terms. The kitchen-level SOP (other tabs) is ready; this commercial layer requires BOD input to close.</div>
+
 </div></div>
 
 <div id="lightbox" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);z-index:9999;cursor:zoom-out;align-items:center;justify-content:center;">
